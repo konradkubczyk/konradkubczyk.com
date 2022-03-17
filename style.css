@@ -22,7 +22,6 @@ body {
 }
 
 .hero .info-card {
-    /* height: 300px; */
     min-width: 20vw;
     background: #00000070;
     backdrop-filter: blur(20px);
@@ -49,12 +48,8 @@ body {
 }
 
 .hero .info-card .info-card__description {
-    padding: 25px;
+    padding: 10px;
     text-align: center;
-}
-
-.hero .info-card .info-card__description h3 {
-    margin: 0px;
 }
 
 .hero .info-card hr {
@@ -91,7 +86,7 @@ body {
 
 .hero .info-card .info-card__social a button {
     width: 100%;
-    margin: 10px 0px;
+    margin: 10px 0px 15px 0px;
     padding: 10px;
     border-radius: 12px;
     border: none;
@@ -106,8 +101,8 @@ body {
     background: #9e2ba850;
 }
 
-.hero .info-card .info-card__social a button svg {
-    margin-right: 5px;
+.hero .info-card .info-card__social a button i {
+    margin-right: 3px;
 }
 
 .hero .info-card .info-card__social .info-card__social__icons {

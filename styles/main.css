@@ -148,29 +148,6 @@ div.info-card__social > a:hover > div {
     background-color: var(--color-palette-secondary);
 }
 
-/* .footer {
-    position: absolute;
-    bottom: 10px;
-    margin: 0 auto;
-    font-size: .75rem;
-}
-
-.footer__links {
-    display: flex;
-    gap: 15px;
-}
-
-.footer__links > a {
-    text-decoration: none;
-    color: var(--color-palette-accent);
-    text-transform: uppercase;
-    transition: 300ms;
-}
-
-.footer__links > a:hover {
-    color: var(--color-palette-primary);
-} */
-
 @media (max-width: 500px) {
     div.info-card__header {
         flex-direction: column;

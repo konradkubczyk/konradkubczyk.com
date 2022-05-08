@@ -1,0 +1,178 @@
+@font-face {
+    font-family: 'montserrat-bold';
+    src: url('/fonts/montserrat/montserrat-bold-webfont.woff2') format('woff2'),
+        url('/fonts/montserrat/montserrat-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'montserrat-light';
+    src: url('/fonts/montserrat/montserrat-light-webfont.woff2') format('woff2'),
+        url('/fonts/montserrat/montserrat-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'montserrat-regular';
+    src: url('/fonts/montserrat/montserrat-regular-webfont.woff2') format('woff2'),
+        url('/fonts/montserrat/montserrat-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+:root {
+    font-family: 'montserrat-regular', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    line-height: 1.5rem;
+}
+
+@media (prefers-color-scheme: light) {
+    :root { 
+        --color-palette-primary: #000000;
+        --color-palette-secondary: #cecece;
+        --color-palette-accent: #9c9c9c;
+        --color-pallette-background: #ffffff;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    :root { 
+        --color-palette-primary: #ffffff;
+        --color-palette-secondary: #303030;
+        --color-palette-accent: #505050;
+        --color-pallette-background: #1b1b1b;
+    }
+}
+
+::selection {
+    background: var(--color-palette-accent);
+    color: var(--color-pallette-primary);
+}
+
+::-moz-selection {
+    background: var(--color-palette-accent);
+    color: var(--color-pallette-primary);
+}
+
+body {
+    margin: 0;
+    background-color: var(--color-pallette-background);
+    color: var(--color-palette-primary);
+}
+
+p.info-card__description {
+    text-align: justify;
+}
+
+div.main-section {
+    min-width: 100vw;
+    min-height: 100vh;
+    background-image: url('/images/monowave.svg');
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div.info-card {
+    background-color: var(--color-pallette-background);
+    max-width: 400px;
+    border: solid 3px var(--color-palette-primary);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 25px;
+}
+
+div.info-card__header {
+    display: flex;
+    gap: 20px;
+}
+
+svg.info-card__header__logo__image {
+    height: 50px;
+    width: 50px;
+    display: flex;
+    border-radius: 7px;
+    padding: 15px;
+    background-color: var(--color-palette-primary);
+}
+
+svg.info-card__header__logo__image > g > path {
+    fill: var(--color-pallette-background);
+}
+
+div.info-card__header__about-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 5px;
+
+}
+
+h1.info-card__header__about-column__title {
+    margin: 0;
+    font-family: 'montserrat-bold';
+    font-size: 2rem;
+    line-height: 2rem;
+}
+
+h2.info-card__header__about-column__subtitle {
+    margin: 0;
+    font-size: 1rem;
+}
+
+div.info-card__social {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+div.info-card__social > a {
+    text-decoration: none;
+}
+
+div.info-card__social > a > div {
+    color: var(--color-palette-primary);
+    border: solid 1px var(--color-palette-secondary);
+    border-radius: 7px;
+    padding: 5px 10px;
+    transition: 300ms;
+}
+
+div.info-card__social > a:hover > div {
+    background-color: var(--color-palette-secondary);
+}
+
+/* .footer {
+    position: absolute;
+    bottom: 10px;
+    margin: 0 auto;
+    font-size: .75rem;
+}
+
+.footer__links {
+    display: flex;
+    gap: 15px;
+}
+
+.footer__links > a {
+    text-decoration: none;
+    color: var(--color-palette-accent);
+    text-transform: uppercase;
+    transition: 300ms;
+}
+
+.footer__links > a:hover {
+    color: var(--color-palette-primary);
+} */
+
+@media (max-width: 500px) {
+    div.info-card__header {
+        flex-direction: column;
+    }
+}

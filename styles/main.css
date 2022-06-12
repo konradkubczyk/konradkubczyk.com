@@ -34,6 +34,7 @@
     :root { 
         --color-palette-primary: #000000;
         --color-palette-secondary: #cecece;
+        --color-palette-ternary: #ececec;
         --color-palette-accent: #9c9c9c;
         --color-pallette-background: #ffffff;
     }
@@ -43,6 +44,7 @@
     :root { 
         --color-palette-primary: #ffffff;
         --color-palette-secondary: #303030;
+        --color-palette-ternary: #232323;
         --color-palette-accent: #505050;
         --color-pallette-background: #1b1b1b;
     }
@@ -132,20 +134,30 @@ div.info-card__social {
     gap: 10px;
 }
 
-div.info-card__social > a {
+div.info-card__social > div.info-card__social__row {
+    display: flex;
+    gap: 10px;
+}
+
+div.info-card__social > div.info-card__social__row > a {
     text-decoration: none;
 }
 
-div.info-card__social > a > div {
+div.info-card__social > div.info-card__social__row > a:first-child {
+    flex-grow: 1;
+}
+
+div.info-card__social > div.info-card__social__row > a > div {
     color: var(--color-palette-primary);
     border: solid 1px var(--color-palette-secondary);
     border-radius: 7px;
     padding: 5px 10px;
+    white-space: nowrap;
     transition: 300ms;
 }
 
-div.info-card__social > a:hover > div {
-    background-color: var(--color-palette-secondary);
+div.info-card__social > div.info-card__social__row > a:hover > div {
+    background-color: var(--color-palette-ternary);
 }
 
 @media (max-width: 500px) {

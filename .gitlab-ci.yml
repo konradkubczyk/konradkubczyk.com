@@ -6,6 +6,6 @@ deploy-job:
   environment: production
   script:
     - echo "Deploying files using FTP..."
-    - apt update -qq && apt install -qq lftp 
-    - lftp -e "mirror --delete $LOCAL_DIR $REMOTE_DIR" -u $FTP_USERNAME,$FTP_PASSWORD $FTP_HOST
+    - apt update -qq && apt install -qq lftp
+    - lftp ftps://$FTP_USERNAME@$FTP_HOST -e "set ftp:ssl-force true; set ssl:check-hostname false; mirror --delete $LOCAL_DIR $REMOTE_DIR; quit"
     - echo "Files deployed successfully."

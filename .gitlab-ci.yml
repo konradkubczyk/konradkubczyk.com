@@ -7,5 +7,5 @@ deploy-job:
   script:
     - echo "Deploying files using FTP..."
     - apt update -qq && apt install -qq lftp 
-    - lftp "open -u $FTP_USERNAME,$FTP_PASSWORD $FTP_URL; mirror --continue --reverse --delete $LOCAL_DIR $REMOTE_DIR"
+    - lftp -e "mirror --delete $LOCAL_DIR $REMOTE_DIR" -u $FTP_USERNAME,$FTP_PASSWORD $FTP_HOST
     - echo "Files deployed successfully."

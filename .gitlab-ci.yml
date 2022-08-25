@@ -7,5 +7,5 @@ deploy-job:
   script:
     - echo "Deploying files using FTP..."
     - apt-get update -qq && apt-get install -qq lftp
-    - lftp -u $FTP_USERNAME,$FTP_PASSWORD $FTP_HOST -e "set ftp:ssl-force true; set ssl:check-hostname false; mirror --delete $LOCAL_DIR $REMOTE_DIR; quit"
+    - lftp -u $FTP_USERNAME,$FTP_PASSWORD $FTP_HOST -e "set ftp:ssl-force true; set ssl:verify-certificate false; mirror --delete $LOCAL_DIR $REMOTE_DIR; quit"
     - echo "Files deployed successfully."

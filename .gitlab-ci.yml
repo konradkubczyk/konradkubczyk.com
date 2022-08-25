@@ -1,0 +1,11 @@
+stages:
+  - deploy
+
+deploy-job:
+  stage: deploy
+  environment: production
+  script:
+    - echo "Deploying files using FTP..."
+    - apt update -qq && apt install -qq lftp 
+    - lftp -e "mirror -R $LOCAL_DIR $REMOTE_DIR" -u $FTP_USERNAME,$FTP_PASSWORD $HOST
+    - echo "Files deployed successfully."

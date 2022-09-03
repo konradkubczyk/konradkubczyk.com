@@ -211,7 +211,8 @@ div.info-card__social > div.info-card__social__row > a > div > svg {
 
 main.licenses {
     max-width: 1000px;
-    margin: 4rem auto;
+    margin: 1rem auto;
+    padding: 1rem;
 }
 
 h2.single-license__header {

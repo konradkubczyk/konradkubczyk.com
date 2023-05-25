@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'montserrat-bold';
-    src: url('/fonts/montserrat/montserrat-bold-webfont.woff2') format('woff2'),
-        url('/fonts/montserrat/montserrat-bold-webfont.woff') format('woff');
+    src: url('../fonts/montserrat/montserrat-bold-webfont.woff2') format('woff2'),
+        url('../fonts/montserrat/montserrat-bold-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -9,8 +9,8 @@
 
 @font-face {
     font-family: 'montserrat-light';
-    src: url('/fonts/montserrat/montserrat-light-webfont.woff2') format('woff2'),
-        url('/fonts/montserrat/montserrat-light-webfont.woff') format('woff');
+    src: url('../fonts/montserrat/montserrat-light-webfont.woff2') format('woff2'),
+        url('../fonts/montserrat/montserrat-light-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -18,8 +18,8 @@
 
 @font-face {
     font-family: 'montserrat-regular';
-    src: url('/fonts/montserrat/montserrat-regular-webfont.woff2') format('woff2'),
-        url('/fonts/montserrat/montserrat-regular-webfont.woff') format('woff');
+    src: url('../fonts/montserrat/montserrat-regular-webfont.woff2') format('woff2'),
+        url('../fonts/montserrat/montserrat-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -73,7 +73,7 @@ p.info-card__description {
 div.page {
     min-width: 100vw;
     min-height: 100vh;
-    background-image: url('/images/monowave.svg');
+    background-image: url('../images/monowave.svg');
     background-position: center;
     background-size: cover;
     align-items: center;

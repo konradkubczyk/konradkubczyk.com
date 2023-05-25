@@ -1,13 +1,11 @@
-stages:
-  - deploy
+image: busybox
 
-deploy-job:
+pages:
   stage: deploy
-  environment: production
-  only:
-    - main
   script:
-    - echo "Deploying files using FTP..."
-    - apt-get update -qq && apt-get install -qq lftp
-    - lftp -e "set ftp:ssl-force true; set ssl:verify-certificate false; mirror --reverse --exclude '^\..*$' $LOCAL_DIR $REMOTE_DIR; quit" -u $FTP_USERNAME,$FTP_PASSWORD $FTP_HOST
-    - echo "Files deployed successfully."
+    - echo "The site will be deployed to $CI_PAGES_URL"
+  artifacts:
+    paths:
+      - public
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH

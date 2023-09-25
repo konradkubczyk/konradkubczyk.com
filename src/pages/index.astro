@@ -4,75 +4,114 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout title="Konrad Kubczyk">
   <main>
-    <div class="flex flex-col gap-5">
-      <section id="hero" class="bg-gradient-to-t from-neutral-900 to-transparent to-20% flex flex-col h-100 justify-between">
-        <div class="container mx-auto grow flex items-center">
-          <div
-            class="p-5 flex flex-col gap-5"
-          >
-            <div
-              class="flex flex-col gap-5 py-10 w-3/5 text-center mx-auto mt-40 mb-20"
-            >
-              <h1 class="text-6xl text-white">Konrad Kubczyk</h1>
-              <p class="text-white/70">
-                Jestem osobą kreatywną, otwartą na wyzwania i zmotywowaną do
-                rozwoju. Zdobyte przeze mnie doświadczenie w tworzeniu stron
-                internetowych i oprogramowania jest dopełniane przez
-                umiejętności artystyczne oraz innowacyjność w rozwiązywaniu
-                problemów.
-              </p>
-              <div class="flex gap-5 mx-auto">
-                <a
-                  href="#wiecej"
-                  class="button bg-neutral-100/75 px-4 py-2 rounded border border-white/25 transition text-dark hover:bg-white/90"
-                >
-                  Więcej
-                </a>
-                <a
-                  href="/kontakt"
-                  class="button bg-neutral-600/25 px-4 py-2 rounded border border-white/25 transition text-white hover:bg-neutral-600/50"
-                >
-                  Kontakt
-                </a>
+    <div class="flex flex-col gap-32">
+      <div
+        id="hero"
+        style="background-image: url('/img/backgrounds/resource-database-JGtQ3VJWoEU-unsplash.jpg'); background-size: cover;"
+      >
+        <div
+          class="flex flex-col h-100 justify-between bg-neutral-900/90 bg-gradient-to-t from-neutral-900 to-transparent to-20%"
+          style="min-height: 80vh;"
+        >
+          <section class="container mx-auto grow flex items-center">
+            <div class="p-5 flex flex-col gap-5">
+              <div
+                class="flex flex-col gap-5 py-10 w-1/2 text-center mx-auto mt-40 mb-20"
+              >
+                <h1 class="text-6xl text-white">Konrad Kubczyk</h1>
+                <p class="text-white/70">
+                  Jestem osobą kreatywną, otwartą na wyzwania i zmotywowaną do
+                  rozwoju. Zdobyte przeze mnie doświadczenie w tworzeniu stron
+                  internetowych i oprogramowania jest dopełniane przez
+                  umiejętności artystyczne oraz innowacyjność w rozwiązywaniu
+                  problemów.
+                </p>
+                <div class="flex gap-5 mx-auto">
+                  <a
+                    href="#wiecej"
+                    class="button uppercase font-semibold tracking-wide text-sm bg-neutral-100/70 px-5 py-3 rounded border border-white/25 transition text-dark hover:bg-white/90"
+                  >
+                    Więcej
+                  </a>
+                  <a
+                    href="/kontakt"
+                    class="button uppercase font-semibold tracking-wide text-sm bg-neutral-600/25 px-5 py-3 rounded border border-white/25 transition text-white hover:bg-neutral-600/50"
+                  >
+                    Kontakt
+                  </a>
+                </div>
               </div>
             </div>
-          </div>
+          </section>
+          <section
+            id="wiecej"
+            class="flex gap-5 container mx-auto flex-wrap p-5 sm:p-0"
+          >
+            <a
+              href="/portfolio#strony-internetowe"
+              class="flex-1 rounded-lg border border-zinc-600/50 p-5 flex flex-col gap-3 cursor-pointer bg-neutral-800/25 transition hover:bg-neutral-700/25"
+            >
+              <h2 class="text-2xl font-semibold text-neutral-100">
+                Strony internetowe
+              </h2>
+              <p class="text-white/70">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Eveniet autem, architecto corporis dignissimos officiis sunt
+                veritatis qui doloremque quas repudiandae aspernatur ex
+                recusandae.
+              </p>
+            </a>
+            <a
+              href="/portfolio#projektowanie-ui-ux"
+              class="flex-1 rounded-lg border border-zinc-600/50 p-5 flex flex-col gap-3 cursor-pointer bg-neutral-800/25 transition hover:bg-neutral-700/25"
+            >
+              <h2 class="text-2xl font-semibold text-neutral-100">
+                Projektowanie UI/UX
+              </h2>
+              <p class="text-white/70">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Aperiam facere porro recusandae nostrum non illo sed quo
+                perspiciatis culpa architecto officiis.
+              </p>
+            </a>
+            <a
+              href="/portfolio#programowanie"
+              class="flex-1 rounded-lg border border-zinc-600/50 p-5 flex flex-col gap-3 cursor-pointer bg-neutral-800/25 transition hover:bg-neutral-700/25"
+            >
+              <h2 class="text-2xl font-semibold text-neutral-100">
+                Programowanie
+              </h2>
+              <p class="text-white/70">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Numquam odio repellendus recusandae nostrum corporis dignissimos
+                odit minima adipisci vitae ab iste quas.
+              </p>
+            </a>
+          </section>
         </div>
-        <div id="wiecej" class="flex gap-5 container mx-auto">
-          <a
-            href="/portfolio#strony-internetowe"
-            class="flex-1 rounded-lg border border-zinc-600/50 p-5 flex flex-col gap-3 cursor-pointer bg-neutral-800/25 transition hover:bg-neutral-700/25"
+      </div>
+      <section class="container mx-auto flex p-5 sm:p-0 gap-10">
+        <div class="flex-1">
+          <h2
+            class="text-sm uppercase font-semibold tracking-widest text-neutral-100/50 mb-1"
           >
-            <h2 class="text-2xl text-white">Strony internetowe</h2>
-            <p class="text-white/70">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet
-              autem, architecto corporis dignissimos officiis sunt veritatis qui
-              doloremque quas repudiandae aspernatur ex recusandae.
-            </p>
-          </a>
-          <a
-            href="/portfolio#projektowanie-ui-ux"
-            class="flex-1 rounded-lg border border-zinc-600/50 p-5 flex flex-col gap-3 cursor-pointer bg-neutral-800/25 transition hover:bg-neutral-700/25"
-          >
-            <h2 class="text-2xl text-white">Projektowanie UI/UX</h2>
-            <p class="text-white/70">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam
-              facere porro recusandae nostrum non illo sed quo perspiciatis
-              culpa architecto officiis.
-            </p>
-          </a>
-          <a
-            href="/portfolio#programowanie"
-            class="flex-1 rounded-lg border border-zinc-600/50 p-5 flex flex-col gap-3 cursor-pointer bg-neutral-800/25 transition hover:bg-neutral-700/25"
-          >
-            <h2 class="text-2xl text-white">Programowanie</h2>
-            <p class="text-white/70">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam
-              odio repellendus recusandae nostrum corporis dignissimos odit
-              minima adipisci vitae ab iste quas.
-            </p>
-          </a>
+            Moje kompetencje
+          </h2>
+          <span class="text-4xl font-semibold text-neutral-100">
+            Tworzę strony i aplikacje internetowe
+          </span>
+          <p class="text-white/70 mt-6">
+            Projektuję, wdrażam, utrzymuję i rozwijam rozwiązania internetowe.
+            Wykorzystuję wiedzę z zakresu programowania, technology webowych,
+            projektowania UI/UX, by tworzyć produkty zarówno funkcjonalne jak i
+            estetyczne.
+          </p>
+          <p class="text-white/70 mt-6">
+            Bezpieczeństwo, szybkość i przejrzystość to aspekty, które stawiam
+            na pierwszym miejscu.
+          </p>
         </div>
+        <div class="flex-1"></div>
       </section>
       <div style="height: 100vh;"></div>
     </div>
@@ -80,7 +119,7 @@ import Layout from "../layouts/Layout.astro";
 </Layout>
 
 <style>
-  #hero {
+  /* #hero {
     position: relative;
     min-height: 80vh;
   }
@@ -98,5 +137,5 @@ import Layout from "../layouts/Layout.astro";
     background-repeat: no-repeat;
     filter: opacity(15%);
     z-index: -1;
-  }
+  } */
 </style>

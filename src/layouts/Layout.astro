@@ -1,51 +1,79 @@
 ---
 interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Deweloper stron internetowych i aplikacji, chętny do nauki i eksploracji nowych możliwości podczas tworzenia ciekawych projektów."
+    />
+    <meta name="keywords" content="Kubczyk, Konrad, Konrad Kubczyk" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/img/brand/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body class="bg-neutral-900">
+    <header class="sticky top-0 z-10 p-5 bg-gradient-to-b from-neutral-900 from-20% to-transparent">
+      <nav
+        id="sticky-nav"
+        class="container mx-auto bg-neutral-900/80 rounded-lg border border-zinc-700/50 p-5 flex justify-between items-center backdrop-blur transition"
+      >
+        <a
+		href="/"
+		class="opacity-80 hover:opacity-100 transition"
+		>
+			<img src="/img/brand/logo.svg" alt="Logo" class="h-7 mx-1" />
+		</a>
+        <div>
+          <menu class="flex gap-5">
+            <a
+              href="/"
+              class="flex items-center text-sm rounded px-3 py-2 uppercase hover:text-white hover:bg-neutral-600/50 hover:active:scale-95 transition text-white bg-neutral-600/25"
+            >
+              Strona główna
+            </a>
+            <a
+              href="/portfolio"
+              class="flex items-center text-sm rounded px-3 py-2 uppercase hover:text-white hover:bg-neutral-600/50 hover:active:scale-95 transition text-white/75"
+            >
+              Portfolio
+            </a>
+            <a
+              href="/kontakt"
+              class="flex items-center text-sm rounded px-3 py-2 uppercase hover:text-white hover:bg-neutral-600/50 hover:active:scale-95 transition text-white/75"
+            >
+              Kontakt
+            </a>
+          </menu>
+        </div>
+      </nav>
+    </header>
+	<div class="px-5">
 		<slot />
-	</body>
+	</div>
+  </body>
 </html>
-<style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
-		background-size: 224px;
-	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
-	}
-</style>
+
+<script>
+  const stickyNav = document.querySelector("#sticky-nav");
+
+  function updateStickyNav() {
+    if (stickyNav) {
+      if (window.scrollY > 0) {
+		stickyNav.classList.add("bg-neutral-800/90");
+      } else {
+        stickyNav.classList.remove("bg-neutral-800/90");
+      }
+    }
+  }
+
+//   window.addEventListener("scroll", updateStickyNav);
+</script>

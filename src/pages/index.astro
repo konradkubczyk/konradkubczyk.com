@@ -90,28 +90,43 @@ import Layout from "../layouts/Layout.astro";
           </section>
         </div>
       </div>
-      <section class="container mx-auto flex p-5 sm:p-0 gap-10">
-        <div class="flex-1">
+      <section
+        class="container mx-auto flex flex-col xl:flex-row p-5 sm:p-0 items-center xl:gap-20"
+      >
+        <div>
           <h2
             class="text-sm uppercase font-semibold tracking-widest text-neutral-100/50 mb-1"
           >
             Moje kompetencje
           </h2>
-          <span class="text-4xl font-semibold text-neutral-100">
+          <span class="text-4xl font-semibold text-neutral-100 t">
             Tworzę strony i aplikacje internetowe
           </span>
-          <p class="text-white/70 mt-6">
+          <p class="text-white/70 my-6">
             Projektuję, wdrażam, utrzymuję i rozwijam rozwiązania internetowe.
             Wykorzystuję wiedzę z zakresu programowania, technology webowych,
             projektowania UI/UX, by tworzyć produkty zarówno funkcjonalne jak i
-            estetyczne.
-          </p>
-          <p class="text-white/70 mt-6">
-            Bezpieczeństwo, szybkość i przejrzystość to aspekty, które stawiam
-            na pierwszym miejscu.
+            estetyczne. Bezpieczeństwo, szybkość i przejrzystość to aspekty,
+            które stawiam na pierwszym miejscu.
           </p>
         </div>
-        <div class="flex-1"></div>
+        <div class="w-full text-right select-none">
+          <span
+            class="text-6xl xl:text-9xl lowercase tracking-wide text-neutral-100/5 mb-1"
+          >
+            Web
+          </span>
+          <span
+            class="text-6xl xl:text-9xl lowercase tracking-wide text-neutral-100/10 mb-1"
+          >
+            Design
+          </span>
+          <span
+            class="text-6xl xl:text-9xl lowercase tracking-wide text-neutral-100/20 mb-1"
+          >
+            Development
+          </span>
+        </div>
       </section>
       <div style="height: 100vh;"></div>
     </div>

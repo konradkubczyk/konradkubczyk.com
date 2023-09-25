@@ -7,7 +7,7 @@ const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="pl">
+<html lang="pl" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta
@@ -20,18 +20,18 @@ const { title } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
+
   <body class="bg-neutral-900">
-    <header class="sticky top-0 z-10 p-5 bg-gradient-to-b from-neutral-900 from-20% to-transparent">
+    <header
+      class="fixed w-full top-0 z-10 p-5 bg-gradient-to-b from-neutral-900 from-20% to-transparent"
+    >
       <nav
         id="sticky-nav"
-        class="container mx-auto bg-neutral-900/80 rounded-lg border border-zinc-700/50 p-5 flex justify-between items-center backdrop-blur transition"
+        class="container mx-auto py-5 px-0 rounded-lg border border-transparent flex justify-between items-center backdrop-blur-none bg-transparent transition-all"
       >
-        <a
-		href="/"
-		class="opacity-80 hover:opacity-100 transition"
-		>
-			<img src="/img/brand/logo.svg" alt="Logo" class="h-7 mx-1" />
-		</a>
+        <a href="/" class="opacity-80 hover:opacity-100 transition">
+          <img src="/img/brand/logo.svg" alt="Logo" class="h-7 mx-1" />
+        </a>
         <div>
           <menu class="flex gap-5">
             <a
@@ -56,9 +56,8 @@ const { title } = Astro.props;
         </div>
       </nav>
     </header>
-	<div class="px-5">
-		<slot />
-	</div>
+
+    <slot />
   </body>
 </html>
 
@@ -68,12 +67,34 @@ const { title } = Astro.props;
   function updateStickyNav() {
     if (stickyNav) {
       if (window.scrollY > 0) {
-		stickyNav.classList.add("bg-neutral-800/90");
+        stickyNav.classList.add("px-5");
+        stickyNav.classList.remove("px-0");
+        stickyNav.classList.add("border-zinc-700/50");
+        stickyNav.classList.remove("border-transparent");
+        stickyNav.classList.add("bg-neutral-900/80");
+        stickyNav.classList.remove("bg-transparent");
+        stickyNav.classList.add("backdrop-blur");
+        stickyNav.classList.remove("backdrop-blur-none");
       } else {
-        stickyNav.classList.remove("bg-neutral-800/90");
+        stickyNav.classList.add("px-0");
+        stickyNav.classList.remove("px-5");
+        stickyNav.classList.add("border-transparent");
+        stickyNav.classList.remove("border-zinc-700/50");
+        stickyNav.classList.add("bg-transparent");
+        stickyNav.classList.remove("bg-neutral-900/80");
+        stickyNav.classList.add("backdrop-blur-none");
+        stickyNav.classList.remove("backdrop-blur");
+
       }
     }
   }
 
-//   window.addEventListener("scroll", updateStickyNav);
+  window.addEventListener("scroll", updateStickyNav);
+  updateStickyNav();
 </script>
+
+<style is:global>
+  :root {
+    scroll-padding-top: 7.5rem;
+  }
+</style>

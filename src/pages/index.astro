@@ -4,41 +4,41 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout title="Konrad Kubczyk">
   <main>
-    <div class="container mx-auto flex flex-col gap-5">
-      <section>
-        <div
-          id="hero"
-          class="rounded-lg border border-zinc-600/50 p-5 flex flex-col gap-5"
-        >
+    <div class="flex flex-col gap-5">
+      <section id="hero" class="bg-gradient-to-t from-neutral-900 to-transparent to-20% flex flex-col h-100 justify-between">
+        <div class="container mx-auto grow flex items-center">
           <div
-            class="flex flex-col gap-5 py-10 w-3/5 text-center mx-auto my-20"
+            class="p-5 flex flex-col gap-5"
           >
-            <h1 class="text-6xl text-white">Konrad Kubczyk</h1>
-            <p class="text-white/70">
-              Jestem osobą kreatywną, otwartą na wyzwania i zmotywowaną do
-              rozwoju. Zdobyte przeze mnie doświadczenie w tworzeniu stron
-              internetowych i oprogramowania jest dopełniane przez umiejętności
-              artystyczne oraz innowacyjność w rozwiązywaniu problemów.
-            </p>
-            <div class="flex gap-5 mx-auto">
-              <a
-                href="#wiecej"
-                class="button bg-neutral-100/75 px-4 py-2 rounded border border-white/25 transition text-dark hover:bg-white/90"
-              >
-                Więcej
-              </a>
-              <a
-                href="/kontakt"
-                class="button bg-neutral-600/25 px-4 py-2 rounded border border-white/25 transition text-white hover:bg-neutral-600/50"
-              >
-                Kontakt
-              </a>
+            <div
+              class="flex flex-col gap-5 py-10 w-3/5 text-center mx-auto mt-40 mb-20"
+            >
+              <h1 class="text-6xl text-white">Konrad Kubczyk</h1>
+              <p class="text-white/70">
+                Jestem osobą kreatywną, otwartą na wyzwania i zmotywowaną do
+                rozwoju. Zdobyte przeze mnie doświadczenie w tworzeniu stron
+                internetowych i oprogramowania jest dopełniane przez
+                umiejętności artystyczne oraz innowacyjność w rozwiązywaniu
+                problemów.
+              </p>
+              <div class="flex gap-5 mx-auto">
+                <a
+                  href="#wiecej"
+                  class="button bg-neutral-100/75 px-4 py-2 rounded border border-white/25 transition text-dark hover:bg-white/90"
+                >
+                  Więcej
+                </a>
+                <a
+                  href="/kontakt"
+                  class="button bg-neutral-600/25 px-4 py-2 rounded border border-white/25 transition text-white hover:bg-neutral-600/50"
+                >
+                  Kontakt
+                </a>
+              </div>
             </div>
           </div>
         </div>
-      </section>
-      <section id="#wiecej">
-        <div class="flex gap-5">
+        <div id="wiecej" class="flex gap-5 container mx-auto">
           <a
             href="/portfolio#strony-internetowe"
             class="flex-1 rounded-lg border border-zinc-600/50 p-5 flex flex-col gap-3 cursor-pointer bg-neutral-800/25 transition hover:bg-neutral-700/25"
@@ -82,6 +82,7 @@ import Layout from "../layouts/Layout.astro";
 <style>
   #hero {
     position: relative;
+    min-height: 80vh;
   }
 
   #hero::before {

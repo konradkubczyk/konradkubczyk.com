@@ -99,10 +99,10 @@ import Layout from "../layouts/Layout.astro";
           >
             Moje kompetencje
           </h2>
-          <span class="text-4xl font-semibold text-neutral-100 t">
+          <span class="text-4xl font-semibold text-neutral-100">
             Tworzę strony i aplikacje internetowe
           </span>
-          <p class="text-white/70 my-6">
+          <p class="text-white/70 mt-5">
             Projektuję, wdrażam, utrzymuję i rozwijam rozwiązania internetowe.
             Wykorzystuję wiedzę z zakresu programowania, technology webowych,
             projektowania UI/UX, by tworzyć produkty zarówno funkcjonalne jak i
@@ -126,6 +126,104 @@ import Layout from "../layouts/Layout.astro";
           >
             Development
           </span>
+        </div>
+      </section>
+      <section class="container mx-auto">
+        <div
+          class="random-string bg-gradient-to-b from-neutral-100/20 to-neutral-900 to-90% bg-clip-text text-transparent select-none font-mono h-64"
+          style="overflow-wrap: anywhere;"
+          data-length="5000"
+          aria-hidden="true"
+        >
+        </div>
+        <script>
+          function generateRandomString(length) {
+            const characters =
+              "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+            let result = "";
+            for (let i = 0; i < length; i++) {
+              const randomIndex = Math.floor(Math.random() * characters.length);
+              const randomCharacter = characters.charAt(randomIndex);
+              result += characters.charAt(
+                Math.floor(Math.random() * characters.length)
+              );
+            }
+            return result;
+          }
+          function refreshRandomStrings() {
+            document.querySelectorAll(".random-string").forEach((element) => {
+              element.innerText = generateRandomString(
+                parseInt(element.dataset.length)
+              );
+            });
+          }
+          refreshRandomStrings();
+          document.addEventListener("scroll", refreshRandomStrings);
+        </script>
+        <div class="flex justify-between items-center">
+          <div>
+            <h2
+              class="text-sm uppercase font-semibold tracking-widest text-neutral-100/50 mb-1"
+            >
+              Repozytoria
+            </h2>
+            <span class="text-4xl font-semibold text-neutral-100">
+              Moje projekty
+            </span>
+          </div>
+          <div class="flex gap-2">
+            <input
+              id="project-filter-astro"
+              type="checkbox"
+              class="hidden peer/project-filter-astro"
+            />
+            <label
+              for="project-filter-astro"
+              tabindex="0"
+              class="project-filter uppercase font-semibold tracking-wide text-sm bg-neutral-800/25 px-3 py-2 rounded-full border border-zinc-600/50 transition text-neutral-100/75 hover:bg-neutral-700/25 peer-checked/project-filter-astro:bg-zinc-600/50 peer-checked/project-filter-astro:text-neutral-100 cursor-pointer select-none"
+            >
+              Astro
+            </label>
+            <input
+              id="project-filter-tailwindcss"
+              type="checkbox"
+              class="hidden peer/project-filter-tailwindcss"
+            />
+            <label
+              for="project-filter-tailwindcss"
+              tabindex="0"
+              class="project-filter uppercase font-semibold tracking-wide text-sm bg-neutral-800/25 px-3 py-2 rounded-full border border-zinc-600/50 transition text-neutral-100/75 hover:bg-neutral-700/25 peer-checked/project-filter-tailwindcss:bg-zinc-600/50 peer-checked/project-filter-tailwindcss:text-neutral-100 cursor-pointer select-none"
+            >
+              Tailwind CSS
+            </label>
+            <input
+              id="project-filter-express"
+              type="checkbox"
+              class="hidden peer/project-filter-express"
+            />
+            <label
+              for="project-filter-express"
+              tabindex="0"
+              class="project-filter uppercase font-semibold tracking-wide text-sm bg-neutral-800/25 px-3 py-2 rounded-full border border-zinc-600/50 transition text-neutral-100/75 hover:bg-neutral-700/25 peer-checked/project-filter-express:bg-zinc-600/50 peer-checked/project-filter-express:text-neutral-100 cursor-pointer select-none"
+            >
+              Express
+            </label>
+            <script>
+              const SPACEBAR_KEYCODE = 32;
+              function toggleFilter(event) {
+                if (event.keyCode !== SPACEBAR_KEYCODE) {
+                  return;
+                }
+                event.target.click();
+                event.preventDefault();
+              }
+              document
+                .querySelectorAll(".project-filter")
+                .forEach((element) => {
+                  element.addEventListener("keydown", toggleFilter);
+                });
+            </script>
+          </div>
         </div>
       </section>
       <div style="height: 100vh;"></div>

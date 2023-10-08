@@ -23,38 +23,40 @@ const { title } = Astro.props;
 
   <body class="bg-neutral-900">
     <header
-      class="fixed w-full top-0 z-10 px-5 sm:px-0 py-5 bg-gradient-to-b from-neutral-900 from-20% to-transparent select-none"
+      class="fixed flex justify-center w-full top-0 z-10 sm:px-0 py-5 bg-gradient-to-b from-neutral-900 from-20% to-transparent select-none"
     >
-      <nav
-        id="sticky-nav"
-        class="container mx-auto py-5 px-0 rounded-lg border border-transparent flex justify-between items-center backdrop-blur-none bg-transparent shadow-none transition-all"
-      >
-        <a href="/#" class="opacity-80 hover:opacity-100 transition">
-          <img src="/img/brand/favicon.svg" alt="Logo" class="h-7 mx-1" />
-        </a>
-        <div>
-          <menu class="flex gap-5">
-            <a
-              href="/#"
-              class="flex items-center text-sm rounded px-3 py-2 uppercase hover:text-white hover:bg-neutral-600/50 hover:active:scale-95 transition text-white bg-neutral-600/25"
-            >
-              Strona główna
-            </a>
-            <a
-              href="/portfolio"
-              class="flex items-center text-sm rounded px-3 py-2 uppercase hover:text-white hover:bg-neutral-600/50 hover:active:scale-95 transition text-white/75"
-            >
-              Portfolio
-            </a>
-            <a
-              href="/kontakt"
-              class="flex items-center text-sm rounded px-3 py-2 uppercase hover:text-white hover:bg-neutral-600/50 hover:active:scale-95 transition text-white/75"
-            >
-              Kontakt
-            </a>
-          </menu>
-        </div>
-      </nav>
+      <div class="container">
+        <nav
+          id="sticky-nav"
+          class="mx-5 py-5 px-0 rounded-lg border border-transparent flex justify-between items-center backdrop-blur-none bg-transparent shadow-none transition-all"
+        >
+          <a href="/#" class="opacity-80 hover:opacity-100 transition">
+            <img src="/img/brand/favicon.svg" alt="Logo" class="h-7 mx-1" />
+          </a>
+          <div>
+            <menu class="flex gap-5">
+              <a
+                href="/#"
+                class="flex items-center text-sm rounded px-3 py-2 uppercase hover:text-white hover:bg-neutral-600/50 hover:active:scale-95 transition text-white bg-neutral-600/25"
+              >
+                Strona główna
+              </a>
+              <a
+                href="/portfolio"
+                class="flex items-center text-sm rounded px-3 py-2 uppercase hover:text-white hover:bg-neutral-600/50 hover:active:scale-95 transition text-white/75"
+              >
+                Portfolio
+              </a>
+              <a
+                href="/kontakt"
+                class="flex items-center text-sm rounded px-3 py-2 uppercase hover:text-white hover:bg-neutral-600/50 hover:active:scale-95 transition text-white/75"
+              >
+                Kontakt
+              </a>
+            </menu>
+          </div>
+        </nav>
+      </div>
     </header>
 
     <slot />

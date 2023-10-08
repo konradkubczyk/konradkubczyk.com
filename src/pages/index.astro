@@ -4,7 +4,7 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout title="Konrad Kubczyk">
   <main>
-    <div class="flex flex-col gap-32">
+    <div class="flex flex-col gap-20 sm:gap-36">
       <div
         id="hero"
         style="background-image: url('/img/backgrounds/resource-database-JGtQ3VJWoEU-unsplash.jpg'); background-size: cover;"
@@ -97,10 +97,10 @@ import Layout from "../layouts/Layout.astro";
           <h2
             class="text-sm uppercase font-semibold tracking-widest text-neutral-100/50 mb-1"
           >
-            Moje kompetencje
+            Moja aktywność
           </h2>
           <span class="text-4xl font-semibold text-neutral-100">
-            Tworzę strony i aplikacje internetowe
+            Tworzę strony internetowe i aplikacje
           </span>
           <p class="text-white/70 mt-5">
             Projektuję, wdrażam, utrzymuję i rozwijam rozwiązania internetowe.
@@ -112,25 +112,143 @@ import Layout from "../layouts/Layout.astro";
         </div>
         <div class="w-full text-right select-none">
           <span
-            class="text-6xl xl:text-9xl lowercase tracking-wide text-neutral-100/5 mb-1"
+            class="text-6xl xl:text-9xl lowercase tracking-wide text-neutral-100/10 mb-1"
           >
             Web
           </span>
           <span
-            class="text-6xl xl:text-9xl lowercase tracking-wide text-neutral-100/10 mb-1"
+            class="text-6xl xl:text-9xl lowercase tracking-wide text-neutral-100/20 mb-1"
           >
             Design
           </span>
           <span
-            class="text-6xl xl:text-9xl lowercase tracking-wide text-neutral-100/20 mb-1"
+            class="text-6xl xl:text-9xl lowercase tracking-wide text-neutral-100/30 mb-1"
           >
             Development
           </span>
         </div>
       </section>
-      <section class="container mx-auto">
+      <section class="container mx-auto sm:p-0 p-5">
+        <div class="flex flex-col xl:flex-row gap-5">
+          <div
+            class="bg-neutral-800/50 border border-zinc-600/50 rounded-md p-5 xl:w-1/3"
+          >
+            <h2
+              class="text-sm uppercase font-semibold tracking-widest text-neutral-100/50 mb-1"
+            >
+              Moje kompetencje
+            </h2>
+            <span class="text-4xl font-semibold text-neutral-100">
+              Umiejętności
+            </span>
+            <p class="text-white/70 mt-5">
+              Znam popularne języki programowania oraz szeroko wykorzystywane
+              oprogramowanie. Szybko się uczę i chętnie poznaję nowe rozwiązania
+              usprawniające pracę, a także poszerzające możliwości.
+            </p>
+          </div>
+          <div class="flex gap-5 flex-wrap sm:px-0 justify-between">
+            <div
+              class="flex flex-1 grow basis-64 xl:basis-80 flex-col gap-5 p-5 border border-zinc-600/50 rounded-md"
+            >
+              <h2
+                class="text-2xl font-semibold text-neutral-100 sm:whitespace-nowrap"
+              >
+                Technologie internetowe
+              </h2>
+              <div class="flex gap-10">
+                <ul class="list-inside list-disc text-white/70">
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>Node.js</li>
+                  <li>Express</li>
+                  <li>WordPress</li>
+                </ul>
+                <ul class="list-inside list-disc text-white/70">
+                  <li>Bootstrap</li>
+                  <li>Tailwind CSS</li>
+                  <li>Svelte</li>
+                  <li>Astro</li>
+                </ul>
+              </div>
+            </div>
+            <div
+              class="flex flex-1 grow basis-64 xl:basis-80 flex-col gap-5 p-5 border border-zinc-600/50 rounded-md"
+            >
+              <h2
+                class="text-2xl font-semibold text-neutral-100 sm:whitespace-nowrap"
+              >
+                Języki programowania
+              </h2>
+              <div class="flex gap-10">
+                <ul class="list-inside list-disc text-white/70">
+                  <li>JavaScript</li>
+                  <li>TypeScript</li>
+                  <li>Python</li>
+                  <li>Java</li>
+                </ul>
+              </div>
+            </div>
+            <div
+              class="flex flex-1 grow basis-64 xl:basis-80 flex-col gap-5 p-5 border border-zinc-600/50 rounded-md"
+            >
+              <h2
+                class="text-2xl font-semibold text-neutral-100 sm:whitespace-nowrap"
+              >
+                Języki obce
+              </h2>
+              <div class="flex gap-10">
+                <ul class="list-inside list-disc text-white/70">
+                  <li>Język angielski (C1)</li>
+                  <li>Język francuski (A1)</li>
+                </ul>
+              </div>
+            </div>
+            <div
+              class="flex flex-1 grow basis-64 xl:basis-80 flex-col gap-5 p-5 border border-zinc-600/50 rounded-md"
+            >
+              <h2
+                class="text-2xl font-semibold text-neutral-100 sm:whitespace-nowrap"
+              >
+                Oprogramowanie i narzędzia
+              </h2>
+              <div class="flex gap-10">
+                <ul class="list-inside list-disc text-white/70">
+                  <li>Visual Studio Code</li>
+                  <li>System kontroli wersji Git</li>
+                  <li>Microsoft Office</li>
+                  <li>LibreOffice</li>
+                </ul>
+                <ul class="list-inside list-disc text-white/70">
+                  <li>Docker</li>
+                  <li>Systemy Linux</li>
+                  <li>Penpot</li>
+                </ul>
+              </div>
+            </div>
+            <div
+              class="flex flex-1 grow basis-64 xl:basis-80 flex-col gap-5 p-5 border border-zinc-600/50 rounded-md"
+            >
+              <h2
+                class="text-2xl font-semibold text-neutral-100 sm:whitespace-nowrap"
+              >
+                Bazy danych
+              </h2>
+              <div class="flex gap-10">
+                <ul class="list-inside list-disc text-white/70">
+                  <li>Język SQL</li>
+                  <li>Microsoft SQL Server</li>
+                  <li>MySQL</li>
+                  <li>MongoDB</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="container mx-auto px-5 sm:px-0">
         <div
-          class="random-string bg-gradient-to-b from-neutral-100/20 to-neutral-900 to-90% bg-clip-text text-transparent select-none font-mono h-64"
+          class="random-string bg-gradient-to-b from-neutral-100/25 to-neutral-900 to-90% bg-clip-text text-transparent select-none font-mono h-64"
           style="overflow-wrap: anywhere;"
           data-length="5000"
           aria-hidden="true"
@@ -165,10 +283,10 @@ import Layout from "../layouts/Layout.astro";
             <h2
               class="text-sm uppercase font-semibold tracking-widest text-neutral-100/50 mb-1"
             >
-              Repozytoria
+              Moje portfolio
             </h2>
             <span class="text-4xl font-semibold text-neutral-100">
-              Moje projekty
+              Wybrane projekty
             </span>
           </div>
           <div class="flex gap-2">
@@ -180,7 +298,7 @@ import Layout from "../layouts/Layout.astro";
             <label
               for="project-filter-astro"
               tabindex="0"
-              class="project-filter uppercase font-semibold tracking-wide text-sm bg-neutral-800/25 px-3 py-2 rounded-full border border-zinc-600/50 transition text-neutral-100/75 hover:bg-neutral-700/25 peer-checked/project-filter-astro:bg-zinc-600/50 peer-checked/project-filter-astro:text-neutral-100 cursor-pointer select-none"
+              class="project-filter flex items-center text-center uppercase font-semibold tracking-wide text-sm bg-neutral-800/25 px-3 py-2 rounded-full border border-zinc-600/50 transition text-neutral-100/75 hover:bg-neutral-700/25 peer-checked/project-filter-astro:bg-zinc-100 peer-checked/project-filter-astro:border-zinc-100 peer-checked/project-filter-astro:text-neutral-900 cursor-pointer select-none"
             >
               Astro
             </label>
@@ -192,7 +310,7 @@ import Layout from "../layouts/Layout.astro";
             <label
               for="project-filter-tailwindcss"
               tabindex="0"
-              class="project-filter uppercase font-semibold tracking-wide text-sm bg-neutral-800/25 px-3 py-2 rounded-full border border-zinc-600/50 transition text-neutral-100/75 hover:bg-neutral-700/25 peer-checked/project-filter-tailwindcss:bg-zinc-600/50 peer-checked/project-filter-tailwindcss:text-neutral-100 cursor-pointer select-none"
+              class="project-filter flex items-center text-center uppercase font-semibold tracking-wide text-sm bg-neutral-800/25 px-3 py-2 rounded-full border border-zinc-600/50 transition text-neutral-100/75 hover:bg-neutral-700/25 peer-checked/project-filter-tailwindcss:bg-zinc-100 peer-checked/project-filter-tailwindcss:border-zinc-100 peer-checked/project-filter-tailwindcss:text-neutral-900 cursor-pointer select-none"
             >
               Tailwind CSS
             </label>
@@ -204,7 +322,7 @@ import Layout from "../layouts/Layout.astro";
             <label
               for="project-filter-express"
               tabindex="0"
-              class="project-filter uppercase font-semibold tracking-wide text-sm bg-neutral-800/25 px-3 py-2 rounded-full border border-zinc-600/50 transition text-neutral-100/75 hover:bg-neutral-700/25 peer-checked/project-filter-express:bg-zinc-600/50 peer-checked/project-filter-express:text-neutral-100 cursor-pointer select-none"
+              class="project-filter flex items-center text-center uppercase font-semibold tracking-wide text-sm bg-neutral-800/25 px-3 py-2 rounded-full border border-zinc-600/50 transition text-neutral-100/75 hover:bg-neutral-700/25 peer-checked/project-filter-express:bg-zinc-100 peer-checked/project-filter-express:border-zinc-100 peer-checked/project-filter-express:text-neutral-900 cursor-pointer select-none"
             >
               Express
             </label>

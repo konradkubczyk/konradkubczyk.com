@@ -16,7 +16,7 @@ import Layout from "../layouts/Layout.astro";
           <section class="container mx-auto grow flex items-center">
             <div class="px-5 flex flex-col gap-5">
               <div
-                class="flex flex-col gap-5 py-10 sm:w-1/2 text-center mx-auto mt-40 mb-20"
+                class="flex flex-col gap-5 py-10 sm:w-5/6 lg:w-1/2 text-center mx-auto mt-40 mb-20"
               >
                 <h1 class="text-6xl text-white">Konrad Kubczyk</h1>
                 <p class="text-white/70">
@@ -315,71 +315,309 @@ import Layout from "../layouts/Layout.astro";
           refreshRandomStrings();
           document.addEventListener("scroll", refreshRandomStrings);
         </script>
-        <div class="flex justify-between items-center">
-          <div>
+        <div class="flex gap-5 flex-col xl:flex-row justify-between">
+          <div class="flex flex-col justify-end">
             <h2
               class="text-sm uppercase font-semibold tracking-widest text-neutral-100/50 mb-1"
             >
               Moje portfolio
             </h2>
             <span class="text-4xl font-semibold text-neutral-100">
-              Wybrane projekty
+              Wybrane&nbsp;projekty
             </span>
           </div>
-          <div class="flex gap-2">
-            <input
-              id="project-filter-astro"
-              type="checkbox"
-              class="hidden peer/project-filter-astro"
-            />
-            <label
-              for="project-filter-astro"
-              tabindex="0"
-              class="project-filter flex items-center text-center uppercase font-semibold tracking-wide text-sm bg-neutral-800/25 px-3 py-2 rounded-full border border-zinc-600/50 transition text-neutral-100/75 hover:bg-neutral-700/25 peer-checked/project-filter-astro:bg-zinc-100 peer-checked/project-filter-astro:border-zinc-100 peer-checked/project-filter-astro:text-neutral-900 cursor-pointer select-none"
-            >
-              Astro
-            </label>
-            <input
-              id="project-filter-tailwindcss"
-              type="checkbox"
-              class="hidden peer/project-filter-tailwindcss"
-            />
-            <label
-              for="project-filter-tailwindcss"
-              tabindex="0"
-              class="project-filter flex items-center text-center uppercase font-semibold tracking-wide text-sm bg-neutral-800/25 px-3 py-2 rounded-full border border-zinc-600/50 transition text-neutral-100/75 hover:bg-neutral-700/25 peer-checked/project-filter-tailwindcss:bg-zinc-100 peer-checked/project-filter-tailwindcss:border-zinc-100 peer-checked/project-filter-tailwindcss:text-neutral-900 cursor-pointer select-none"
-            >
-              Tailwind CSS
-            </label>
-            <input
-              id="project-filter-express"
-              type="checkbox"
-              class="hidden peer/project-filter-express"
-            />
-            <label
-              for="project-filter-express"
-              tabindex="0"
-              class="project-filter flex items-center text-center uppercase font-semibold tracking-wide text-sm bg-neutral-800/25 px-3 py-2 rounded-full border border-zinc-600/50 transition text-neutral-100/75 hover:bg-neutral-700/25 peer-checked/project-filter-express:bg-zinc-100 peer-checked/project-filter-express:border-zinc-100 peer-checked/project-filter-express:text-neutral-900 cursor-pointer select-none"
-            >
-              Express
-            </label>
-            <script>
-              const SPACEBAR_KEYCODE = 32;
-              function toggleFilter(event) {
-                if (event.keyCode !== SPACEBAR_KEYCODE) {
-                  return;
-                }
-                event.target.click();
-                event.preventDefault();
-              }
-              document
-                .querySelectorAll(".project-filter")
-                .forEach((element) => {
-                  element.addEventListener("keydown", toggleFilter);
-                });
-            </script>
+          <div
+            id="filters"
+            class="flex gap-2 flex-wrap xl:flex-wrap-reverse xl:justify-end xl:items-start"
+          >
           </div>
         </div>
+        <div id="projects" class="mt-5 flex gap-5 flex-wrap">
+          <a
+            class="project flex-1 flex rounded-lg border border-zinc-600/50 p-5 flex-col gap-3 cursor-pointer bg-neutral-800/25 transition hover:bg-neutral-700/25 justify-between"
+            href="https://gitlab.com/konradkubczyk/kiwi"
+            target="_blank"
+          >
+            <div>
+              <h3 class="text-2xl font-semibold text-neutral-100">Kiwi</h3>
+              <p class="text-white/70 mt-3">
+                Aplikacja internetowa pozwalająca na łatwe zasubskrybowanie
+                planu zajęć w preferowanym kalendarzu.
+              </p>
+            </div>
+            <div
+              class="tags flex text-xs text-neutral-100 uppercase gap-2 tracking-wider border-t border-zinc-600/50 pt-5 mt-1"
+            >
+              <span class="border border-white/10 px-2 py-1 rounded"
+                >JavaScript</span
+              >
+              <span class="border border-white/10 px-2 py-1 rounded"
+                >Node.js</span
+              >
+              <span class="border border-white/10 px-2 py-1 rounded"
+                >Express</span
+              >
+              <span class="border border-white/10 px-2 py-1 rounded"
+                >Bootstrap</span
+              >
+              <span class="border border-white/10 px-2 py-1 rounded"
+                >Docker</span
+              >
+            </div>
+          </a>
+          <a
+            class="project flex-1 flex rounded-lg border border-zinc-600/50 p-5 flex-col gap-3 cursor-pointer bg-neutral-800/25 transition hover:bg-neutral-700/25 justify-between"
+            href="https://gitlab.com/konradkubczyk/netlico"
+            target="_blank"
+          >
+            <div>
+              <h3 class="text-2xl font-semibold text-neutral-100">Netlico</h3>
+              <p class="text-white/70 mt-3">
+                Kreator mikrostron internetowych.
+              </p>
+            </div>
+            <div
+              class="tags flex text-xs text-neutral-100 uppercase gap-2 tracking-wider border-t border-zinc-600/50 pt-5 mt-1"
+            >
+              <span class="border border-white/10 px-2 py-1 rounded"
+                >JavaScript</span
+              >
+              <span class="border border-white/10 px-2 py-1 rounded"
+                >Node.js</span
+              >
+              <span class="border border-white/10 px-2 py-1 rounded"
+                >Express</span
+              >
+              <span class="border border-white/10 px-2 py-1 rounded"
+                >Bootstrap</span
+              >
+              <span class="border border-white/10 px-2 py-1 rounded"
+                >MongoDB</span
+              >
+              <span class="border border-white/10 px-2 py-1 rounded"
+                >Docker</span
+              >
+            </div>
+          </a>
+          <a
+            class="project flex-1 flex rounded-lg border border-zinc-600/50 p-5 flex-col gap-3 cursor-pointer bg-neutral-800/25 transition hover:bg-neutral-700/25 justify-between"
+            href="https://gitlab.com/konradkubczyk/CeneoWebScraper"
+            target="_blank"
+          >
+            <div>
+              <h3 class="text-2xl font-semibold text-neutral-100">
+                CeneoWebScraper
+              </h3>
+              <p class="text-white/70 mt-3">
+                Program umożliwiający zapisywanie i podstawową analizę opinii o
+                produktach.
+              </p>
+            </div>
+            <div
+              class="tags flex text-xs text-neutral-100 uppercase gap-2 tracking-wider border-t border-zinc-600/50 pt-5 mt-1"
+            >
+              <span class="border border-white/10 px-2 py-1 rounded"
+                >Python</span
+              >
+              <span class="border border-white/10 px-2 py-1 rounded">Flask</span
+              >
+              <span class="border border-white/10 px-2 py-1 rounded"
+                >Bootstrap</span
+              >
+              <span class="border border-white/10 px-2 py-1 rounded">MySQL</span
+              >
+              <span class="border border-white/10 px-2 py-1 rounded"
+                >Docker</span
+              >
+            </div>
+          </a>
+          <a
+            class="project flex-1 flex rounded-lg border border-zinc-600/50 p-5 flex-col gap-3 cursor-pointer bg-neutral-800/25 transition hover:bg-neutral-700/25 justify-between"
+            href="https://gitlab.com/konradkubczyk/com-konradkubczyk"
+            target="_blank"
+          >
+            <div>
+              <h3 class="text-2xl font-semibold text-neutral-100">
+                konradkubczyk.com
+              </h3>
+              <p class="text-white/70 mt-3">
+                Abecnie wyświetlana strona internetowa.
+              </p>
+            </div>
+            <div
+              class="tags flex text-xs text-neutral-100 uppercase gap-2 tracking-wider border-t border-zinc-600/50 pt-5 mt-1"
+            >
+              <span class="border border-white/10 px-2 py-1 rounded">Astro</span
+              >
+              <span class="border border-white/10 px-2 py-1 rounded"
+                >Tailwind CSS</span
+              >
+            </div>
+          </a>
+          <p
+            id="no-projects-for-criteria-alert"
+            class="hidden text-white/70 mt-5"
+          >
+            Brak projektów spełniających wszystkie wybrane kryteria. Można
+            zresetować filtry, <button class="reset-filters underline"
+              >klikając tutaj</button
+            >.
+          </p>
+        </div>
+        <script>
+          const projects = document.querySelectorAll("#projects > .project");
+          projects.forEach((project) => {
+            project.tags = project.querySelector(".tags").innerText.split("\n");
+          });
+
+          let availableFilters = [];
+
+          projects.forEach((project) => {
+            const projectTags = project
+              .querySelector(".tags")
+              .innerText.split("\n");
+            projectTags.forEach((tag) => {
+              if (!availableFilters.includes(tag)) {
+                availableFilters.push(tag);
+              }
+            });
+          });
+
+          const filtersElement = document.querySelector("#filters");
+
+          availableFilters.forEach((filter) => {
+            const filterNameSimplified = filter
+              .replace(" ", "")
+              .replace(".", "")
+              .toLowerCase();
+
+            const filterInputElement = document.createElement("input");
+            filterInputElement.type = "checkbox";
+            filterInputElement.id = `project-filter-input-${filterNameSimplified}`;
+            filterInputElement.classList.add("hidden");
+            filtersElement.appendChild(filterInputElement);
+
+            const filterLabelElement = document.createElement("label");
+
+            filterLabelElement.htmlFor = `project-filter-${filterNameSimplified}`;
+            filterLabelElement.id = `project-filter-label-${filterNameSimplified}`;
+            filterLabelElement.tabIndex = 0;
+            filterLabelElement.classList.add(
+              "project-filter",
+              "flex",
+              "items-center",
+              "text-center",
+              "uppercase",
+              "font-semibold",
+              "tracking-wide",
+              "text-sm",
+              "bg-neutral-800/25",
+              "px-3",
+              "py-2",
+              "rounded-full",
+              "border",
+              "border-zinc-600/50",
+              "transition",
+              "text-neutral-100/75",
+              "hover:bg-neutral-700/25",
+              "cursor-pointer",
+              "select-none",
+              "whitespace-nowrap"
+            );
+            filterLabelElement.innerText = filter;
+            filtersElement.appendChild(filterLabelElement);
+          });
+
+          let activeFilters = [];
+
+          function filterProjects() {
+            if (activeFilters.length === 0) {
+              projects.forEach((project) => {
+                project.classList.remove("hidden");
+              });
+              document
+                .querySelector("#no-projects-for-criteria-alert")
+                .classList.add("hidden");
+              return;
+            }
+
+            let hiddenProjectsCount = 0;
+
+            projects.forEach((project) => {
+              if (
+                activeFilters.every((filter) => project.tags.includes(filter))
+              ) {
+                project.classList.remove("hidden");
+              } else {
+                project.classList.add("hidden");
+                hiddenProjectsCount++;
+              }
+            });
+
+            console.log(hiddenProjectsCount, projects.length);
+
+            if (hiddenProjectsCount === projects.length) {
+              document
+                .querySelector("#no-projects-for-criteria-alert")
+                .classList.remove("hidden");
+            } else {
+              document
+                .querySelector("#no-projects-for-criteria-alert")
+                .classList.add("hidden");
+            }
+          }
+
+          function processFiltersChange(event) {
+            let currentFilter = event.target.innerText;
+            if (activeFilters.includes(currentFilter)) {
+              activeFilters = activeFilters.filter(
+                (filter) => filter !== currentFilter
+              );
+              event.target.style.background = "";
+              event.target.style.borderColor = "";
+              event.target.style.color = "";
+            } else {
+              activeFilters.push(currentFilter);
+              event.target.style.background = "white";
+              event.target.style.borderColor = "white";
+              event.target.style.color = "black";
+            }
+
+            filterProjects();
+          }
+
+          document.querySelectorAll(".project-filter").forEach((element) => {
+            element.addEventListener("click", processFiltersChange);
+          });
+
+          const SPACEBAR_KEYCODE = 32;
+
+          function toggleFilter(event) {
+            if (event.keyCode !== SPACEBAR_KEYCODE) {
+              return;
+            }
+            event.target.click();
+            event.preventDefault();
+          }
+
+          document.querySelectorAll(".project-filter").forEach((element) => {
+            element.addEventListener("keydown", toggleFilter);
+          });
+
+          function resetFilters() {
+            document.querySelectorAll(".project-filter").forEach((element) => {
+              element.style.background = "";
+              element.style.borderColor = "";
+              element.style.color = "";
+            });
+            activeFilters = [];
+            filterProjects();
+          }
+
+          document.querySelectorAll(".reset-filters").forEach((element) => {
+            element.addEventListener("click", resetFilters);
+          });
+        </script>
       </section>
       <div style="height: 100vh;"></div>
     </div>

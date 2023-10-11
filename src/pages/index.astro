@@ -40,7 +40,10 @@ import Layout from "../layouts/Layout.astro";
             </div>
           </div>
         </section>
-        <section id="more" class="flex gap-5 container mx-auto flex-wrap px-5">
+        <section
+          id="more"
+          class="flex gap-5 container mx-auto flex-col sm:flex-row flex-wrap px-5"
+        >
           <div
             class="flex-1 rounded-lg border border-zinc-600/50 p-5 flex flex-col gap-3 bg-neutral-800/10"
           >
@@ -48,10 +51,9 @@ import Layout from "../layouts/Layout.astro";
               Web development
             </h2>
             <p class="text-white/70">
-              Websites and web apps are my main area of expertise. During the
-              last few years I have been working on various commercial projects,
-              most of them built with WordPress. I am also familiar with other
-              technologies and frameworks, such as Express or Astro.
+              This is my main area of expertise. During the last few years I
+              have been working on various projects built with WordPress. I am
+              also familiar with other technologies and frameworks.
             </p>
           </div>
           <div
@@ -100,17 +102,17 @@ import Layout from "../layouts/Layout.astro";
       </div>
       <div class="w-full text-right select-none">
         <span
-          class="text-6xl xl:text-9xl lowercase tracking-wide text-neutral-100/10 mb-1"
+          class="text-5xl sm:text-6xl xl:text-9xl lowercase tracking-wide text-neutral-100/10 mb-1"
         >
           Web
         </span>
         <span
-          class="text-6xl xl:text-9xl lowercase tracking-wide text-neutral-100/20 mb-1"
+          class="text-5xl sm:text-6xl xl:text-9xl lowercase tracking-wide text-neutral-100/20 mb-1"
         >
           Design
         </span>
         <span
-          class="text-6xl xl:text-9xl lowercase tracking-wide text-neutral-100/30 mb-1"
+          class="text-5xl sm:text-6xl xl:text-9xl lowercase tracking-wide text-neutral-100/30 mb-1"
         >
           Development
         </span>
@@ -435,7 +437,9 @@ import Layout from "../layouts/Layout.astro";
           class="hidden text-white/70 mt-5"
         >
           No projects match the selected criteria. You can reset the filters by
-          <button class="reset-filters underline">clicking here</button>.
+          <button class="reset-filters underline hover:text-white transition"
+            >clicking here</button
+          >.
         </p>
       </div>
       <script>
@@ -598,7 +602,9 @@ import Layout from "../layouts/Layout.astro";
         class="rounded-lg"
         style="background-image: url('/img/backgrounds/resource-database-JGtQ3VJWoEU-unsplash.jpg'); background-size: cover;"
       >
-        <div class="bg-neutral-900/50 text-center p-10 xl:p-20">
+        <div
+          class="bg-neutral-900/50 text-center p-5 sm:p-10 xl:p-20 sm:text-2xl"
+        >
           <h2
             class="text-sm uppercase font-semibold tracking-widest text-neutral-100/50 mb-1"
           >
@@ -607,10 +613,13 @@ import Layout from "../layouts/Layout.astro";
           <span class="text-4xl font-semibold text-neutral-100">
             Contact me
           </span>
-          <div class="my-6 h-px bg-gradient-to-r from-transparent via-zinc-600 to-transparent"></div>
+          <div
+            class="my-6 h-px bg-gradient-to-r from-transparent via-zinc-600 to-transparent"
+          >
+          </div>
           <div class="flex gap-5 lg:gap-7 justify-center flex-wrap">
             <a
-              class="scrambled-email-link text-white/70 text-2xl font-bold flex gap-3 items-center bg-neutral-400/10 px-5 py-2 rounded-md hover:text-white hover:bg-neutral-400/20 hover:active:scale-95 transition"
+              class="scrambled-email-link text-white/70 font-bold flex gap-3 items-center bg-neutral-400/10 px-5 py-2 rounded-md hover:text-white hover:bg-neutral-400/20 hover:active:scale-95 transition select-none"
               href="#"
               target="_blank"
             >
@@ -638,7 +647,7 @@ import Layout from "../layouts/Layout.astro";
               </div>
             </a>
             <a
-              class="text-white/70 text-2xl font-bold flex gap-3 items-center bg-neutral-400/10 px-5 py-2 rounded-md hover:text-white hover:bg-neutral-400/20 hover:active:scale-95 transition"
+              class="text-white/70 font-bold flex gap-3 items-center bg-neutral-400/10 px-5 py-2 rounded-md hover:text-white hover:bg-neutral-400/20 hover:active:scale-95 transition select-none"
               href="https://gitlab.com/konradkubczyk"
               target="_blank"
             >
@@ -655,7 +664,7 @@ import Layout from "../layouts/Layout.astro";
                GitLab
             </a>
             <a
-              class="text-white/70 text-2xl font-bold flex gap-3 items-center bg-neutral-400/10 px-5 py-2 rounded-md hover:text-white hover:bg-neutral-400/20 hover:active:scale-95 transition"
+              class="text-white/70 font-bold flex gap-3 items-center bg-neutral-400/10 px-5 py-2 rounded-md hover:text-white hover:bg-neutral-400/20 hover:active:scale-95 transition select-none"
               href="https://mastodon.social/@konradkubczyk"
               rel="me"
               target="_blank"
@@ -673,7 +682,7 @@ import Layout from "../layouts/Layout.astro";
                Mastodon
             </a>
             <a
-              class="text-white/70 text-2xl font-bold flex gap-3 items-center bg-neutral-400/10 px-5 py-2 rounded-md hover:text-white hover:bg-neutral-400/20 hover:active:scale-95 transition"
+              class="text-white/70 font-bold flex gap-3 items-center bg-neutral-400/10 px-5 py-2 rounded-md hover:text-white hover:bg-neutral-400/20 hover:active:scale-95 transition select-none"
               href="https://www.linkedin.com/in/konradkubczyk/"
               target="_blank"
             >

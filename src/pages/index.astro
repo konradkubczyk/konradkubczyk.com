@@ -323,7 +323,7 @@ import Layout from "../layouts/Layout.astro";
         >
         </div>
       </div>
-      <div id="projects" class="mt-5 flex gap-5 flex-wrap">
+      <div id="projects" class="mt-5 flex gap-5 flex-col sm:flex-row flex-wrap">
         <a
           class="project flex-1 flex rounded-lg border border-zinc-600/50 p-5 flex-col gap-3 cursor-pointer bg-neutral-800/25 transition hover:bg-neutral-700/25 justify-between"
           href="https://gitlab.com/konradkubczyk/kiwi"
@@ -338,7 +338,7 @@ import Layout from "../layouts/Layout.astro";
             </p>
           </div>
           <div
-            class="tags flex text-xs text-neutral-100 uppercase gap-2 tracking-wider border-t border-zinc-600/50 pt-5 mt-1"
+            class="tags flex text-xs text-neutral-100 uppercase gap-2 tracking-wider border-t border-zinc-600/50 pt-5 mt-1 flex-wrap sm:flex-nowrap"
           >
             <span class="border border-white/10 px-2 py-1 rounded"
               >JavaScript</span
@@ -367,7 +367,7 @@ import Layout from "../layouts/Layout.astro";
             </p>
           </div>
           <div
-            class="tags flex text-xs text-neutral-100 uppercase gap-2 tracking-wider border-t border-zinc-600/50 pt-5 mt-1"
+            class="tags flex text-xs text-neutral-100 uppercase gap-2 tracking-wider border-t border-zinc-600/50 pt-5 mt-1 flex-wrap sm:flex-nowrap"
           >
             <span class="border border-white/10 px-2 py-1 rounded"
               >JavaScript</span
@@ -399,7 +399,7 @@ import Layout from "../layouts/Layout.astro";
             </p>
           </div>
           <div
-            class="tags flex text-xs text-neutral-100 uppercase gap-2 tracking-wider border-t border-zinc-600/50 pt-5 mt-1"
+            class="tags flex text-xs text-neutral-100 uppercase gap-2 tracking-wider border-t border-zinc-600/50 pt-5 mt-1 flex-wrap sm:flex-nowrap"
           >
             <span class="border border-white/10 px-2 py-1 rounded">Python</span>
             <span class="border border-white/10 px-2 py-1 rounded">Flask</span>
@@ -422,7 +422,7 @@ import Layout from "../layouts/Layout.astro";
             <p class="text-white/70 mt-3">The currently viewed website.</p>
           </div>
           <div
-            class="tags flex text-xs text-neutral-100 uppercase gap-2 tracking-wider border-t border-zinc-600/50 pt-5 mt-1"
+            class="tags flex text-xs text-neutral-100 uppercase gap-2 tracking-wider border-t border-zinc-600/50 pt-5 mt-1 flex-wrap sm:flex-nowrap"
           >
             <span class="border border-white/10 px-2 py-1 rounded">Astro</span>
             <span class="border border-white/10 px-2 py-1 rounded"
@@ -598,7 +598,7 @@ import Layout from "../layouts/Layout.astro";
         class="rounded-lg"
         style="background-image: url('/img/backgrounds/resource-database-JGtQ3VJWoEU-unsplash.jpg'); background-size: cover;"
       >
-        <div class="bg-neutral-900/50 text-center p-20">
+        <div class="bg-neutral-900/50 text-center p-10 xl:p-20">
           <h2
             class="text-sm uppercase font-semibold tracking-widest text-neutral-100/50 mb-1"
           >
@@ -607,8 +607,8 @@ import Layout from "../layouts/Layout.astro";
           <span class="text-4xl font-semibold text-neutral-100">
             Contact me
           </span>
-          <div class="my-8 h-px bg-gradient-to-r from-transparent via-zinc-600 to-transparent"></div>
-          <div class="flex gap-10 justify-center">
+          <div class="my-6 h-px bg-gradient-to-r from-transparent via-zinc-600 to-transparent"></div>
+          <div class="flex gap-5 lg:gap-7 justify-center flex-wrap">
             <a
               class="scrambled-email-link text-white/70 text-2xl font-bold flex gap-3 items-center bg-neutral-400/10 px-5 py-2 rounded-md hover:text-white hover:bg-neutral-400/20 hover:active:scale-95 transition"
               href="#"

@@ -4,7 +4,7 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout title="Konrad Kubczyk">
   <main>
-    <div class="flex flex-col gap-20 sm:gap-36">
+    <div class="flex flex-col gap-20 2xl:gap-36">
       <div
         id="hero"
         style="background-image: url('/img/backgrounds/resource-database-JGtQ3VJWoEU-unsplash.jpg'); background-size: cover;"
@@ -16,28 +16,27 @@ import Layout from "../layouts/Layout.astro";
           <section class="container mx-auto grow flex items-center">
             <div class="px-5 flex flex-col gap-5">
               <div
-                class="flex flex-col gap-5 py-10 sm:w-5/6 lg:w-1/2 text-center mx-auto mt-40 mb-20"
+                class="flex flex-col gap-5 py-10 sm:w-2/3 lg:w-5/6 xl:w-3/5 text-center mx-auto mt-40 mb-20"
               >
-                <h1 class="text-6xl text-white">Konrad Kubczyk</h1>
+                <h1 class="text-5xl md:text-6xl text-white">Konrad Kubczyk</h1>
                 <p class="text-white/70">
-                  Jestem osobą kreatywną, otwartą na wyzwania i zmotywowaną do
-                  rozwoju. Zdobyte przeze mnie doświadczenie w tworzeniu stron
-                  internetowych i oprogramowania jest dopełniane przez
-                  umiejętności artystyczne oraz innowacyjność w rozwiązywaniu
-                  problemów.
+                  I am a creative, open-minded and motivated person. My
+                  experience in web and software development is complemented by
+                  an eye for design and eagerness to innovate while solving
+                  problems.
                 </p>
                 <div class="flex gap-5 mx-auto">
                   <a
-                    href="#wiecej"
+                    href="#more"
                     class="button uppercase font-semibold tracking-wide text-sm bg-neutral-100/70 px-5 py-3 rounded border border-white/25 transition text-dark hover:bg-white/90"
                   >
-                    Więcej
+                    More
                   </a>
                   <a
-                    href="/kontakt"
+                    href="#contact"
                     class="button uppercase font-semibold tracking-wide text-sm bg-neutral-600/25 px-5 py-3 rounded border border-white/25 transition text-white hover:bg-neutral-600/50"
                   >
-                    Kontakt
+                    Contact
                   </a>
                 </div>
               </div>
@@ -47,46 +46,42 @@ import Layout from "../layouts/Layout.astro";
             id="wiecej"
             class="flex gap-5 container mx-auto flex-wrap px-5"
           >
-            <a
-              href="/portfolio#strony-internetowe"
-              class="flex-1 rounded-lg border border-zinc-600/50 p-5 flex flex-col gap-3 cursor-pointer bg-neutral-800/25 transition hover:bg-neutral-700/25"
+            <div
+              class="flex-1 rounded-lg border border-zinc-600/50 p-5 flex flex-col gap-3 bg-neutral-800/10"
             >
               <h2 class="text-2xl font-semibold text-neutral-100">
-                Strony internetowe
+                Web development
               </h2>
               <p class="text-white/70">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Eveniet autem, architecto corporis dignissimos officiis sunt
-                veritatis qui doloremque quas repudiandae aspernatur ex
-                recusandae.
+                Websites and web apps are my main area of expertise. During the
+                last few years I have been working on various commercial
+                projects, most of them built with WordPress. I am also familiar
+                with other technologies and frameworks, such as Express or
+                Astro.
               </p>
-            </a>
-            <a
-              href="/portfolio#projektowanie-ui-ux"
-              class="flex-1 rounded-lg border border-zinc-600/50 p-5 flex flex-col gap-3 cursor-pointer bg-neutral-800/25 transition hover:bg-neutral-700/25"
+            </div>
+            <div
+              class="flex-1 rounded-lg border border-zinc-600/50 p-5 flex flex-col gap-3 bg-neutral-800/10"
             >
               <h2 class="text-2xl font-semibold text-neutral-100">
-                Projektowanie UI/UX
+                UI/UX design
               </h2>
               <p class="text-white/70">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Aperiam facere porro recusandae nostrum non illo sed quo
-                perspiciatis culpa architecto officiis.
+                Design is an important part of every project. I am familiar with
+                the principles of UI/UX design, and I am able to create a design
+                that is both functional and aesthetic.
               </p>
-            </a>
-            <a
-              href="/portfolio#programowanie"
-              class="flex-1 rounded-lg border border-zinc-600/50 p-5 flex flex-col gap-3 cursor-pointer bg-neutral-800/25 transition hover:bg-neutral-700/25"
+            </div>
+            <div
+              class="flex-1 rounded-lg border border-zinc-600/50 p-5 flex flex-col gap-3 bg-neutral-800/10"
             >
-              <h2 class="text-2xl font-semibold text-neutral-100">
-                Programowanie
-              </h2>
+              <h2 class="text-2xl font-semibold text-neutral-100">Software</h2>
               <p class="text-white/70">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Numquam odio repellendus recusandae nostrum corporis dignissimos
-                odit minima adipisci vitae ab iste quas.
+                Solving problems with software is what I enjoy doing. The
+                languages which I use the most are JavaScript, Python and Java,
+                but I am always eager to learn new ones.
               </p>
-            </a>
+            </div>
           </section>
         </div>
       </div>
@@ -97,17 +92,16 @@ import Layout from "../layouts/Layout.astro";
           <h2
             class="text-sm uppercase font-semibold tracking-widest text-neutral-100/50 mb-1"
           >
-            Moja aktywność
+            My main activity
           </h2>
           <span class="text-4xl font-semibold text-neutral-100">
-            Tworzę strony internetowe i aplikacje
+            Building web solutions
           </span>
           <p class="text-white/70 mt-5">
-            Projektuję, wdrażam, utrzymuję i rozwijam rozwiązania internetowe.
-            Wykorzystuję wiedzę z zakresu programowania, technology webowych,
-            projektowania UI/UX, by tworzyć produkty zarówno funkcjonalne jak i
-            estetyczne. Bezpieczeństwo, szybkość i przejrzystość to aspekty,
-            które stawiam na pierwszym miejscu.
+            I use my knowledge of programming, web technologies and UI/UX design
+            to create, build and maintain products that are practical, yet
+            esthetically pleasing. Security, openness and people-first approach
+            are what I value the most.
           </p>
         </div>
         <div class="w-full text-right select-none">
@@ -140,15 +134,14 @@ import Layout from "../layouts/Layout.astro";
               <h2
                 class="text-sm uppercase font-semibold tracking-widest text-neutral-100/50 mb-1"
               >
-                Moje doświadczenie
+                My professional background
               </h2>
               <span class="text-4xl font-semibold text-neutral-100">
-                Praca zawodowa
+                Work experience
               </span>
-              <p class="text-white/70 mt-5">
-                Przez ostatnie lata pracowałem tworząc, aktualizując i
-                rozwijając strony internetowe wykorzystujące WordPressa, w
-                oparciu o wymagania klientów.
+              <p class="text-white/70 mt-5 max-w-sm mx-auto">
+                Since 2021 I have been working as a web developer, building
+                commercial websites using WordPress.
               </p>
               <div class="relative mt-5 flex items-center gap-5">
                 <div
@@ -156,9 +149,9 @@ import Layout from "../layouts/Layout.astro";
                 >
                 </div>
                 <p
-                  class="relative px-5 mx-auto text-center text-white/70 whitespace-nowrap bg-neutral-900"
+                  class="relative px-5 mx-auto text-center text-white/70 whitespace-nowrap bg-neutral-900 uppercase tracking-widest text-sm font-semibold"
                 >
-                  2021 - obecnie
+                  2021 &dash; Present
                 </p>
               </div>
             </div>
@@ -173,15 +166,15 @@ import Layout from "../layouts/Layout.astro";
             <h2
               class="text-sm uppercase font-semibold tracking-widest text-neutral-100/50 mb-1"
             >
-              Moje kompetencje
+              My skills
             </h2>
             <span class="text-4xl font-semibold text-neutral-100">
-              Umiejętności
+              Abilities
             </span>
             <p class="text-white/70 mt-5">
-              Znam popularne języki programowania oraz szeroko wykorzystywane
-              oprogramowanie. Szybko się uczę i chętnie poznaję nowe rozwiązania
-              usprawniające pracę, a także poszerzające możliwości.
+              I am familiar with popular programming languages and widely used
+              software. I learn quickly, and I am eager to discover new solutions
+              which can improve my efficiency or expand possibilities.
             </p>
           </div>
           <div class="flex gap-5 flex-wrap sm:px-0 justify-between">
@@ -191,7 +184,7 @@ import Layout from "../layouts/Layout.astro";
               <h2
                 class="text-2xl font-semibold text-neutral-100 sm:whitespace-nowrap"
               >
-                Technologie internetowe
+                Web technologies
               </h2>
               <div class="flex gap-10">
                 <ul class="list-inside list-disc text-white/70">
@@ -215,7 +208,7 @@ import Layout from "../layouts/Layout.astro";
               <h2
                 class="text-2xl font-semibold text-neutral-100 sm:whitespace-nowrap"
               >
-                Języki programowania
+                Programming
               </h2>
               <div class="flex gap-10">
                 <ul class="list-inside list-disc text-white/70">
@@ -232,12 +225,13 @@ import Layout from "../layouts/Layout.astro";
               <h2
                 class="text-2xl font-semibold text-neutral-100 sm:whitespace-nowrap"
               >
-                Języki obce
+                Languages
               </h2>
               <div class="flex gap-10">
                 <ul class="list-inside list-disc text-white/70">
-                  <li>Język angielski (C1)</li>
-                  <li>Język francuski (A1)</li>
+                  <li>Polish (native)</li>
+                  <li>English (C1)</li>
+                  <li>French (A1)</li>
                 </ul>
               </div>
             </div>
@@ -247,18 +241,18 @@ import Layout from "../layouts/Layout.astro";
               <h2
                 class="text-2xl font-semibold text-neutral-100 sm:whitespace-nowrap"
               >
-                Oprogramowanie i narzędzia
+                Software and utilities
               </h2>
               <div class="flex gap-10">
                 <ul class="list-inside list-disc text-white/70">
                   <li>Visual Studio Code</li>
-                  <li>System kontroli wersji Git</li>
+                  <li>Git</li>
                   <li>Microsoft Office</li>
                   <li>LibreOffice</li>
                 </ul>
                 <ul class="list-inside list-disc text-white/70">
                   <li>Docker</li>
-                  <li>Systemy Linux</li>
+                  <li>Linux</li>
                   <li>Penpot</li>
                 </ul>
               </div>
@@ -269,11 +263,11 @@ import Layout from "../layouts/Layout.astro";
               <h2
                 class="text-2xl font-semibold text-neutral-100 sm:whitespace-nowrap"
               >
-                Bazy danych
+                Databases
               </h2>
               <div class="flex gap-10">
                 <ul class="list-inside list-disc text-white/70">
-                  <li>Język SQL</li>
+                  <li>SQL</li>
                   <li>Microsoft SQL Server</li>
                   <li>MySQL</li>
                   <li>MongoDB</li>
@@ -286,7 +280,7 @@ import Layout from "../layouts/Layout.astro";
       <section class="container mx-auto px-5">
         <div
           class="random-string bg-gradient-to-b from-neutral-100/25 to-neutral-900 to-90% bg-clip-text text-transparent select-none font-mono h-64"
-          style="overflow-wrap: anywhere;"
+          style="overflow-wrap: anywhere; margin-bottom: -2.75rem"
           data-length="5000"
           aria-hidden="true"
         >
@@ -315,15 +309,18 @@ import Layout from "../layouts/Layout.astro";
           refreshRandomStrings();
           document.addEventListener("scroll", refreshRandomStrings);
         </script>
-        <div class="flex gap-5 flex-col xl:flex-row justify-between">
+        <div
+          id="portfolio"
+          class="flex gap-5 flex-col xl:flex-row justify-between"
+        >
           <div class="flex flex-col justify-end">
             <h2
               class="text-sm uppercase font-semibold tracking-widest text-neutral-100/50 mb-1"
             >
-              Moje portfolio
+              My projects
             </h2>
             <span class="text-4xl font-semibold text-neutral-100">
-              Wybrane&nbsp;projekty
+              Portfolio
             </span>
           </div>
           <div
@@ -341,8 +338,9 @@ import Layout from "../layouts/Layout.astro";
             <div>
               <h3 class="text-2xl font-semibold text-neutral-100">Kiwi</h3>
               <p class="text-white/70 mt-3">
-                Aplikacja internetowa pozwalająca na łatwe zasubskrybowanie
-                planu zajęć w preferowanym kalendarzu.
+                Web service for subscribing to a university class schedule using
+                preferred calendar app. It acts as a middleman, translating a
+                requested timetable into a widely supported ICS format.
               </p>
             </div>
             <div
@@ -373,7 +371,9 @@ import Layout from "../layouts/Layout.astro";
             <div>
               <h3 class="text-2xl font-semibold text-neutral-100">Netlico</h3>
               <p class="text-white/70 mt-3">
-                Kreator mikrostron internetowych.
+                Microsite builder, which provides a simple interface, allowing a
+                user to add custom text content, pick a theme and publish a
+                website under a custom subdomain.
               </p>
             </div>
             <div
@@ -409,8 +409,8 @@ import Layout from "../layouts/Layout.astro";
                 CeneoWebScraper
               </h3>
               <p class="text-white/70 mt-3">
-                Program umożliwiający zapisywanie i podstawową analizę opinii o
-                produktach.
+                Web app for saving and analyzing product reviews from a price
+                comparison website.
               </p>
             </div>
             <div
@@ -440,9 +440,7 @@ import Layout from "../layouts/Layout.astro";
               <h3 class="text-2xl font-semibold text-neutral-100">
                 konradkubczyk.com
               </h3>
-              <p class="text-white/70 mt-3">
-                Abecnie wyświetlana strona internetowa.
-              </p>
+              <p class="text-white/70 mt-3">The currently viewed website.</p>
             </div>
             <div
               class="tags flex text-xs text-neutral-100 uppercase gap-2 tracking-wider border-t border-zinc-600/50 pt-5 mt-1"
@@ -458,10 +456,9 @@ import Layout from "../layouts/Layout.astro";
             id="no-projects-for-criteria-alert"
             class="hidden text-white/70 mt-5"
           >
-            Brak projektów spełniających wszystkie wybrane kryteria. Można
-            zresetować filtry, <button class="reset-filters underline"
-              >klikając tutaj</button
-            >.
+            No projects match the selected criteria. You can reset the filters
+            by
+            <button class="reset-filters underline">clicking here</button>.
           </p>
         </div>
         <script>

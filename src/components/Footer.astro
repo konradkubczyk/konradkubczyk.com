@@ -1,0 +1,23 @@
+<footer>
+  <div class="container mx-auto px-5 mt-20 2xl:mt-36">
+    <div class="border-t border-white/25"></div>
+    <div class="flex justify-between py-10">
+      <span class="text-sm uppercase text-white/75 tracking-wider">
+        &copy; <span id="current-year"></span> Konrad Kubczyk
+      </span>
+      <div class="flex gap-10">
+        <a
+          href="https://gitlab.com/konradkubczyk/com-konradkubczyk"
+          target="_blank"
+          class="flex items-center text-sm uppercase text-white/75 tracking-wider hover:text-white transition"
+        >
+          Source code
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script defer>
+document.getElementById("current-year").innerHTML = new Date().getFullYear();
+</script>

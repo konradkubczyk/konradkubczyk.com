@@ -282,7 +282,7 @@ import Layout from "../layouts/Layout.astro";
         role="none"
       >
       </div>
-      <script>
+      <script is:inline>
         function generateRandomString(length) {
           const characters =
             "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
@@ -442,7 +442,7 @@ import Layout from "../layouts/Layout.astro";
           >.
         </p>
       </div>
-      <script>
+      <script is:inline>
         const projects = document.querySelectorAll("#projects > .project");
         projects.forEach((project) => {
           project.tags = project.querySelector(".tags").innerText.split("\n");

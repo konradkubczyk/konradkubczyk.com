@@ -103,16 +103,22 @@ import Layout from "../layouts/Layout.astro";
       <div class="w-full text-right select-none">
         <span
           class="text-5xl sm:text-6xl xl:text-9xl lowercase tracking-wide text-neutral-100/10 mb-1"
+          aria-hidden="true"
+          role="none"
         >
           Web
         </span>
         <span
           class="text-5xl sm:text-6xl xl:text-9xl lowercase tracking-wide text-neutral-100/20 mb-1"
+          aria-hidden="true"
+          role="none"
         >
           Design
         </span>
         <span
           class="text-5xl sm:text-6xl xl:text-9xl lowercase tracking-wide text-neutral-100/30 mb-1"
+          aria-hidden="true"
+          role="none"
         >
           Development
         </span>
@@ -283,27 +289,27 @@ import Layout from "../layouts/Layout.astro";
       >
       </div>
       <script is:inline>
-        function generateRandomString(length) {
-          const characters =
-            "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-          let result = "";
-          for (let i = 0; i < length; i++) {
-            const randomIndex = Math.floor(Math.random() * characters.length);
-            const randomCharacter = characters.charAt(randomIndex);
-            result += characters.charAt(
-              Math.floor(Math.random() * characters.length)
-            );
-          }
-          return result;
+      function generateRandomString(length) {
+        const characters =
+          "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+        let result = "";
+        for (let i = 0; i < length; i++) {
+          const randomIndex = Math.floor(Math.random() * characters.length);
+          const randomCharacter = characters.charAt(randomIndex);
+          result += characters.charAt(
+            Math.floor(Math.random() * characters.length)
+          );
         }
-        function refreshRandomStrings() {
-          document.querySelectorAll(".random-string").forEach((element) => {
-            element.innerText = generateRandomString(
-              parseInt(element.dataset.length)
-            );
-          });
-        }
-        refreshRandomStrings();
+        return result;
+      }
+      function refreshRandomStrings() {
+        document.querySelectorAll(".random-string").forEach((element) => {
+          element.innerText = generateRandomString(
+            parseInt(element.dataset.length)
+          );
+        });
+      }
+      refreshRandomStrings();
       </script>
       <div
         id="portfolio"
@@ -443,156 +449,156 @@ import Layout from "../layouts/Layout.astro";
         </p>
       </div>
       <script is:inline>
-        const projects = document.querySelectorAll("#projects > .project");
-        projects.forEach((project) => {
-          project.tags = project.querySelector(".tags").innerText.split("\n");
-        });
+      const projects = document.querySelectorAll("#projects > .project");
+      projects.forEach((project) => {
+        project.tags = project.querySelector(".tags").innerText.split("\n");
+      });
 
-        let availableFilters = [];
+      let availableFilters = [];
 
-        projects.forEach((project) => {
-          const projectTags = project
-            .querySelector(".tags")
-            .innerText.split("\n");
-          projectTags.forEach((tag) => {
-            if (!availableFilters.includes(tag)) {
-              availableFilters.push(tag);
-            }
-          });
-        });
-
-        const filtersElement = document.querySelector("#filters");
-
-        availableFilters.forEach((filter) => {
-          const filterNameSimplified = filter
-            .replace(" ", "")
-            .replace(".", "")
-            .toLowerCase();
-
-          const filterInputElement = document.createElement("input");
-          filterInputElement.type = "checkbox";
-          filterInputElement.id = `project-filter-input-${filterNameSimplified}`;
-          filterInputElement.classList.add("hidden");
-          filtersElement.appendChild(filterInputElement);
-
-          const filterLabelElement = document.createElement("label");
-
-          filterLabelElement.htmlFor = `project-filter-${filterNameSimplified}`;
-          filterLabelElement.id = `project-filter-label-${filterNameSimplified}`;
-          filterLabelElement.tabIndex = 0;
-          filterLabelElement.classList.add(
-            "project-filter",
-            "flex",
-            "items-center",
-            "text-center",
-            "uppercase",
-            "font-semibold",
-            "tracking-wide",
-            "text-sm",
-            "bg-neutral-800/25",
-            "px-3",
-            "py-2",
-            "rounded-full",
-            "border",
-            "border-zinc-600/50",
-            "transition",
-            "text-neutral-100/75",
-            "hover:bg-neutral-700/25",
-            "cursor-pointer",
-            "select-none",
-            "whitespace-nowrap"
-          );
-          filterLabelElement.innerText = filter;
-          filtersElement.appendChild(filterLabelElement);
-        });
-
-        let activeFilters = [];
-
-        function filterProjects() {
-          if (activeFilters.length === 0) {
-            projects.forEach((project) => {
-              project.classList.remove("hidden");
-            });
-            document
-              .querySelector("#no-projects-for-criteria-alert")
-              .classList.add("hidden");
-            return;
+      projects.forEach((project) => {
+        const projectTags = project
+          .querySelector(".tags")
+          .innerText.split("\n");
+        projectTags.forEach((tag) => {
+          if (!availableFilters.includes(tag)) {
+            availableFilters.push(tag);
           }
+        });
+      });
 
-          let hiddenProjectsCount = 0;
+      const filtersElement = document.querySelector("#filters");
 
+      availableFilters.forEach((filter) => {
+        const filterNameSimplified = filter
+          .replace(" ", "")
+          .replace(".", "")
+          .toLowerCase();
+
+        const filterInputElement = document.createElement("input");
+        filterInputElement.type = "checkbox";
+        filterInputElement.id = `project-filter-input-${filterNameSimplified}`;
+        filterInputElement.classList.add("hidden");
+        filtersElement.appendChild(filterInputElement);
+
+        const filterLabelElement = document.createElement("label");
+
+        filterLabelElement.htmlFor = `project-filter-${filterNameSimplified}`;
+        filterLabelElement.id = `project-filter-label-${filterNameSimplified}`;
+        filterLabelElement.tabIndex = 0;
+        filterLabelElement.classList.add(
+          "project-filter",
+          "flex",
+          "items-center",
+          "text-center",
+          "uppercase",
+          "font-semibold",
+          "tracking-wide",
+          "text-sm",
+          "bg-neutral-800/25",
+          "px-3",
+          "py-2",
+          "rounded-full",
+          "border",
+          "border-zinc-600/50",
+          "transition",
+          "text-neutral-100/75",
+          "hover:bg-neutral-700/25",
+          "cursor-pointer",
+          "select-none",
+          "whitespace-nowrap"
+        );
+        filterLabelElement.innerText = filter;
+        filtersElement.appendChild(filterLabelElement);
+      });
+
+      let activeFilters = [];
+
+      function filterProjects() {
+        if (activeFilters.length === 0) {
           projects.forEach((project) => {
-            if (
-              activeFilters.every((filter) => project.tags.includes(filter))
-            ) {
-              project.classList.remove("hidden");
-            } else {
-              project.classList.add("hidden");
-              hiddenProjectsCount++;
-            }
+            project.classList.remove("hidden");
           });
+          document
+            .querySelector("#no-projects-for-criteria-alert")
+            .classList.add("hidden");
+          return;
+        }
 
-          if (hiddenProjectsCount === projects.length) {
-            document
-              .querySelector("#no-projects-for-criteria-alert")
-              .classList.remove("hidden");
+        let hiddenProjectsCount = 0;
+
+        projects.forEach((project) => {
+          if (
+            activeFilters.every((filter) => project.tags.includes(filter))
+          ) {
+            project.classList.remove("hidden");
           } else {
-            document
-              .querySelector("#no-projects-for-criteria-alert")
-              .classList.add("hidden");
+            project.classList.add("hidden");
+            hiddenProjectsCount++;
           }
+        });
+
+        if (hiddenProjectsCount === projects.length) {
+          document
+            .querySelector("#no-projects-for-criteria-alert")
+            .classList.remove("hidden");
+        } else {
+          document
+            .querySelector("#no-projects-for-criteria-alert")
+            .classList.add("hidden");
+        }
+      }
+
+      function processFiltersChange(event) {
+        let currentFilter = event.target.innerText;
+        if (activeFilters.includes(currentFilter)) {
+          activeFilters = activeFilters.filter(
+            (filter) => filter !== currentFilter
+          );
+          event.target.style.background = "";
+          event.target.style.borderColor = "";
+          event.target.style.color = "";
+        } else {
+          activeFilters.push(currentFilter);
+          event.target.style.background = "white";
+          event.target.style.borderColor = "white";
+          event.target.style.color = "black";
         }
 
-        function processFiltersChange(event) {
-          let currentFilter = event.target.innerText;
-          if (activeFilters.includes(currentFilter)) {
-            activeFilters = activeFilters.filter(
-              (filter) => filter !== currentFilter
-            );
-            event.target.style.background = "";
-            event.target.style.borderColor = "";
-            event.target.style.color = "";
-          } else {
-            activeFilters.push(currentFilter);
-            event.target.style.background = "white";
-            event.target.style.borderColor = "white";
-            event.target.style.color = "black";
-          }
+        filterProjects();
+      }
 
-          filterProjects();
+      document.querySelectorAll(".project-filter").forEach((element) => {
+        element.addEventListener("click", processFiltersChange);
+      });
+
+      const SPACEBAR_KEYCODE = 32;
+
+      function toggleFilter(event) {
+        if (event.keyCode !== SPACEBAR_KEYCODE) {
+          return;
         }
+        event.target.click();
+        event.preventDefault();
+      }
 
+      document.querySelectorAll(".project-filter").forEach((element) => {
+        element.addEventListener("keydown", toggleFilter);
+      });
+
+      function resetFilters() {
         document.querySelectorAll(".project-filter").forEach((element) => {
-          element.addEventListener("click", processFiltersChange);
+          element.style.background = "";
+          element.style.borderColor = "";
+          element.style.color = "";
         });
+        activeFilters = [];
+        filterProjects();
+      }
 
-        const SPACEBAR_KEYCODE = 32;
-
-        function toggleFilter(event) {
-          if (event.keyCode !== SPACEBAR_KEYCODE) {
-            return;
-          }
-          event.target.click();
-          event.preventDefault();
-        }
-
-        document.querySelectorAll(".project-filter").forEach((element) => {
-          element.addEventListener("keydown", toggleFilter);
-        });
-
-        function resetFilters() {
-          document.querySelectorAll(".project-filter").forEach((element) => {
-            element.style.background = "";
-            element.style.borderColor = "";
-            element.style.color = "";
-          });
-          activeFilters = [];
-          filterProjects();
-        }
-
-        document.querySelectorAll(".reset-filters").forEach((element) => {
-          element.addEventListener("click", resetFilters);
-        });
+      document.querySelectorAll(".reset-filters").forEach((element) => {
+        element.addEventListener("click", resetFilters);
+      });
       </script>
     </section>
     <section id="contact" class="container mx-auto px-5">
@@ -620,6 +626,7 @@ import Layout from "../layouts/Layout.astro";
               class="scrambled-email-link text-white/70 font-bold flex gap-3 items-center bg-neutral-400/10 px-5 py-2 rounded-md hover:text-white hover:bg-neutral-400/20 hover:active:scale-95 transition select-none"
               href="#"
               target="_blank"
+              aria-label="Email"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"

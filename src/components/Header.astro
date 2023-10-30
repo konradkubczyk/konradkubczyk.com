@@ -75,10 +75,13 @@ const nav = document.querySelector("#nav");
 const menuButton = document.querySelector("#menu-button");
 const menuContainer = document.querySelector("#menu-container");
 const menuItems = document.querySelectorAll("#nav a");
+let ticking = false;
+previouslyScrolled = false;
 
-function updateNav() {
+function updateNav(isScrolled) {
   if (nav) {
-    if (window.scrollY > 0 || menuButton.classList.contains("active")) {
+    if (!previouslyScrolled && (isScrolled || menuButton.classList.contains("active"))) {
+      previouslyScrolled = true;
       nav.classList.add("px-5");
       nav.classList.remove("px-0");
       nav.classList.add("border-zinc-700/50");
@@ -89,7 +92,8 @@ function updateNav() {
       nav.classList.remove("backdrop-blur-none");
       nav.classList.add("shadow");
       nav.classList.remove("shadow-none");
-    } else {
+    } else if (!isScrolled && !menuButton.classList.contains("active")) {
+      previouslyScrolled = false;
       nav.classList.add("px-0");
       nav.classList.remove("px-5");
       nav.classList.add("border-transparent");
@@ -104,7 +108,16 @@ function updateNav() {
   }
 }
 
-window.addEventListener("scroll", updateNav);
+window.addEventListener("scroll", () => {
+  const isScrolled = window.scrollY > 0;
+  if (!ticking) {
+    window.requestAnimationFrame(() => {
+      updateNav(isScrolled);
+      ticking = false;
+    });
+    ticking = true;
+  }
+});
 updateNav();
 
 function toggleMenu() {

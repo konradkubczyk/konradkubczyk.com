@@ -28,37 +28,45 @@
         class="hidden sm:block w-full sm:w-min bg-neutral-800/25 sm:bg-transparent p-2 sm:p-0 rounded"
       >
         <menu class="flex gap-2 sm:gap-5 flex-col sm:flex-row">
-          <a
-            href="#experience"
-            class="flex items-center text-sm rounded px-3 py-2 uppercase text-white/75 tracking-wider hover:text-white hover:bg-neutral-600/50 hover:active:scale-95 transition"
-          >
-            Experience
-          </a>
-          <a
-            href="#skills"
-            class="flex items-center text-sm rounded px-3 py-2 uppercase text-white/75 tracking-wider hover:text-white hover:bg-neutral-600/50 hover:active:scale-95 transition"
-          >
-            Skills
-          </a>
-          <a
-            href="#portfolio"
-            class="flex items-center text-sm rounded px-3 py-2 uppercase text-white/75 tracking-wider hover:text-white hover:bg-neutral-600/50 hover:active:scale-95 transition"
-          >
-            Portfolio
-          </a>
-          <a
-            href="#contact"
-            class="flex items-center text-sm rounded px-3 py-2 uppercase text-white/75 tracking-wider hover:text-white hover:bg-neutral-600/50 hover:active:scale-95 transition"
-          >
-            Contact
-          </a>
+          <li>
+            <a
+              href="#experience"
+              class="flex items-center text-sm rounded px-3 py-2 uppercase text-white/75 tracking-wider hover:text-white hover:bg-neutral-600/50 hover:active:scale-95 transition"
+            >
+              Experience
+            </a>
+          </li>
+          <li>
+            <a
+              href="#skills"
+              class="flex items-center text-sm rounded px-3 py-2 uppercase text-white/75 tracking-wider hover:text-white hover:bg-neutral-600/50 hover:active:scale-95 transition"
+            >
+              Skills
+            </a>
+          </li>
+          <li>
+            <a
+              href="#portfolio"
+              class="flex items-center text-sm rounded px-3 py-2 uppercase text-white/75 tracking-wider hover:text-white hover:bg-neutral-600/50 hover:active:scale-95 transition"
+            >
+              Portfolio
+            </a>
+          </li>
+          <li>
+            <a
+              href="#contact"
+              class="flex items-center text-sm rounded px-3 py-2 uppercase text-white/75 tracking-wider hover:text-white hover:bg-neutral-600/50 hover:active:scale-95 transition"
+            >
+              Contact
+            </a>
+          </li>
         </menu>
       </div>
     </nav>
   </div>
 </header>
 
-<script defer>
+<script is:inline>
 const nav = document.querySelector("#nav");
 const menuButton = document.querySelector("#menu-button");
 const menuContainer = document.querySelector("#menu-container");

@@ -12,7 +12,7 @@ class EmailUnscrambler {
             for (const trigger of this.#unscrambleTriggers) {
                 scrambledEmailLink.addEventListener(trigger, () => {
                     this.#unscrambleEmailLink(scrambledEmailLink);
-                });
+                }, { passive: true });
             }
         }
     }

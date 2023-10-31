@@ -9,11 +9,14 @@
   checkScrollState();
 
   let togglingMenu = false;
-  function toggleMenu() {
+  function setMenuOpen(value) {
     if (togglingMenu) return;
     togglingMenu = true;
-    isMenuOpen = !isMenuOpen;
+    isMenuOpen = value;
     setTimeout(() => (togglingMenu = false), 150);
+  }
+  function toggleMenu() {
+    setMenuOpen(!isMenuOpen);
   }
 </script>
 
@@ -22,7 +25,7 @@
     ? "fixed flex justify-center w-full top-0 z-10 p-0 bg-gradient-to-b from-neutral-900 from-20% to-transparent select-none transition-all"
     : isScrolled
     ? "fixed flex justify-center w-full top-0 z-10 py-5 bg-gradient-to-b from-neutral-900 from-20% to-transparent select-none transition-all"
-    : "fixed flex justify-center w-full top-0 z-10 py-1 sm:py-5 bg-gradient-to-b from-neutral-900 from-20% to-transparent select-none transition-all"}
+    : "fixed flex justify-center w-full top-0 z-10 py-5 sm:py-5 bg-gradient-to-b from-neutral-900 from-20% to-transparent select-none transition-all"}
 >
   <div class="container touch-none">
     <nav
@@ -37,11 +40,11 @@
         <a
           href="/#"
           class="opacity-80 hover:opacity-100 transition"
-          on:click={toggleMenu}
+          on:click={() => setMenuOpen(false)}
         >
           <img src="/img/brand/logo.svg" alt="Logo" class="h-7 mx-1" />
         </a>
-        <button id="menu-button" aria-label="Menu" on:click={toggleMenu}>
+        <button id="menu-button" aria-label="Menu" on:click={() => toggleMenu()}>
           {#if isMenuOpen}
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -69,7 +72,7 @@
       <div
         id="menu-container"
         class={isMenuOpen
-          ? "sm:block opacity-100 w-full sm:w-min flex-grow flex items-end"
+          ? "sm:block opacity-100 w-full sm:w-min flex-grow flex"
           : "hidden sm:block opacity-0 sm:opacity-100 w-full sm:w-min"}
       >
         <menu class="flex gap-5 sm:gap-5 flex-col sm:flex-row">
@@ -78,7 +81,7 @@
               href="#experience"
               class="flex items-center text-2xl sm:text-sm rounded sm:px-3 py-2 sm:uppercase text-white/75 sm:tracking-wider hover:text-white active:text-white sm:hover:bg-neutral-600/50 sm:hover:active:scale-95 transition"
               draggable="false"
-              on:click={() => (isMenuOpen = false)}
+              on:click={() => setMenuOpen(false)}
             >
               Experience
             </a>
@@ -88,7 +91,7 @@
               href="#skills"
               class="flex items-center text-2xl sm:text-sm rounded sm:px-3 py-2 sm:uppercase text-white/75 sm:tracking-wider hover:text-white active:text-white sm:hover:bg-neutral-600/50 sm:hover:active:scale-95 transition"
               draggable="false"
-              on:click={() => (isMenuOpen = false)}
+              on:click={() => setMenuOpen(false)}
             >
               Skills
             </a>
@@ -98,7 +101,7 @@
               href="#portfolio"
               class="flex items-center text-2xl sm:text-sm rounded sm:px-3 py-2 sm:uppercase text-white/75 sm:tracking-wider hover:text-white active:text-white sm:hover:bg-neutral-600/50 sm:hover:active:scale-95 transition"
               draggable="false"
-              on:click={() => (isMenuOpen = false)}
+              on:click={() => setMenuOpen(false)}
             >
               Portfolio
             </a>
@@ -108,7 +111,7 @@
               href="#contact"
               class="flex items-center text-2xl sm:text-sm rounded sm:px-3 py-2 sm:uppercase text-white/75 sm:tracking-wider hover:text-white active:text-white sm:hover:bg-neutral-600/50 sm:hover:active:scale-95 transition"
               draggable="false"
-              on:click={() => (isMenuOpen = false)}
+              on:click={() => setMenuOpen(false)}
             >
               Contact
             </a>
@@ -118,69 +121,3 @@
     </nav>
   </div>
 </header>
-
-<!-- <script is:inline>
-const nav = document.querySelector("#nav");
-const menuButton = document.querySelector("#menu-button");
-const menuContainer = document.querySelector("#menu-container");
-const menuItems = document.querySelectorAll("#nav a");
-let ticking = false;
-previouslyScrolled = false;
-
-function updateNav(isScrolled) {
-  if (nav) {
-    if ((!previouslyScrolled && isScrolled) || menuButton.classList.contains("active")) {
-      console.log("scrolled or menu active")
-      previouslyScrolled = true;
-      nav.classList.add("px-5");
-      nav.classList.remove("px-0");
-      nav.classList.add("border-zinc-700/50");
-      nav.classList.remove("border-transparent");
-      nav.classList.add("bg-neutral-900/80");
-      nav.classList.remove("bg-transparent");
-      nav.classList.add("backdrop-blur");
-      nav.classList.remove("backdrop-blur-none");
-      nav.classList.add("shadow");
-      nav.classList.remove("shadow-none");
-    } else if (!isScrolled && !menuButton.classList.contains("active")) {
-      console.log("not scrolled scrolled or menu active")
-      previouslyScrolled = false;
-      nav.classList.add("px-0");
-      nav.classList.remove("px-5");
-      nav.classList.add("border-transparent");
-      nav.classList.remove("border-zinc-700/50");
-      nav.classList.add("bg-transparent");
-      nav.classList.remove("bg-neutral-900/80");
-      nav.classList.add("backdrop-blur-none");
-      nav.classList.remove("backdrop-blur");
-      nav.classList.add("shadow-none");
-      nav.classList.remove("shadow");
-    }
-  }
-}
-
-window.addEventListener("scroll", () => {
-  const isScrolled = window.scrollY > 0;
-  if (!ticking) {
-    window.requestAnimationFrame(() => {
-      updateNav(isScrolled);
-      ticking = false;
-    });
-    ticking = true;
-  }
-});
-updateNav();
-
-function toggleMenu() {
-  menuButton.classList.toggle("active");
-  menuContainer.classList.toggle("hidden");
-  updateNav();
-}
-menuButton.addEventListener("click", toggleMenu);
-
-menuItems.forEach((item) => {
-  item.addEventListener("click", () => {
-    if (menuButton.classList.contains("active")) toggleMenu();
-  });
-});
-</script> -->

@@ -4,7 +4,7 @@ import ProjectCard from "../components/ProjectCard.astro";
 ---
 
 <Layout title="Konrad Kubczyk">
-  <main class="flex flex-col gap-20 2xl:gap-36">
+  <main class="flex flex-col gap-20 xl:gap-24 2xl:gap-36">
     <div
       id="hero"
       style="background-image: url('/img/backgrounds/resource-database-JGtQ3VJWoEU-unsplash.webp'); background-size: cover;"
@@ -103,21 +103,21 @@ import ProjectCard from "../components/ProjectCard.astro";
       </div>
       <div class="w-full text-right select-none opacity-80">
         <span
-          class="text-5xl sm:text-6xl xl:text-9xl lowercase tracking-wide text-neutral-100/10 mb-1"
+          class="text-5xl sm:text-6xl xl:text-7xl 2xl:text-9xl lowercase tracking-wide text-neutral-100/10 mb-1"
           aria-hidden="true"
           role="none"
         >
           Web
         </span>
         <span
-          class="text-5xl sm:text-6xl xl:text-9xl lowercase tracking-wide text-neutral-100/20 mb-1"
+          class="text-5xl sm:text-6xl xl:text-7xl 2xl:text-9xl lowercase tracking-wide text-neutral-100/20 mb-1"
           aria-hidden="true"
           role="none"
         >
           Design
         </span>
         <span
-          class="text-5xl sm:text-6xl xl:text-9xl lowercase tracking-wide text-neutral-100/30 mb-1"
+          class="text-5xl sm:text-6xl xl:text-7xl 2xl:text-9xl lowercase tracking-wide text-neutral-100/30 mb-1"
           aria-hidden="true"
           role="none"
         >
@@ -130,7 +130,7 @@ import ProjectCard from "../components/ProjectCard.astro";
         class="rounded-lg"
         style="background-image: url('/img/backgrounds/resource-database-JGtQ3VJWoEU-unsplash.webp'); background-size: cover; background-position: bottom;"
       >
-        <div class="p-5 sm:p-10 lg:py-20 lg:px-40 rounded-lg bg-neutral-900/50">
+        <div class="p-5 sm:p-10 lg:py-20 lg:px-40 rounded-lg bg-neutral-900/60">
           <div
             class="bg-neutral-900 max-w-2xl mx-auto p-5 sm:p-10 rounded-md sm:text-center border border-zinc-600/50"
           >
@@ -354,7 +354,7 @@ import ProjectCard from "../components/ProjectCard.astro";
         <ProjectCard
           name="konradkubczyk.com"
           description="The currently viewed website. It is built with Astro, a static site generator, and Tailwind CSS, a utility-first CSS framework."
-          tags={["JavaScript", "Astro", "Tailwind CSS"]}
+          tags={["JavaScript", "Astro", "Svelte", "Tailwind CSS"]}
           link="https://gitlab.com/konradkubczyk/com-konradkubczyk"
         />
         <p
@@ -526,7 +526,7 @@ import ProjectCard from "../components/ProjectCard.astro";
         style="background-image: url('/img/backgrounds/resource-database-JGtQ3VJWoEU-unsplash.webp'); background-size: cover;"
       >
         <div
-          class="bg-neutral-900/50 sm:text-center p-5 sm:p-10 xl:p-20 sm:text-2xl"
+          class="bg-neutral-900/75 sm:text-center p-5 sm:p-10 xl:p-20 sm:text-2xl"
         >
           <h2
             class="text-sm uppercase font-semibold tracking-widest text-neutral-100/50 mb-1"
@@ -537,12 +537,12 @@ import ProjectCard from "../components/ProjectCard.astro";
             Contact me
           </span>
           <div
-            class="my-5 h-px bg-gradient-to-r from-zinc-600 sm:from-transparent sm:via-zinc-600 to-transparent"
+            class="mt-3 mb-4 xl:mt-5 xl:mb-6 h-px bg-gradient-to-r from-zinc-600 sm:from-transparent sm:via-zinc-600 to-transparent"
           >
           </div>
           <div class="flex gap-5 lg:gap-7 sm:justify-center flex-wrap">
             <a
-              class="scrambled-email-link text-white/70 font-bold flex gap-3 items-center bg-neutral-400/10 px-4 py-2 rounded-md hover:text-white hover:bg-neutral-400/20 hover:active:scale-95 transition select-none"
+              class="scrambled-email-link text-white/70 font-medium flex gap-3 items-center bg-neutral-400/10 px-4 py-2 rounded-md hover:text-white hover:bg-neutral-400/20 hover:active:scale-95 transition select-none"
               href="#"
               target="_blank"
               aria-label="Email"
@@ -572,7 +572,7 @@ import ProjectCard from "../components/ProjectCard.astro";
               </div>
             </a>
             <a
-              class="text-white/70 font-bold flex gap-3 items-center bg-neutral-400/10 px-4 py-2 rounded-md hover:text-white hover:bg-neutral-400/20 hover:active:scale-95 transition select-none"
+              class="text-white/70 font-medium flex gap-3 items-center bg-neutral-400/10 px-4 py-2 rounded-md hover:text-white hover:bg-neutral-400/20 hover:active:scale-95 transition select-none"
               href="https://gitlab.com/konradkubczyk"
               target="_blank"
               draggable="false"
@@ -590,7 +590,7 @@ import ProjectCard from "../components/ProjectCard.astro";
               GitLab
             </a>
             <a
-              class="text-white/70 font-bold flex gap-3 items-center bg-neutral-400/10 px-4 py-2 rounded-md hover:text-white hover:bg-neutral-400/20 hover:active:scale-95 transition select-none"
+              class="text-white/70 font-medium flex gap-3 items-center bg-neutral-400/10 px-4 py-2 rounded-md hover:text-white hover:bg-neutral-400/20 hover:active:scale-95 transition select-none"
               href="https://mastodon.social/@konradkubczyk"
               rel="me"
               target="_blank"
@@ -609,7 +609,7 @@ import ProjectCard from "../components/ProjectCard.astro";
               Mastodon
             </a>
             <a
-              class="text-white/70 font-bold flex gap-3 items-center bg-neutral-400/10 px-4 py-2 rounded-md hover:text-white hover:bg-neutral-400/20 hover:active:scale-95 transition select-none"
+              class="text-white/70 font-medium flex gap-3 items-center bg-neutral-400/10 px-4 py-2 rounded-md hover:text-white hover:bg-neutral-400/20 hover:active:scale-95 transition select-none"
               href="https://www.linkedin.com/in/konradkubczyk/"
               target="_blank"
               draggable="false"

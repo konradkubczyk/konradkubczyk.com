@@ -22,19 +22,19 @@
 
 <header
   class={isMenuOpen
-    ? "fixed flex justify-center w-full top-0 z-10 p-0 bg-gradient-to-b from-neutral-900 from-20% to-transparent select-none transition-all"
+    ? "fixed flex justify-center w-full top-0 z-10 p-0 bg-gradient-to-b from-neutral-900 from-20% to-transparent select-none transition-all duration-300"
     : isScrolled
-    ? "fixed flex justify-center w-full top-0 z-10 py-5 bg-gradient-to-b from-neutral-900 from-20% to-transparent select-none transition-all"
-    : "fixed flex justify-center w-full top-0 z-10 py-5 sm:py-5 bg-gradient-to-b from-neutral-900 from-20% to-transparent select-none transition-all"}
+    ? "fixed flex justify-center w-full top-0 z-10 py-5 bg-gradient-to-b from-neutral-900 from-20% to-transparent select-none transition-all duration-300"
+    : "fixed flex justify-center w-full top-0 z-10 py-5 sm:py-5 bg-gradient-to-b from-neutral-900 from-20% to-transparent select-none transition-all duration-300"}
 >
   <div class="container touch-none">
     <nav
       id="nav"
       class={isMenuOpen
-        ? "mx-0 p-10 rounded-none border border-transparent flex items-center backdrop-blur bg-neutral-900/100 shadow transition-all flex-col sm:flex-row gap-10 h-screen sm:h-auto"
+        ? "mx-0 p-10 rounded-none border border-transparent flex items-center backdrop-blur bg-neutral-900/100 shadow transition-all duration-300 flex-col sm:flex-row gap-10 h-screen sm:h-auto"
         : isScrolled
-        ? "mx-5 py-5 px-5 rounded-lg border border-zinc-700/50 flex justify-between items-center backdrop-blur bg-neutral-900/80 shadow transition-all flex-col sm:flex-row gap-5 h-[4.375rem] sm:h-auto"
-        : "mx-5 py-5 px-0 rounded-lg border border-transparent flex justify-between items-center backdrop-blur-none bg-transparent shadow-none transition-all flex-col sm:flex-row gap-5 h-[4.375rem] sm:h-auto"}
+        ? "mx-5 py-5 px-5 rounded-lg border border-zinc-700/50 flex justify-between items-center backdrop-blur bg-neutral-900/80 shadow transition-all duration-300 flex-col sm:flex-row gap-5 h-[4.375rem] sm:h-auto"
+        : "mx-5 py-5 px-0 rounded-lg border border-transparent flex justify-between items-center backdrop-blur-none bg-transparent shadow-none transition-all duration-300 flex-col sm:flex-row gap-5 h-[4.375rem] sm:h-auto"}
     >
       <div class="flex justify-between items-center w-full">
         <a
@@ -72,8 +72,8 @@
       <div
         id="menu-container"
         class={isMenuOpen
-          ? "sm:block opacity-100 w-full sm:w-min flex-grow flex"
-          : "hidden sm:block opacity-0 sm:opacity-100 w-full sm:w-min"}
+          ? "sm:block opacity-100 w-full sm:w-min flex-grow flex transition-opacity duration-300 delay-75"
+          : "sm:block opacity-0 sm:opacity-100 w-full sm:w-min flex-grow flex transition-opacity duration-300"}
       >
         <menu class="flex gap-5 sm:gap-5 flex-col sm:flex-row">
           <li>

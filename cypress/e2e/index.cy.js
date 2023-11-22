@@ -15,7 +15,7 @@ it('has a correct link to source code', () => {
     const page = cy.visit('/');
 
     page.get('a')
-        .filter('[href="https://gitlab.com/konradkubczyk/com-konradkubczyk"]')
+        .filter('[href="https://gitlab.com/konradkubczyk/konradkubczyk.com"]')
         .should('have.length.gte', 1);
 });
 

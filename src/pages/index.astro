@@ -86,14 +86,16 @@ import ProjectCard from "../components/ProjectCard.astro";
       class="container mx-auto flex flex-col xl:flex-row px-5 items-center xl:gap-20"
     >
       <div>
-        <h2
-          class="text-sm uppercase font-semibold tracking-widest text-neutral-100/50 mb-1"
-        >
-          My main activity
-        </h2>
-        <span class="text-3xl sm:text-4xl font-semibold text-neutral-100">
-          Building web solutions
-        </span>
+        <div class="flex flex-col-reverse">
+          <h2 class="text-3xl sm:text-4xl font-semibold text-neutral-100">
+            Building web solutions
+          </h2>
+          <span
+              class="text-sm uppercase font-semibold tracking-widest text-neutral-100/50 mb-2"
+          >
+            My main activity
+          </span>
+        </div>
         <p class="text-white/70 mt-5">
           I use my knowledge of programming, web technologies and UI/UX design
           to create, build and maintain products that are practical, yet
@@ -134,14 +136,16 @@ import ProjectCard from "../components/ProjectCard.astro";
           <div
             class="bg-neutral-900 max-w-2xl mx-auto p-5 sm:p-10 rounded-md sm:text-center border border-zinc-600/50"
           >
-            <h2
-              class="text-sm uppercase font-semibold tracking-widest text-neutral-100/50 mb-1"
-            >
-              My professional background
-            </h2>
-            <span class="text-3xl sm:text-4xl font-semibold text-neutral-100">
-              Work experience
-            </span>
+            <div class="flex flex-col-reverse">
+              <h2 class="text-3xl sm:text-4xl font-semibold text-neutral-100">
+                Work experience
+              </h2>
+              <span
+                class="text-sm uppercase font-semibold tracking-widest text-neutral-100/50 mb-2"
+              >
+                My professional background
+              </span>
+            </div>
             <p class="text-white/70 mt-5 sm:max-w-sm mx-auto">
               Since 2021 I have been working as a web developer, building
               commercial websites using WordPress.
@@ -166,14 +170,16 @@ import ProjectCard from "../components/ProjectCard.astro";
         <div
           class="bg-neutral-800/50 border border-zinc-600/50 rounded-md p-5 xl:w-1/3"
         >
-          <h2
-            class="text-sm uppercase font-semibold tracking-widest text-neutral-100/50 mb-1"
-          >
-            My skills
-          </h2>
-          <span class="text-3xl sm:text-4xl font-semibold text-neutral-100">
-            Abilities
-          </span>
+          <div class="flex flex-col-reverse">
+            <h2 class="text-3xl sm:text-4xl font-semibold text-neutral-100">
+              Abilities
+            </h2>
+            <span
+              class="text-sm uppercase font-semibold tracking-widest text-neutral-100/50 mb-2"
+            >
+              My skills
+            </span>
+          </div>
           <p class="text-white/70 mt-5">
             I am familiar with popular programming languages and widely used
             software. I learn quickly, and I am eager to discover new solutions
@@ -182,13 +188,13 @@ import ProjectCard from "../components/ProjectCard.astro";
         </div>
         <div class="flex gap-5 flex-wrap sm:px-0 justify-between">
           <div
-            class="flex flex-1 grow basis-64 xl:basis-80 flex-col gap-5 p-5 border border-zinc-600/50 rounded-md"
+            class="flex flex-1 grow basis-64 xl:basis-80 flex-col gap-3 p-5 border border-zinc-600/50 rounded-md"
           >
-            <h2
+            <h3
               class="text-xl sm:text-2xl font-semibold text-neutral-100 sm:whitespace-nowrap"
             >
               Web technologies
-            </h2>
+            </h3>
             <div class="flex gap-10">
               <ul class="list-inside list-disc text-white/70">
                 <li>HTML</li>
@@ -206,13 +212,13 @@ import ProjectCard from "../components/ProjectCard.astro";
             </div>
           </div>
           <div
-            class="flex flex-1 grow basis-64 xl:basis-80 flex-col gap-5 p-5 border border-zinc-600/50 rounded-md"
+            class="flex flex-1 grow basis-64 xl:basis-80 flex-col gap-3 p-5 border border-zinc-600/50 rounded-md"
           >
-            <h2
+            <h3
               class="text-xl sm:text-2xl font-semibold text-neutral-100 sm:whitespace-nowrap"
             >
               Programming
-            </h2>
+            </h3>
             <div class="flex gap-10">
               <ul class="list-inside list-disc text-white/70">
                 <li>JavaScript</li>
@@ -223,13 +229,13 @@ import ProjectCard from "../components/ProjectCard.astro";
             </div>
           </div>
           <div
-            class="flex flex-1 grow basis-64 xl:basis-80 flex-col gap-5 p-5 border border-zinc-600/50 rounded-md"
+            class="flex flex-1 grow basis-64 xl:basis-80 flex-col gap-3 p-5 border border-zinc-600/50 rounded-md"
           >
-            <h2
+            <h3
               class="text-xl sm:text-2xl font-semibold text-neutral-100 sm:whitespace-nowrap"
             >
               Languages
-            </h2>
+            </h3>
             <div class="flex gap-10">
               <ul class="list-inside list-disc text-white/70">
                 <li>Polish (native)</li>
@@ -239,13 +245,13 @@ import ProjectCard from "../components/ProjectCard.astro";
             </div>
           </div>
           <div
-            class="flex flex-1 grow basis-64 xl:basis-80 flex-col gap-5 p-5 border border-zinc-600/50 rounded-md"
+            class="flex flex-1 grow basis-64 xl:basis-80 flex-col gap-3 p-5 border border-zinc-600/50 rounded-md"
           >
-            <h2
+            <h3
               class="text-xl sm:text-2xl font-semibold text-neutral-100 sm:whitespace-nowrap"
             >
               Software and utilities
-            </h2>
+            </h3>
             <div class="flex gap-10">
               <ul class="list-inside list-disc text-white/70">
                 <li>Visual Studio Code</li>
@@ -261,13 +267,13 @@ import ProjectCard from "../components/ProjectCard.astro";
             </div>
           </div>
           <div
-            class="flex flex-1 grow basis-64 xl:basis-80 flex-col gap-5 p-5 border border-zinc-600/50 rounded-md"
+            class="flex flex-1 grow basis-64 xl:basis-80 flex-col gap-3 p-5 border border-zinc-600/50 rounded-md"
           >
-            <h2
+            <h3
               class="text-xl sm:text-2xl font-semibold text-neutral-100 sm:whitespace-nowrap"
             >
               Databases
-            </h2>
+            </h3>
             <div class="flex gap-10">
               <ul class="list-inside list-disc text-white/70">
                 <li>SQL</li>
@@ -317,14 +323,16 @@ import ProjectCard from "../components/ProjectCard.astro";
         class="flex gap-5 flex-col xl:flex-row justify-between"
       >
         <div class="flex flex-col justify-end">
-          <h2
-            class="text-sm uppercase font-semibold tracking-widest text-neutral-100/50 mb-1"
-          >
-            My projects
-          </h2>
-          <span class="text-3xl sm:text-4xl font-semibold text-neutral-100">
-            Portfolio
-          </span>
+          <div class="flex flex-col-reverse">
+            <h2 class="text-3xl sm:text-4xl font-semibold text-neutral-100">
+              Portfolio
+            </h2>
+            <span
+              class="text-sm uppercase font-semibold tracking-widest text-neutral-100/50 mb-2"
+            >
+              My projects
+            </span>
+          </div>
         </div>
         <div
           id="filters"
@@ -528,14 +536,16 @@ import ProjectCard from "../components/ProjectCard.astro";
         <div
           class="bg-neutral-900/75 sm:text-center p-5 sm:p-10 xl:p-20 sm:text-2xl"
         >
-          <h2
-            class="text-sm uppercase font-semibold tracking-widest text-neutral-100/50 mb-1"
-          >
-            My details
-          </h2>
-          <span class="text-3xl sm:text-4xl font-semibold text-neutral-100">
-            Contact me
-          </span>
+          <div class="flex flex-col-reverse">
+            <h2 class="text-3xl sm:text-4xl font-semibold text-neutral-100">
+              Contact me
+            </h2>
+            <span
+              class="text-sm uppercase font-semibold tracking-widest text-neutral-100/50 mb-2"
+            >
+              My details
+            </span>
+          </div>
           <div
             class="mt-3 mb-4 xl:mt-5 xl:mb-6 h-px bg-gradient-to-r from-zinc-600 sm:from-transparent sm:via-zinc-600 to-transparent"
           >

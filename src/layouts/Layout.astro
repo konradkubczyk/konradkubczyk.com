@@ -3,41 +3,44 @@ import Header from "../components/Header.svelte";
 import Footer from "../components/Footer.astro";
 
 interface Props {
-  title: string;
+    title: string;
 }
 
-const { title } = Astro.props;
+const {title} = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en" class="scroll-smooth">
-  <head>
-    <meta charset="UTF-8" />
+<head>
+    <meta charset="UTF-8"/>
     <meta
-      name="description"
-      content="Web developer and programmer, eager to learn and explore while creating interesting projects."
+            name="description"
+            content="Web developer and programmer, eager to learn and explore while creating interesting projects."
     />
-    <meta name="keywords" content="Kubczyk, Konrad, Konrad Kubczyk" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="sitemap" href="/sitemap-index.xml" />
-    <link rel="icon" type="image/svg+xml" href="/img/brand/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
+    <meta name="keywords" content="Kubczyk, Konrad, Konrad Kubczyk"/>
+    <meta name="viewport" content="width=device-width"/>
+    <link rel="sitemap" href="/sitemap-index.xml"/>
+    <link rel="icon" type="image/svg+xml" href="/img/brand/favicon.svg"/>
+    <meta name="generator" content={Astro.generator}/>
     <title>{title}</title>
+    <style global>
+        @import "../styles/global.css";
+    </style>
     <link rel="stylesheet" href="/css/email-unscrambler.css">
     <script src="/js/email-unscrambler.js" defer></script>
-  </head>
+</head>
 
-  <body class="bg-neutral-900">
-    <Header client:only />
+<body class="bg-neutral-900">
+<Header client:only/>
 
-    <slot />
+<slot/>
 
-    <Footer />
-  </body>
+<Footer/>
+</body>
 </html>
 
 <style is:global>
-  :root {
-    scroll-padding-top: 7.5rem;
-  }
+    :root {
+        scroll-padding-top: 7.5rem;
+    }
 </style>

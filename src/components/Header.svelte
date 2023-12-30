@@ -31,7 +31,7 @@
     <nav
       id="nav"
       class={isMenuOpen
-        ? "mx-0 p-10 rounded-none border border-transparent flex items-center backdrop-blur bg-neutral-900/100 shadow transition-all duration-300 flex-col sm:flex-row gap-10 h-screen sm:h-auto"
+        ? "mx-0 p-10 rounded-none border border-transparent flex items-center backdrop-blur bg-neutral-900/100 shadow transition-all duration-300 flex-col sm:flex-row gap-10 h-dvh sm:h-auto"
         : isScrolled
         ? "mx-5 py-5 px-5 rounded-lg border border-zinc-700/50 flex justify-between items-center backdrop-blur bg-neutral-900/80 shadow transition-all duration-300 flex-col sm:flex-row gap-5 h-[4.375rem] sm:h-auto"
         : "mx-5 py-5 px-0 rounded-lg border border-transparent flex justify-between items-center backdrop-blur-none bg-transparent shadow-none transition-all duration-300 flex-col sm:flex-row gap-5 h-[4.375rem] sm:h-auto"}
@@ -75,7 +75,7 @@
           ? "sm:block opacity-100 w-full sm:w-min flex-grow flex transition-opacity duration-300 delay-75"
           : "sm:block opacity-0 sm:opacity-100 w-full sm:w-min flex-grow flex transition-opacity duration-300"}
       >
-        <menu class="flex gap-5 sm:gap-5 flex-col sm:flex-row">
+        <menu class="flex gap-5 sm:gap-5 flex-col sm:flex-row justify-end">
           <li>
             <a
               href="#experience"

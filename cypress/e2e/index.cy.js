@@ -24,3 +24,10 @@ it('does not contain any email address', () => {
 
     page.get('body').invoke('html').should('not.match', /\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b/);
 });
+
+it('has a custom font applied', () => {
+    const page = cy.visit('/');
+
+    // Check if H1 has an IBM Plex Mono font applied
+    page.get('h1').should('have.css', 'font-family', '"IBM Plex Mono", monospace');
+});

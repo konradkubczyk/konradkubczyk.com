@@ -26,3 +26,6 @@ cypress/videos/
 
 # JetBrains IDEs
 .idea/
+
+# Visual Studio Code
+.vscode/

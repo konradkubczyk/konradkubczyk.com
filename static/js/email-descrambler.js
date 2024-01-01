@@ -1,4 +1,4 @@
-class EmailUnscrambler {
+class EmailDescrambler {
     #unscrambleTriggers = [
         'mouseover',
         'touchstart',
@@ -42,9 +42,7 @@ class EmailUnscrambler {
 
     #getAddressFragmentsSequence(scrambledEmailLink) {
         const addressDataPoints = scrambledEmailLink.children[1].dataset;
-        const addressFragmentsSequence = addressDataPoints['sequence'].split('');
-
-        return addressFragmentsSequence;
+        return addressDataPoints['sequence'].split('');
     }
 
     #arrangeAddressFragments(addressFragments, fragmentsSequence) {
@@ -64,9 +62,7 @@ class EmailUnscrambler {
     }
 
     #joinEmailLinkFragments(arrangedFragments) {
-        const joinedEmailLinkFragments = arrangedFragments.join('');
-
-        return joinedEmailLinkFragments;
+        return arrangedFragments.join('');
     }
 
     #injectEmailLink(emailLinkString, emailLinkElement) {
@@ -74,4 +70,4 @@ class EmailUnscrambler {
     }
 }
 
-const emailUnscrambler = new EmailUnscrambler();
+const emailDescrambler = new EmailDescrambler();

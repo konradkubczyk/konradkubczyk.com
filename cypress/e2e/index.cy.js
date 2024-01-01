@@ -5,10 +5,10 @@ it('titles are correct', () => {
     page.get('h1').should('have.text', 'Konrad Kubczyk');
 });
 
-it('has a correct project', () => {
+it('has a correct project card', () => {
     const page = cy.visit('/');
 
-    page.get('.project').should('contain.text', 'Kiwi');
+    page.get('.project-card').should('contain.text', 'Kiwi');
 });
 
 it('has a correct link to source code', () => {

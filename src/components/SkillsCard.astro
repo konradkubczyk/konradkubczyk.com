@@ -1,0 +1,35 @@
+---
+interface Props {
+    category: string;
+    skills: string[];
+}
+
+const {category, skills} = Astro.props;
+
+function chunkArray<T>(array: T[], chunkSize: number): T[][] {
+    const result: T[][] = [];
+    for (let i = 0; i < array.length; i += chunkSize) {
+        result.push(array.slice(i, i + chunkSize));
+    }
+    return result;
+}
+---
+
+<div
+        class="flex flex-1 grow basis-64 xl:basis-80 flex-col gap-3 p-5 border border-zinc-600/50 rounded-md"
+>
+    <h3
+            class="text-xl sm:text-2xl font-semibold text-neutral-100 sm:whitespace-nowrap"
+    >
+        {category}
+    </h3>
+    <div class="flex gap-10">
+        {chunkArray(skills, 5).map((chunkOfSkills, index) => (
+                <ul class="list-inside list-disc text-white/70">
+                    {chunkOfSkills.map((skill) => (
+                            <li class="whitespace-nowrap">{skill}</li>
+                    ))}
+                </ul>
+        ))}
+    </div>
+</div>

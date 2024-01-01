@@ -1,644 +1,346 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import ProjectCard from "../components/ProjectCard.astro";
+import SkillsCard from "../components/SkillsCard.astro";
+import ActivityField from "../components/ActivityField.astro";
+import PortfolioDecorator from "../components/PortfolioDecorator.astro";
+import Projects from "../components/Projects.svelte";
 ---
 
 <Layout title="Konrad Kubczyk">
-  <main class="flex flex-col gap-20 xl:gap-24 2xl:gap-36">
-    <div
-      id="hero"
-      style="background-image: url('/img/backgrounds/resource-database-JGtQ3VJWoEU-unsplash.webp'); background-size: cover;"
-    >
-      <div
-        class="flex flex-col h-100 justify-between bg-neutral-900/80 bg-gradient-to-t from-neutral-900 to-transparent to-20%"
-        style="min-height: 80vh;"
-      >
-        <section class="container mx-auto grow flex items-center">
-          <div class="px-5 flex flex-col gap-5 mx-auto">
-            <div
-              class="flex flex-col gap-5 py-10 sm:w-2/3 lg:w-5/6 xl:w-3/5 sm:text-center mx-auto mt-36 sm:mt-40 mb-20"
-            >
-              <h1 class="text-4xl sm:text-5xl md:text-6xl text-white">Konrad Kubczyk</h1>
-              <p class="text-white/70">
-                I am a creative, open-minded and motivated person. My experience
-                in web and software development is complemented by an eye for
-                design and eagerness to innovate while solving problems.
-              </p>
-              <div class="flex gap-5 sm:mx-auto">
-                <a
-                  href="#more"
-                  class="button uppercase font-semibold tracking-wide text-sm bg-neutral-100/70 px-5 py-3 rounded border border-white/25 transition text-dark hover:bg-white/90"
-                >
-                  More
-                </a>
-                <a
-                  href="#contact"
-                  class="button uppercase font-semibold tracking-wide text-sm bg-neutral-600/25 px-5 py-3 rounded border border-white/25 transition text-white hover:bg-neutral-600/50"
-                >
-                  Contact
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section
-          id="more"
-          class="flex gap-5 container mx-auto flex-col sm:flex-row flex-wrap px-5"
+    <main class="flex flex-col gap-20 xl:gap-24 2xl:gap-36">
+        <div
+                id="hero bg-cover"
+                style="background-image: url('/img/backgrounds/resource-database-JGtQ3VJWoEU-unsplash.webp');"
         >
-          <div
-            class="flex-1 rounded-lg border border-zinc-600/50 p-5 flex flex-col gap-3 bg-neutral-800/10"
-          >
-            <h2 class="text-2xl font-semibold text-neutral-100">
-              Web development
-            </h2>
-            <p class="text-white/70">
-              This is my main area of expertise. During the last few years I
-              have been working on various projects built with WordPress. I am
-              also familiar with other technologies and frameworks.
-            </p>
-          </div>
-          <div
-            class="flex-1 rounded-lg border border-zinc-600/50 p-5 flex flex-col gap-3 bg-neutral-800/10"
-          >
-            <h2 class="text-2xl font-semibold text-neutral-100">
-              UI/UX design
-            </h2>
-            <p class="text-white/70">
-              Design is an important part of every project. I am familiar with
-              the principles of UI/UX design, and I am able to create a design
-              that is both functional and aesthetic.
-            </p>
-          </div>
-          <div
-            class="flex-1 rounded-lg border border-zinc-600/50 p-5 flex flex-col gap-3 bg-neutral-800/10"
-          >
-            <h2 class="text-2xl font-semibold text-neutral-100">Software</h2>
-            <p class="text-white/70">
-              Solving problems with software is what I enjoy doing. The
-              languages which I use the most are JavaScript, Python and Java,
-              but I am always eager to learn new ones.
-            </p>
-          </div>
-        </section>
-      </div>
-    </div>
-    <section
-      class="container mx-auto flex flex-col xl:flex-row px-5 items-center xl:gap-20"
-    >
-      <div>
-        <div class="flex flex-col-reverse">
-          <h2 class="text-3xl sm:text-4xl font-semibold text-neutral-100">
-            Building web solutions
-          </h2>
-          <span
-              class="text-sm uppercase font-semibold tracking-widest text-neutral-100/50 mb-2"
-          >
+            <div
+                    class="flex flex-col h-100 justify-between bg-neutral-900/80 bg-gradient-to-t from-neutral-900 to-transparent to-20%"
+                    style="min-height: 80vh;"
+            >
+                <section class="container mx-auto grow flex items-center">
+                    <div class="px-5 flex flex-col gap-5 mx-auto">
+                        <div
+                                class="flex flex-col gap-5 py-10 sm:w-2/3 lg:w-5/6 xl:w-3/5 sm:text-center mx-auto mt-36 sm:mt-40 mb-20"
+                        >
+                            <h1 class="text-4xl sm:text-5xl md:text-6xl text-white">Konrad Kubczyk</h1>
+                            <p class="text-white/70">
+                                I am a creative, open-minded and motivated person. My experience
+                                in web and software development is complemented by an eye for
+                                design and eagerness to innovate while solving problems.
+                            </p>
+                            <div class="flex gap-5 sm:mx-auto">
+                                <a
+                                        href="#more"
+                                        class="button uppercase font-semibold tracking-wide text-sm bg-neutral-100/70 px-5 py-3 rounded border border-white/25 transition text-dark hover:bg-white/90"
+                                >
+                                    More
+                                </a>
+                                <a
+                                        href="#contact"
+                                        class="button uppercase font-semibold tracking-wide text-sm bg-neutral-600/25 px-5 py-3 rounded border border-white/25 transition text-white hover:bg-neutral-600/50"
+                                >
+                                    Contact
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section
+                        id="more"
+                        class="flex gap-5 container mx-auto flex-col sm:flex-row flex-wrap px-5"
+                >
+                    <ActivityField
+                            title="Web development"
+                            description="This is my main area of expertise. I have been working on various projects built with WordPress during the last few years. I am also familiar with other technologies and frameworks."
+                    />
+                    <ActivityField
+                            title="UI/UX design"
+                            description="The role of design is crucial in every project. Through my experience I have learned how to create a product that is both functional and esthetically pleasing."
+                    />
+                    <ActivityField
+                            title="Software"
+                            description="Solving problems with software is what I enjoy doing. The languages which I use the most are JavaScript, Python and Java, but I am always eager to learn new ones."
+                    />
+                </section>
+            </div>
+        </div>
+        <section
+                class="container mx-auto flex flex-col xl:flex-row px-5 items-center xl:gap-20"
+        >
+            <div>
+                <div class="flex flex-col-reverse">
+                    <h2 class="text-3xl sm:text-4xl font-semibold text-neutral-100">
+                        Building web solutions
+                    </h2>
+                    <span
+                            class="text-sm uppercase font-semibold tracking-widest text-neutral-100/50 mb-2"
+                    >
             My main activity
           </span>
-        </div>
-        <p class="text-white/70 mt-5">
-          I use my knowledge of programming, web technologies and UI/UX design
-          to create, build and maintain products that are practical, yet
-          esthetically pleasing. Security, openness and people-first approach
-          are what I value the most.
-        </p>
-      </div>
-      <div class="w-full text-right select-none opacity-80">
+                </div>
+                <p class="text-white/70 mt-5">
+                    I use my knowledge of programming, web technologies and UI/UX design
+                    to create, build and maintain products that are practical, yet
+                    esthetically pleasing. Security, openness and people-first approach
+                    are what I value the most.
+                </p>
+            </div>
+            <div class="w-full text-right select-none opacity-80">
         <span
-          class="text-5xl sm:text-6xl xl:text-7xl 2xl:text-9xl lowercase tracking-wide text-neutral-100/10 mb-1"
-          aria-hidden="true"
-          role="none"
+                class="text-5xl sm:text-6xl xl:text-7xl 2xl:text-9xl lowercase tracking-wide text-neutral-100/10 mb-1"
+                aria-hidden="true"
+                role="none"
         >
           Web
         </span>
-        <span
-          class="text-5xl sm:text-6xl xl:text-7xl 2xl:text-9xl lowercase tracking-wide text-neutral-100/20 mb-1"
-          aria-hidden="true"
-          role="none"
-        >
+                <span
+                        class="text-5xl sm:text-6xl xl:text-7xl 2xl:text-9xl lowercase tracking-wide text-neutral-100/20 mb-1"
+                        aria-hidden="true"
+                        role="none"
+                >
           Design
         </span>
-        <span
-          class="text-5xl sm:text-6xl xl:text-7xl 2xl:text-9xl lowercase tracking-wide text-neutral-100/30 mb-1"
-          aria-hidden="true"
-          role="none"
-        >
+                <span
+                        class="text-5xl sm:text-6xl xl:text-7xl 2xl:text-9xl lowercase tracking-wide text-neutral-100/30 mb-1"
+                        aria-hidden="true"
+                        role="none"
+                >
           Development
         </span>
-      </div>
-    </section>
-    <section id="experience" class="container mx-auto px-5">
-      <div
-        class="rounded-lg"
-        style="background-image: url('/img/backgrounds/resource-database-JGtQ3VJWoEU-unsplash.webp'); background-size: cover; background-position: bottom;"
-      >
-        <div class="p-5 sm:p-10 lg:py-20 lg:px-40 rounded-lg bg-neutral-900/60">
-          <div
-            class="bg-neutral-900 max-w-2xl mx-auto p-5 sm:p-10 rounded-md sm:text-center border border-zinc-600/50"
-          >
-            <div class="flex flex-col-reverse">
-              <h2 class="text-3xl sm:text-4xl font-semibold text-neutral-100">
-                Work experience
-              </h2>
-              <span
-                class="text-sm uppercase font-semibold tracking-widest text-neutral-100/50 mb-2"
-              >
+            </div>
+        </section>
+        <section id="experience" class="container mx-auto px-5">
+            <div
+                    class="rounded-lg bg-cover bg-bottom"
+                    style="background-image: url('/img/backgrounds/resource-database-JGtQ3VJWoEU-unsplash.webp');"
+            >
+                <div class="p-5 sm:p-10 lg:py-20 lg:px-40 rounded-lg bg-neutral-900/60">
+                    <div
+                            class="bg-neutral-900 max-w-2xl mx-auto p-5 sm:p-10 rounded-md sm:text-center border border-zinc-600/50"
+                    >
+                        <div class="flex flex-col-reverse">
+                            <h2 class="text-3xl sm:text-4xl font-semibold text-neutral-100">
+                                Work experience
+                            </h2>
+                            <span
+                                    class="text-sm uppercase font-semibold tracking-widest text-neutral-100/50 mb-2"
+                            >
                 My professional background
               </span>
+                        </div>
+                        <p class="text-white/70 mt-5 sm:max-w-sm mx-auto">
+                            Since 2021 I have been working as a web developer, building
+                            commercial websites using WordPress.
+                        </p>
+                        <div class="relative mt-5 flex items-center gap-5">
+                            <div
+                                    class="absolute w-full sm:w-1/2 h-px bg-gradient-to-r from-transparent to-zinc-600"
+                            >
+                            </div>
+                            <p
+                                    class="relative pl-5 sm:px-5 ml-auto sm:mx-auto text-center text-white/70 whitespace-nowrap bg-neutral-900 uppercase tracking-widest text-sm font-semibold"
+                            >
+                                2021 &dash; Present
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <p class="text-white/70 mt-5 sm:max-w-sm mx-auto">
-              Since 2021 I have been working as a web developer, building
-              commercial websites using WordPress.
-            </p>
-            <div class="relative mt-5 flex items-center gap-5">
-              <div
-                class="absolute w-full sm:w-1/2 h-px bg-gradient-to-r from-transparent to-zinc-600"
-              >
-              </div>
-              <p
-                class="relative pl-5 sm:px-5 ml-auto sm:mx-auto text-center text-white/70 whitespace-nowrap bg-neutral-900 uppercase tracking-widest text-sm font-semibold"
-              >
-                2021 &dash; Present
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="skills" class="container mx-auto px-5">
-      <div class="flex flex-col xl:flex-row gap-5">
-        <div
-          class="bg-neutral-800/50 border border-zinc-600/50 rounded-md p-5 xl:w-1/3"
-        >
-          <div class="flex flex-col-reverse">
-            <h2 class="text-3xl sm:text-4xl font-semibold text-neutral-100">
-              Abilities
-            </h2>
-            <span
-              class="text-sm uppercase font-semibold tracking-widest text-neutral-100/50 mb-2"
-            >
+        </section>
+        <section id="skills" class="container mx-auto px-5">
+            <div class="flex flex-col xl:flex-row gap-5">
+                <div
+                        class="bg-neutral-800/50 border border-zinc-600/50 rounded-md p-5 xl:w-1/3"
+                >
+                    <div class="flex flex-col-reverse">
+                        <h2 class="text-3xl sm:text-4xl font-semibold text-neutral-100">
+                            Abilities
+                        </h2>
+                        <span
+                                class="text-sm uppercase font-semibold tracking-widest text-neutral-100/50 mb-2"
+                        >
               My skills
             </span>
-          </div>
-          <p class="text-white/70 mt-5">
-            I am familiar with popular programming languages and widely used
-            software. I learn quickly, and I am eager to discover new solutions
-            which can improve my efficiency or expand possibilities.
-          </p>
-        </div>
-        <div class="flex gap-5 flex-wrap sm:px-0 justify-between">
-          <div
-            class="flex flex-1 grow basis-64 xl:basis-80 flex-col gap-3 p-5 border border-zinc-600/50 rounded-md"
-          >
-            <h3
-              class="text-xl sm:text-2xl font-semibold text-neutral-100 sm:whitespace-nowrap"
-            >
-              Web technologies
-            </h3>
-            <div class="flex gap-10">
-              <ul class="list-inside list-disc text-white/70">
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>Node.js</li>
-                <li>Express</li>
-                <li>WordPress</li>
-              </ul>
-              <ul class="list-inside list-disc text-white/70">
-                <li>Bootstrap</li>
-                <li>Tailwind CSS</li>
-                <li>Svelte</li>
-                <li>Astro</li>
-              </ul>
+                    </div>
+                    <p class="text-white/70 mt-5">
+                        I am familiar with popular programming languages and widely used
+                        software. I learn quickly, and I am eager to discover new solutions
+                        which can improve my efficiency or expand possibilities.
+                    </p>
+                </div>
+                <div class="flex gap-5 flex-wrap sm:px-0 justify-between">
+                    <SkillsCard
+                            category="Web technologies"
+                            skills={["HTML", "CSS", "Node.js", "Express", "WordPress", "Bootstrap", "Tailwind CSS", "Vue.js", "Svelte", "Astro"]}
+                    />
+                    <SkillsCard
+                            category="Programming"
+                            skills={["JavaScript", "TypeScript", "Python", "Java"]}
+                    />
+                    <SkillsCard
+                            category="Languages"
+                            skills={["Polish (native)", "English (C1)", "French (A1)"]}
+                    />
+                    <SkillsCard
+                            category="Software and utilities"
+                            skills={["Visual Studio Code", "JetBrains WebStorm", "Git", "LibreOffice", "Microsoft Office", "Docker", "Linux", "Penpot"]}
+                    />
+                    <SkillsCard
+                            category="Databases"
+                            skills={["SQL", "Microsoft SQL Server", "MySQL", "MongoDB"]}
+                    />
+                </div>
             </div>
-          </div>
-          <div
-            class="flex flex-1 grow basis-64 xl:basis-80 flex-col gap-3 p-5 border border-zinc-600/50 rounded-md"
-          >
-            <h3
-              class="text-xl sm:text-2xl font-semibold text-neutral-100 sm:whitespace-nowrap"
+        </section>
+        <section class="container mx-auto px-5">
+            <PortfolioDecorator/>
+            <Projects
+                    client:only="svelte"
+                    projects={[
+                        {
+                            name: "Kiwi",
+                            description: "Web service for subscribing to a university class schedule using preferred calendar app. It acts as a middleman, translating a requested timetable into a widely supported ICS format.",
+                            tags: ["JavaScript", "Node.js", "Express", "Bootstrap", "Docker"],
+                            link: "https://gitlab.com/konradkubczyk/kiwi",
+                        },
+                        {
+                            name: "Netlico",
+                            description: "Microsite builder, which provides a simple interface, allowing a user to add custom text content, pick a theme and publish a website under a custom subdomain.",
+                            tags: ["JavaScript", "Node.js", "Express", "Bootstrap", "MongoDB", "Docker"],
+                            link: "https://gitlab.com/konradkubczyk/netlico"
+                        },
+                        {
+                            name: "CeneoWebScraper",
+                            description: "Web app for saving and analyzing product reviews from a price comparison website.",
+                            tags: ["Python", "Flask", "Bootstrap", "MySQL", "Docker"],
+                            link: "https://gitlab.com/konradkubczyk/CeneoWebScraper",
+                        },
+                        {
+                            name: "konradkubczyk.com",
+                            description: "The currently viewed website. It is built with Astro, a static site generator, and Tailwind CSS, a utility-first CSS framework.",
+                            tags: ["JavaScript", "Astro", "Svelte", "Tailwind CSS"],
+                            link: "https://gitlab.com/konradkubczyk/konradkubczyk.com",
+                        }
+                    ]}/>
+        </section>
+        <section id="contact" class="container mx-auto px-5">
+            <div
+                    class="rounded-lg bg-cover"
+                    style="background-image: url('/img/backgrounds/resource-database-JGtQ3VJWoEU-unsplash.webp');"
             >
-              Programming
-            </h3>
-            <div class="flex gap-10">
-              <ul class="list-inside list-disc text-white/70">
-                <li>JavaScript</li>
-                <li>TypeScript</li>
-                <li>Python</li>
-                <li>Java</li>
-              </ul>
-            </div>
-          </div>
-          <div
-            class="flex flex-1 grow basis-64 xl:basis-80 flex-col gap-3 p-5 border border-zinc-600/50 rounded-md"
-          >
-            <h3
-              class="text-xl sm:text-2xl font-semibold text-neutral-100 sm:whitespace-nowrap"
-            >
-              Languages
-            </h3>
-            <div class="flex gap-10">
-              <ul class="list-inside list-disc text-white/70">
-                <li>Polish (native)</li>
-                <li>English (C1)</li>
-                <li>French (A1)</li>
-              </ul>
-            </div>
-          </div>
-          <div
-            class="flex flex-1 grow basis-64 xl:basis-80 flex-col gap-3 p-5 border border-zinc-600/50 rounded-md"
-          >
-            <h3
-              class="text-xl sm:text-2xl font-semibold text-neutral-100 sm:whitespace-nowrap"
-            >
-              Software and utilities
-            </h3>
-            <div class="flex gap-10">
-              <ul class="list-inside list-disc text-white/70">
-                <li>Visual Studio Code</li>
-                <li>Git</li>
-                <li>Microsoft Office</li>
-                <li>LibreOffice</li>
-              </ul>
-              <ul class="list-inside list-disc text-white/70">
-                <li>Docker</li>
-                <li>Linux</li>
-                <li>Penpot</li>
-              </ul>
-            </div>
-          </div>
-          <div
-            class="flex flex-1 grow basis-64 xl:basis-80 flex-col gap-3 p-5 border border-zinc-600/50 rounded-md"
-          >
-            <h3
-              class="text-xl sm:text-2xl font-semibold text-neutral-100 sm:whitespace-nowrap"
-            >
-              Databases
-            </h3>
-            <div class="flex gap-10">
-              <ul class="list-inside list-disc text-white/70">
-                <li>SQL</li>
-                <li>Microsoft SQL Server</li>
-                <li>MySQL</li>
-                <li>MongoDB</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="container mx-auto px-5">
-      <div
-        class="random-string bg-gradient-to-b from-neutral-100/25 to-neutral-900 to-90% bg-clip-text text-transparent select-none font-mono h-64 overflow-hidden"
-        style="overflow-wrap: anywhere; margin-bottom: -2.75rem"
-        data-length="5000"
-        aria-hidden="true"
-        role="none"
-      >
-      </div>
-      <script is:inline>
-      function generateRandomString(length) {
-        const characters =
-          "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-        let result = "";
-        for (let i = 0; i < length; i++) {
-          const randomIndex = Math.floor(Math.random() * characters.length);
-          const randomCharacter = characters.charAt(randomIndex);
-          result += characters.charAt(
-            Math.floor(Math.random() * characters.length)
-          );
-        }
-        return result;
-      }
-      function refreshRandomStrings() {
-        document.querySelectorAll(".random-string").forEach((element) => {
-          element.innerText = generateRandomString(
-            parseInt(element.dataset.length)
-          );
-        });
-      }
-      refreshRandomStrings();
-      </script>
-      <div
-        id="portfolio"
-        class="flex gap-5 flex-col xl:flex-row justify-between"
-      >
-        <div class="flex flex-col justify-end">
-          <div class="flex flex-col-reverse">
-            <h2 class="text-3xl sm:text-4xl font-semibold text-neutral-100">
-              Portfolio
-            </h2>
-            <span
-              class="text-sm uppercase font-semibold tracking-widest text-neutral-100/50 mb-2"
-            >
-              My projects
-            </span>
-          </div>
-        </div>
-        <div
-          id="filters"
-          class="flex gap-2 flex-wrap xl:flex-wrap-reverse xl:justify-end xl:items-start"
-        >
-        </div>
-      </div>
-      <div id="projects" class="mt-5 flex gap-5 flex-col sm:flex-row flex-wrap">
-        <ProjectCard
-          name="Kiwi"
-          description="Web service for subscribing to a university class schedule using preferred calendar app. It acts as a middleman, translating a requested timetable into a widely supported ICS format."
-          tags={["JavaScript", "Node.js", "Express", "Bootstrap", "Docker"]}
-          link="https://gitlab.com/konradkubczyk/kiwi"
-        />
-        <ProjectCard
-        name="Netlico"
-        description="Microsite builder, which provides a simple interface, allowing a user to add custom text content, pick a theme and publish a website under a custom subdomain."
-        tags={["JavaScript", "Node.js", "Express", "Bootstrap", "MongoDB", "Docker"]}
-        link="https://gitlab.com/konradkubczyk/netlico"
-        />
-        <ProjectCard
-          name="CeneoWebScraper"
-          description="Web app for saving and analyzing product reviews from a price comparison website."
-          tags={["Python", "Flask", "Bootstrap", "MySQL", "Docker"]}
-          link="https://gitlab.com/konradkubczyk/CeneoWebScraper"
-        />
-        <ProjectCard
-          name="konradkubczyk.com"
-          description="The currently viewed website. It is built with Astro, a static site generator, and Tailwind CSS, a utility-first CSS framework."
-          tags={["JavaScript", "Astro", "Svelte", "Tailwind CSS"]}
-          link="https://gitlab.com/konradkubczyk/konradkubczyk.com"
-        />
-        <p
-          id="no-projects-for-criteria-alert"
-          class="hidden text-white/70 mt-5"
-        >
-          No projects match the selected criteria. You can reset the filters by
-          <button class="reset-filters underline hover:text-white transition"
-            >clicking here</button
-          >.
-        </p>
-      </div>
-      <script is:inline>
-      const projects = document.querySelectorAll("#projects > .project");
-      projects.forEach((project) => {
-        project.tags = project.querySelector(".tags").innerText.split("\n");
-      });
-
-      let availableFilters = [];
-
-      projects.forEach((project) => {
-        const projectTags = project
-          .querySelector(".tags")
-          .innerText.split("\n");
-        projectTags.forEach((tag) => {
-          if (!availableFilters.includes(tag)) {
-            availableFilters.push(tag);
-          }
-        });
-      });
-
-      const filtersElement = document.querySelector("#filters");
-
-      availableFilters.forEach((filter) => {
-        const filterNameSimplified = filter
-          .replace(" ", "")
-          .replace(".", "")
-          .toLowerCase();
-
-        const filterInputElement = document.createElement("input");
-        filterInputElement.type = "checkbox";
-        filterInputElement.id = `project-filter-input-${filterNameSimplified}`;
-        filterInputElement.classList.add("hidden");
-        filtersElement.appendChild(filterInputElement);
-
-        const filterLabelElement = document.createElement("label");
-
-        filterLabelElement.htmlFor = `project-filter-${filterNameSimplified}`;
-        filterLabelElement.id = `project-filter-label-${filterNameSimplified}`;
-        filterLabelElement.tabIndex = 0;
-        filterLabelElement.classList.add(
-          "project-filter",
-          "flex",
-          "items-center",
-          "text-center",
-          "uppercase",
-          "font-semibold",
-          "tracking-wide",
-          "text-sm",
-          "bg-neutral-800/25",
-          "px-3",
-          "py-2",
-          "rounded-full",
-          "border",
-          "border-zinc-600/50",
-          "transition",
-          "text-neutral-100/75",
-          "hover:bg-neutral-700/25",
-          "cursor-pointer",
-          "select-none",
-          "whitespace-nowrap"
-        );
-        filterLabelElement.innerText = filter;
-        filtersElement.appendChild(filterLabelElement);
-      });
-
-      let activeFilters = [];
-
-      function filterProjects() {
-        if (activeFilters.length === 0) {
-          projects.forEach((project) => {
-            project.classList.remove("hidden");
-          });
-          document
-            .querySelector("#no-projects-for-criteria-alert")
-            .classList.add("hidden");
-          return;
-        }
-
-        let hiddenProjectsCount = 0;
-
-        projects.forEach((project) => {
-          if (
-            activeFilters.every((filter) => project.tags.includes(filter))
-          ) {
-            project.classList.remove("hidden");
-          } else {
-            project.classList.add("hidden");
-            hiddenProjectsCount++;
-          }
-        });
-
-        if (hiddenProjectsCount === projects.length) {
-          document
-            .querySelector("#no-projects-for-criteria-alert")
-            .classList.remove("hidden");
-        } else {
-          document
-            .querySelector("#no-projects-for-criteria-alert")
-            .classList.add("hidden");
-        }
-      }
-
-      function processFiltersChange(event) {
-        let currentFilter = event.target.innerText;
-        if (activeFilters.includes(currentFilter)) {
-          activeFilters = activeFilters.filter(
-            (filter) => filter !== currentFilter
-          );
-          event.target.style.background = "";
-          event.target.style.borderColor = "";
-          event.target.style.color = "";
-        } else {
-          activeFilters.push(currentFilter);
-          event.target.style.background = "white";
-          event.target.style.borderColor = "white";
-          event.target.style.color = "black";
-        }
-
-        filterProjects();
-      }
-
-      document.querySelectorAll(".project-filter").forEach((element) => {
-        element.addEventListener("click", processFiltersChange);
-      });
-
-      const SPACEBAR_KEYCODE = 32;
-
-      function toggleFilter(event) {
-        if (event.keyCode !== SPACEBAR_KEYCODE) {
-          return;
-        }
-        event.target.click();
-        event.preventDefault();
-      }
-
-      document.querySelectorAll(".project-filter").forEach((element) => {
-        element.addEventListener("keydown", toggleFilter);
-      });
-
-      function resetFilters() {
-        document.querySelectorAll(".project-filter").forEach((element) => {
-          element.style.background = "";
-          element.style.borderColor = "";
-          element.style.color = "";
-        });
-        activeFilters = [];
-        filterProjects();
-      }
-
-      document.querySelectorAll(".reset-filters").forEach((element) => {
-        element.addEventListener("click", resetFilters);
-      });
-      </script>
-    </section>
-    <section id="contact" class="container mx-auto px-5">
-      <div
-        class="rounded-lg"
-        style="background-image: url('/img/backgrounds/resource-database-JGtQ3VJWoEU-unsplash.webp'); background-size: cover;"
-      >
-        <div
-          class="bg-neutral-900/75 sm:text-center p-5 sm:p-10 xl:p-20 sm:text-2xl"
-        >
-          <div class="flex flex-col-reverse">
-            <h2 class="text-3xl sm:text-4xl font-semibold text-neutral-100">
-              Contact me
-            </h2>
-            <span
-              class="text-sm uppercase font-semibold tracking-widest text-neutral-100/50 mb-2"
-            >
+                <div
+                        class="bg-neutral-900/75 sm:text-center p-5 sm:p-10 xl:p-20 sm:text-2xl"
+                >
+                    <div class="flex flex-col-reverse">
+                        <h2 class="text-3xl sm:text-4xl font-semibold text-neutral-100">
+                            Contact me
+                        </h2>
+                        <span
+                                class="text-sm uppercase font-semibold tracking-widest text-neutral-100/50 mb-2"
+                        >
               My details
             </span>
-          </div>
-          <div
-            class="mt-3 mb-4 xl:mt-5 xl:mb-6 h-px bg-gradient-to-r from-zinc-600 sm:from-transparent sm:via-zinc-600 to-transparent"
-          >
-          </div>
-          <div class="flex gap-5 lg:gap-7 sm:justify-center flex-wrap">
-            <a
-              class="scrambled-email-link text-white/70 font-medium flex gap-3 items-center bg-neutral-400/10 px-4 py-2 rounded-md hover:text-white hover:bg-neutral-400/20 hover:active:scale-95 transition select-none"
-              href="#"
-              target="_blank"
-              aria-label="Email"
-              draggable="false"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                height="1em"
-                viewBox="0 0 512 512"
-                class="fill-current"
-                ><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-                <path
-                  d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"
-                ></path></svg
-              >
-              <div
-                class="scrambled-email"
-                data-sequence="4253106"
-                data-hq2Dn="."
-                data-gzc7T="kubczyk"
-                data-4fgK8=":"
-                data-RjLx2="@"
-                data-oGP2U="mailto"
-                data-4t4KA="konrad"
-                data-SxV5N="com"
-              >
-              </div>
-            </a>
-            <a
-              class="text-white/70 font-medium flex gap-3 items-center bg-neutral-400/10 px-4 py-2 rounded-md hover:text-white hover:bg-neutral-400/20 hover:active:scale-95 transition select-none"
-              href="https://gitlab.com/konradkubczyk"
-              target="_blank"
-              draggable="false"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                height="1em"
-                viewBox="0 0 512 512"
-                class="fill-current"
-                ><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-                <path
-                  d="M503.5 204.6L502.8 202.8L433.1 21.02C431.7 17.45 429.2 14.43 425.9 12.38C423.5 10.83 420.8 9.865 417.9 9.57C415 9.275 412.2 9.653 409.5 10.68C406.8 11.7 404.4 13.34 402.4 15.46C400.5 17.58 399.1 20.13 398.3 22.9L351.3 166.9H160.8L113.7 22.9C112.9 20.13 111.5 17.59 109.6 15.47C107.6 13.35 105.2 11.72 102.5 10.7C99.86 9.675 96.98 9.295 94.12 9.587C91.26 9.878 88.51 10.83 86.08 12.38C82.84 14.43 80.33 17.45 78.92 21.02L9.267 202.8L8.543 204.6C-1.484 230.8-2.72 259.6 5.023 286.6C12.77 313.5 29.07 337.3 51.47 354.2L51.74 354.4L52.33 354.8L158.3 434.3L210.9 474L242.9 498.2C246.6 500.1 251.2 502.5 255.9 502.5C260.6 502.5 265.2 500.1 268.9 498.2L300.9 474L353.5 434.3L460.2 354.4L460.5 354.1C482.9 337.2 499.2 313.5 506.1 286.6C514.7 259.6 513.5 230.8 503.5 204.6z"
-                ></path></svg
-              >
-              GitLab
-            </a>
-            <a
-              class="text-white/70 font-medium flex gap-3 items-center bg-neutral-400/10 px-4 py-2 rounded-md hover:text-white hover:bg-neutral-400/20 hover:active:scale-95 transition select-none"
-              href="https://mastodon.social/@konradkubczyk"
-              rel="me"
-              target="_blank"
-              draggable="false"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                height="1em"
-                viewBox="0 0 448 512"
-                class="fill-current"
-                ><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-                <path
-                  d="M433 179.11c0-97.2-63.71-125.7-63.71-125.7-62.52-28.7-228.56-28.4-290.48 0 0 0-63.72 28.5-63.72 125.7 0 115.7-6.6 259.4 105.63 289.1 40.51 10.7 75.32 13 103.33 11.4 50.81-2.8 79.32-18.1 79.32-18.1l-1.7-36.9s-36.31 11.4-77.12 10.1c-40.41-1.4-83-4.4-89.63-54a102.54 102.54 0 0 1-.9-13.9c85.63 20.9 158.65 9.1 178.75 6.7 56.12-6.7 105-41.3 111.23-72.9 9.8-49.8 9-121.5 9-121.5zm-75.12 125.2h-46.63v-114.2c0-49.7-64-51.6-64 6.9v62.5h-46.33V197c0-58.5-64-56.6-64-6.9v114.2H90.19c0-122.1-5.2-147.9 18.41-175 25.9-28.9 79.82-30.8 103.83 6.1l11.6 19.5 11.6-19.5c24.11-37.1 78.12-34.8 103.83-6.1 23.71 27.3 18.4 53 18.4 175z"
-                ></path></svg
-              >
-              Mastodon
-            </a>
-            <a
-              class="text-white/70 font-medium flex gap-3 items-center bg-neutral-400/10 px-4 py-2 rounded-md hover:text-white hover:bg-neutral-400/20 hover:active:scale-95 transition select-none"
-              href="https://www.linkedin.com/in/konradkubczyk/"
-              target="_blank"
-              draggable="false"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                height="1em"
-                viewBox="0 0 448 512"
-                class="fill-current"
-                ><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-                <path
-                  d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"
-                ></path></svg
-              >
-              LinkedIn
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
+                    </div>
+                    <div
+                            class="mt-3 mb-4 xl:mt-5 xl:mb-6 h-px bg-gradient-to-r from-zinc-600 sm:from-transparent sm:via-zinc-600 to-transparent"
+                    >
+                    </div>
+                    <div class="flex gap-5 lg:gap-7 sm:justify-center flex-wrap">
+                        <a
+                                class="scrambled-email-link text-white/70 font-medium flex gap-3 items-center bg-neutral-400/10 px-4 py-2 rounded-md hover:text-white hover:bg-neutral-400/20 hover:active:scale-95 transition select-none"
+                                href="#"
+                                target="_blank"
+                                aria-label="Email"
+                                draggable="false"
+                        >
+                            <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    height="1em"
+                                    viewBox="0 0 512 512"
+                                    class="fill-current"
+                            >
+                                <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                <path
+                                        d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"
+                                ></path>
+                            </svg
+                            >
+                            <div
+                                    class="scrambled-email"
+                                    data-sequence="4253106"
+                                    data-hq2Dn="."
+                                    data-gzc7T="kubczyk"
+                                    data-4fgK8=":"
+                                    data-RjLx2="@"
+                                    data-oGP2U="mailto"
+                                    data-4t4KA="konrad"
+                                    data-SxV5N="com"
+                            >
+                            </div>
+                        </a>
+                        <a
+                                class="text-white/70 font-medium flex gap-3 items-center bg-neutral-400/10 px-4 py-2 rounded-md hover:text-white hover:bg-neutral-400/20 hover:active:scale-95 transition select-none"
+                                href="https://gitlab.com/konradkubczyk"
+                                target="_blank"
+                                draggable="false"
+                        >
+                            <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    height="1em"
+                                    viewBox="0 0 512 512"
+                                    class="fill-current"
+                            >
+                                <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                <path
+                                        d="M503.5 204.6L502.8 202.8L433.1 21.02C431.7 17.45 429.2 14.43 425.9 12.38C423.5 10.83 420.8 9.865 417.9 9.57C415 9.275 412.2 9.653 409.5 10.68C406.8 11.7 404.4 13.34 402.4 15.46C400.5 17.58 399.1 20.13 398.3 22.9L351.3 166.9H160.8L113.7 22.9C112.9 20.13 111.5 17.59 109.6 15.47C107.6 13.35 105.2 11.72 102.5 10.7C99.86 9.675 96.98 9.295 94.12 9.587C91.26 9.878 88.51 10.83 86.08 12.38C82.84 14.43 80.33 17.45 78.92 21.02L9.267 202.8L8.543 204.6C-1.484 230.8-2.72 259.6 5.023 286.6C12.77 313.5 29.07 337.3 51.47 354.2L51.74 354.4L52.33 354.8L158.3 434.3L210.9 474L242.9 498.2C246.6 500.1 251.2 502.5 255.9 502.5C260.6 502.5 265.2 500.1 268.9 498.2L300.9 474L353.5 434.3L460.2 354.4L460.5 354.1C482.9 337.2 499.2 313.5 506.1 286.6C514.7 259.6 513.5 230.8 503.5 204.6z"
+                                ></path>
+                            </svg
+                            >
+                            GitLab
+                        </a>
+                        <a
+                                class="text-white/70 font-medium flex gap-3 items-center bg-neutral-400/10 px-4 py-2 rounded-md hover:text-white hover:bg-neutral-400/20 hover:active:scale-95 transition select-none"
+                                href="https://mastodon.social/@konradkubczyk"
+                                rel="me"
+                                target="_blank"
+                                draggable="false"
+                        >
+                            <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    height="1em"
+                                    viewBox="0 0 448 512"
+                                    class="fill-current"
+                            >
+                                <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                <path
+                                        d="M433 179.11c0-97.2-63.71-125.7-63.71-125.7-62.52-28.7-228.56-28.4-290.48 0 0 0-63.72 28.5-63.72 125.7 0 115.7-6.6 259.4 105.63 289.1 40.51 10.7 75.32 13 103.33 11.4 50.81-2.8 79.32-18.1 79.32-18.1l-1.7-36.9s-36.31 11.4-77.12 10.1c-40.41-1.4-83-4.4-89.63-54a102.54 102.54 0 0 1-.9-13.9c85.63 20.9 158.65 9.1 178.75 6.7 56.12-6.7 105-41.3 111.23-72.9 9.8-49.8 9-121.5 9-121.5zm-75.12 125.2h-46.63v-114.2c0-49.7-64-51.6-64 6.9v62.5h-46.33V197c0-58.5-64-56.6-64-6.9v114.2H90.19c0-122.1-5.2-147.9 18.41-175 25.9-28.9 79.82-30.8 103.83 6.1l11.6 19.5 11.6-19.5c24.11-37.1 78.12-34.8 103.83-6.1 23.71 27.3 18.4 53 18.4 175z"
+                                ></path>
+                            </svg
+                            >
+                            Mastodon
+                        </a>
+                        <a
+                                class="text-white/70 font-medium flex gap-3 items-center bg-neutral-400/10 px-4 py-2 rounded-md hover:text-white hover:bg-neutral-400/20 hover:active:scale-95 transition select-none"
+                                href="https://www.linkedin.com/in/konradkubczyk/"
+                                target="_blank"
+                                draggable="false"
+                        >
+                            <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    height="1em"
+                                    viewBox="0 0 448 512"
+                                    class="fill-current"
+                            >
+                                <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                <path
+                                        d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"
+                                ></path>
+                            </svg
+                            >
+                            LinkedIn
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 </Layout>

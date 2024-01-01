@@ -24,7 +24,7 @@ function chunkArray<T>(array: T[], chunkSize: number): T[][] {
         {category}
     </h3>
     <div class="flex gap-10">
-        {chunkArray(skills, 5).map((chunkOfSkills, index) => (
+        {chunkArray(skills, 5).map((chunkOfSkills: string[]) => (
                 <ul class="list-inside list-disc text-white/70">
                     {chunkOfSkills.map((skill) => (
                             <li class="whitespace-nowrap">{skill}</li>

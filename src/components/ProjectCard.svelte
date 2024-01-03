@@ -6,7 +6,8 @@
 </script>
 
 <a
-        class="project-card flex-1 flex rounded-lg border border-zinc-600/50 p-5 flex-col gap-3 cursor-pointer bg-neutral-800/25 transition hover:bg-neutral-700/25 justify-between"
+        class="project-card flex-1 flex rounded-lg border border-zinc-600/50 p-5 flex-col gap-3 cursor-pointer bg-neutral-800/25 transition hover:bg-neutral-700/25 hover:border-zinc-500/75 active:scale-[0.99] justify-between"
+        draggable="false"
         href={link}
         target="_blank"
 >

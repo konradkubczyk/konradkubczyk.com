@@ -53,7 +53,7 @@
     >
         {#each tags as tag}
             <button
-                    class="flex items-center text-center uppercase font-semibold tracking-wide text-sm bg-neutral-800/25 px-3 py-2 rounded-full border border-zinc-600/50 transition duration-200 text-neutral-100/75 hover:bg-neutral-700/25 cursor-pointer select-none whitespace-nowrap"
+                    class="flex items-center text-center uppercase font-semibold tracking-wide text-sm bg-neutral-800/25 px-3 py-2 rounded-full border border-zinc-600/50 transition duration-200 text-neutral-100/75 hover:bg-neutral-700/25 hover:border-zinc-500/75 cursor-pointer select-none whitespace-nowrap"
                     on:click={toggleFilter}
                     style={activeFilters.has(tag) ? "background: white; border-color: white; color: black;" : ""}
             >

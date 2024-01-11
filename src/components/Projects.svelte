@@ -5,7 +5,10 @@
         name: string;
         description: string;
         tags: string[];
-        link: string;
+        repository: string;
+        language: string;
+        live?: string;
+        group?: boolean;
     }
 
     export let projects: Project[];
@@ -69,7 +72,10 @@
                     name={project.name}
                     description={project.description}
                     tags={project.tags}
-                    link={project.link}
+                    repository={project.repository}
+                    language={project.language}
+                    live={project.live}
+                    group={project.group}
             />
         {/if}
     {/each}

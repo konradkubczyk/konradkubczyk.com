@@ -27,10 +27,10 @@
 
 <header
         class={isMenuOpen
-    ? "fixed flex justify-center w-full top-0 z-10 p-0 bg-gradient-to-b from-neutral-900 from-20% to-transparent select-none transition-all duration-300"
+    ? "fixed flex justify-center w-full top-0 z-10 overflow-hidden p-0 bg-gradient-to-b from-neutral-900 from-20% to-transparent select-none transition-all duration-300"
     : isScrolled
-    ? "fixed flex justify-center w-full top-0 z-10 py-5 bg-gradient-to-b from-neutral-900 from-20% to-transparent select-none transition-all duration-300"
-    : "fixed flex justify-center w-full top-0 z-10 py-5 sm:py-5 bg-gradient-to-b from-neutral-900 from-20% to-transparent select-none transition-all duration-300"}
+    ? "fixed flex justify-center w-full top-0 z-10 overflow-hidden py-5 bg-gradient-to-b from-neutral-900 from-20% to-transparent select-none transition-all duration-300"
+    : "fixed flex justify-center w-full top-0 z-10 overflow-hidden py-5 sm:py-5 bg-gradient-to-b from-neutral-900 from-20% to-transparent select-none transition-all duration-300"}
 >
     <div class="container touch-none">
         <nav

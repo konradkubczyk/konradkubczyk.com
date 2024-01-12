@@ -27,19 +27,19 @@
 
 <header
         class={isMenuOpen
-    ? "fixed flex justify-center w-full top-0 z-10 overflow-hidden p-0 bg-gradient-to-b from-neutral-900 from-20% to-transparent select-none transition-all duration-300"
+    ? "fixed flex justify-center w-full top-0 z-10 overflow-hidden p-0 bg-gradient-to-b from-neutral-900 from-20% to-transparent select-none transition-all duration-500"
     : isScrolled
-    ? "fixed flex justify-center w-full top-0 z-10 overflow-hidden py-5 bg-gradient-to-b from-neutral-900 from-20% to-transparent select-none transition-all duration-300"
-    : "fixed flex justify-center w-full top-0 z-10 overflow-hidden py-5 sm:py-5 bg-gradient-to-b from-neutral-900 from-20% to-transparent select-none transition-all duration-300"}
+    ? "fixed flex justify-center w-full top-0 z-10 overflow-hidden pt-5 bg-gradient-to-b from-neutral-900 from-20% to-transparent select-none transition-all duration-500"
+    : "fixed flex justify-center w-full top-0 z-10 overflow-hidden pt-5 sm:py-5 bg-gradient-to-b from-neutral-900 from-20% to-transparent select-none transition-all duration-500"}
 >
     <div class="container touch-none">
         <nav
                 id="nav"
                 class={isMenuOpen
-        ? "mx-0 p-10 rounded-none border border-transparent flex items-center backdrop-blur bg-neutral-900/100 shadow transition-all duration-300 flex-col sm:flex-row gap-10 h-dvh sm:h-auto"
+        ? "mx-0 p-10 rounded-none border border-transparent flex items-center backdrop-blur bg-neutral-900/100 shadow transition-all duration-500 flex-col sm:flex-row gap-10 h-dvh sm:h-auto"
         : isScrolled
-        ? "mx-5 py-5 px-5 rounded-lg border border-zinc-700/50 flex justify-between items-center backdrop-blur bg-neutral-900/80 shadow transition-all duration-300 flex-col sm:flex-row gap-5 h-[4.375rem] sm:h-auto"
-        : "mx-5 py-5 px-0 rounded-lg border border-transparent flex justify-between items-center backdrop-blur-none bg-transparent shadow-none transition-all duration-300 flex-col sm:flex-row gap-5 h-[4.375rem] sm:h-auto"}
+        ? "mx-5 py-5 px-5 rounded-lg border border-zinc-700/50 flex justify-between items-center backdrop-blur bg-neutral-900/80 shadow transition-all duration-500 flex-col sm:flex-row gap-5 h-[4.375rem] sm:h-auto"
+        : "mx-5 py-5 px-0 rounded-lg border border-transparent flex justify-between items-center backdrop-blur-none bg-transparent shadow-none transition-all duration-500 flex-col sm:flex-row gap-5 h-[4.375rem] sm:h-auto"}
         >
             <div class="flex justify-between items-center w-full">
                 <a
@@ -49,12 +49,12 @@
                 >
                     <img src="/img/brand/logo.svg" alt="Logo" class="h-7 mx-1"/>
                 </a>
-                <button id="menu-button" aria-label="Menu" on:click={() => toggleMenu()}>
+                <button id="menu-button" class="sm:hidden text-white/75 hover:text-white transition cursor-pointer mx-1" aria-label="Menu" on:click={() => toggleMenu()}>
                     {#if isMenuOpen}
                         <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 height="1.5em"
-                                class="fill-current text-white/75 hover:text-white transition cursor-pointer sm:hidden mx-1"
+                                class="fill-current"
                                 viewBox="0 0 384 512"
                         >
                             <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
@@ -68,7 +68,7 @@
                                 xmlns="http://www.w3.org/2000/svg"
                                 height="1.2em"
                                 viewBox="0 0 448 512"
-                                class="fill-current text-white/75 hover:text-white transition cursor-pointer sm:hidden mx-1"
+                                class="fill-current"
                         >
                             <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
                             <path

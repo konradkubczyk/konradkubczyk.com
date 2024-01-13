@@ -1,7 +1,13 @@
 <script lang="ts">
-import MenuItem from "./MenuItem.svelte";
+    /*
+     * This Source Code Form is subject to the terms of the Mozilla Public
+     * License, v. 2.0. If a copy of the MPL was not distributed with this
+     * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+     */
 
-export let isOpen: boolean;
+    import MenuItem from "./MenuItem.svelte";
+
+    export let isOpen: boolean;
 </script>
 
 <div
@@ -12,22 +18,22 @@ export let isOpen: boolean;
 >
     <menu class="flex gap-5 sm:gap-5 flex-col sm:flex-row justify-end">
         <MenuItem
-                href="#experience"
+                href="/#experience"
                 text="Experience"
                 on:closeMenu
         />
         <MenuItem
-                href="#skills"
+                href="/#skills"
                 text="Skills"
                 on:closeMenu
         />
         <MenuItem
-                href="#portfolio"
+                href="/#portfolio"
                 text="Portfolio"
                 on:closeMenu
         />
         <MenuItem
-                href="#contact"
+                href="/#contact"
                 text="Contact"
                 on:closeMenu
         />

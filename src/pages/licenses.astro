@@ -1,0 +1,55 @@
+---
+/*
+ * This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+ */
+
+import Layout from "../layouts/Layout.astro";
+
+import licenses from "../../data/licenses.json";
+---
+
+<Layout title="Licenses">
+    <main class="flex flex-col gap-20 xl:gap-24 2xl:gap-36">
+        <section class="container mx-auto px-5 mt-52">
+            <h1
+                    class="text-4xl sm:text-5xl md:text-6xl text-white"
+            >Licenses</h1>
+            <p
+                    class="text-white/70 mt-5"
+            >
+                The site was built using various open source tools and libraries, listed below along with their
+                licenses. Click on a package name to view more details.
+            </p>
+        </section>
+        <section class="container mx-auto px-5 flex flex-col gap-10">
+            {Object.values(licenses).map((license, index) => (
+                    <details
+                            class="text-white/90 rounded-lg bg-neutral-800/25 border border-zinc-600/50 has-[summary:hover]:border-zinc-500/75 transition">
+                        <summary class="p-5 flex flex-col sm:flex-row flex-wrap gap-2 justify-between cursor-pointer">
+                            <h2 class="text-lg font-bold text-white">{license.name}</h2>
+                            <span class="opacity-50">{license.licenses}</span>
+                        </summary>
+                        <div class="p-5 pt-0">
+                            <ul class="mb-5">
+                                {license.publisher ?
+                                        <li>Publisher: {license.publisher}</li> : null}
+                                {license.version ?
+                                        <li>Version: {license.version}</li> : null}
+                                {license.description ?
+                                        <li>Description: {license.description}</li> : null}
+                                {license.repository ?
+                                        <li>Repository: <a href="{license.repository}"
+                                                           class="underline">{license.repository}</a></li> : null}
+                                {license.copyright ?
+                                        <li>Copyright: {license.copyright}</li> : null}
+                            </ul>
+                            {license.licenseText ?
+                                    <pre class="whitespace-pre-wrap p-3 rounded bg-neutral-700/25">{license.licenseText}</pre> : null}
+                        </div>
+                    </details>
+            ))}
+        </section>
+    </main>
+</Layout>

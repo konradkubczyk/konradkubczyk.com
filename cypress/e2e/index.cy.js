@@ -1,4 +1,4 @@
-it('titles are correct', () => {
+it('has correct titles', () => {
     const page = cy.visit('/');
 
     page.get('title').should('have.text', 'Konrad Kubczyk');
@@ -30,4 +30,18 @@ it('has a custom font applied', () => {
 
     // Check if H1 has an IBM Plex Mono font applied
     page.get('h1').should('have.css', 'font-family', '"IBM Plex Mono", monospace');
+});
+
+it('has a /licenses page', () => {
+    const page = cy.visit('/licenses');
+
+    page.get('title').should('have.text', 'Licenses - Konrad Kubczyk');
+    page.get('h1').should('have.text', 'Licenses');
+});
+
+it('has licenses listed', () => {
+    const page = cy.visit('/licenses');
+
+    page.get('details').should('have.length.gte', 1);
+    page.get('details').should('contain.text', 'konradkubczyk.com');
 });

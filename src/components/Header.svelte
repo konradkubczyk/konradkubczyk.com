@@ -1,4 +1,10 @@
 <script lang="ts">
+    /*
+     * This Source Code Form is subject to the terms of the Mozilla Public
+     * License, v. 2.0. If a copy of the MPL was not distributed with this
+     * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+     */
+
     import Menu from "./Menu.svelte";
 
     let isMenuOpen = false;
@@ -49,7 +55,8 @@
                 >
                     <img src="/img/brand/logo.svg" alt="Logo" class="h-7 mx-1"/>
                 </a>
-                <button id="menu-button" class="sm:hidden text-white/75 hover:text-white transition cursor-pointer mx-1" aria-label="Menu" on:click={() => toggleMenu()}>
+                <button id="menu-button" class="sm:hidden text-white/75 hover:text-white transition cursor-pointer mx-1"
+                        aria-label="Menu" on:click={() => toggleMenu()}>
                     {#if isMenuOpen}
                         <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -61,8 +68,7 @@
                             <path
                                     d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"
                             />
-                        </svg
-                        >
+                        </svg>
                     {:else}
                         <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -80,8 +86,8 @@
                 </button>
             </div>
             <Menu
-                isOpen={isMenuOpen}
-                on:closeMenu={() => setMenuOpen(false)}
+                    isOpen={isMenuOpen}
+                    on:closeMenu={() => setMenuOpen(false)}
             />
         </nav>
     </div>

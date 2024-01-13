@@ -9,6 +9,7 @@ test:
   image: cypress/base:latest
   stage: test
   script:
+    - npm run gather-licenses &
     - npm start &
     - npm run test
   artifacts:

@@ -1,3 +1,9 @@
+/*
+ * This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+ */
+
 class EmailDescrambler {
     #unscrambleTriggers = [
         'mouseover',
@@ -12,7 +18,7 @@ class EmailDescrambler {
             for (const trigger of this.#unscrambleTriggers) {
                 scrambledEmailLink.addEventListener(trigger, () => {
                     this.#unscrambleEmailLink(scrambledEmailLink);
-                }, { passive: true });
+                }, {passive: true});
             }
         }
     }
@@ -47,7 +53,7 @@ class EmailDescrambler {
 
     #arrangeAddressFragments(addressFragments, fragmentsSequence) {
         const fragmentsArray = [];
-        
+
         for (const addressFragmentID in addressFragments) {
             fragmentsArray.push(addressFragments[addressFragmentID]);
         }

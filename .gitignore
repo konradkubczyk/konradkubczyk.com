@@ -29,3 +29,6 @@ cypress/videos/
 
 # Visual Studio Code
 .vscode/
+
+# Generated on build
+/data/licenses.json

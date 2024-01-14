@@ -45,3 +45,13 @@ it('has licenses listed', () => {
     page.get('details').should('have.length.gte', 1);
     page.get('details').should('contain.text', 'konradkubczyk.com');
 });
+
+it('has a custom 404 page', () => {
+
+    // Visit url that does not exist expecting 404
+    const page = cy.visit('/this-page-does-not-exist', { failOnStatusCode: false });
+
+    page.get('title').should('have.text', 'Not found - Konrad Kubczyk');
+    page.get('h1').should('have.text', 'Not found');
+    page.get('a').filter('[href="/"]').should('have.length.gte', 1);
+});

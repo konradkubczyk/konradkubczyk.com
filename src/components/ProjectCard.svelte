@@ -15,19 +15,19 @@
 </script>
 
 <a
-        class="project-card flex-1 flex rounded-lg border border-zinc-600/50 p-5 flex-col gap-5 cursor-pointer bg-neutral-800/25 transition hover:bg-neutral-700/25 hover:border-zinc-500/75 active:scale-[0.99] has-[a:active]:scale-100 justify-between select-none max-w-full"
+        class="project-card flex-1 flex rounded-lg border border-zinc-600/50 p-5 flex-col gap-5 cursor-pointer bg-neutral-800/25 transition hover:bg-neutral-700/25 hover:border-zinc-500/75 active:scale-[0.99] has-[a:active]:scale-100 justify-between select-none max-w-full sm:min-w-72"
         draggable="false"
         href={repository}
         target="_blank"
 >
     <div>
-        <div class="flex justify-between gap-5">
+        <div class="flex justify-between gap-5 h-8">
             <h3 class="grow text-2xl font-semibold text-neutral-100 overflow-hidden text-ellipsis leading-none self-center">
                 {name}
             </h3>
             {#if live}
                 <a
-                        class="border border-white/10 p-2 h-full rounded-md whitespace-nowrap font-semibold text-white/70 uppercase text-xs transition bg-neutral-600/25 hover:bg-neutral-500/35 hover:border-zinc-400/75 hover:active:scale-95 tracking-wide flex gap-1.5"
+                        class="border border-white/10 px-2 rounded-md font-semibold text-white/70 uppercase text-xs transition bg-neutral-600/25 hover:bg-neutral-500/35 hover:border-zinc-400/75 hover:active:scale-95 tracking-wide flex gap-1.5 items-center"
                         draggable="false"
                         href="{live}"
                         target="_blank"
@@ -46,7 +46,7 @@
         </p>
     </div>
     <div
-            class="flex text-xs text-white/25 uppercase gap-3 tracking-wider flex-wrap sm:flex-nowrap"
+            class="flex text-xs text-white/25 uppercase gap-3 tracking-wider flex-wrap"
     >
         <span class="text-white/75 font-bold">
             {language}

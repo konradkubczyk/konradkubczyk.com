@@ -22,12 +22,12 @@
 >
     <div>
         <div class="flex justify-between gap-5 h-8">
-            <h3 class="grow text-2xl font-semibold text-neutral-100 overflow-hidden text-ellipsis leading-none self-center">
+            <h3 class="grow text-2xl text-neutral-100 overflow-hidden text-ellipsis leading-none self-center">
                 {name}
             </h3>
             {#if live}
                 <a
-                        class="border border-white/10 px-2 rounded-md font-semibold text-white/70 uppercase text-xs transition bg-neutral-600/25 hover:bg-neutral-500/35 hover:border-zinc-400/75 hover:active:scale-95 tracking-wide flex gap-1.5 items-center"
+                        class="border border-white/10 px-2 rounded-md text-white/70 uppercase text-xs transition bg-neutral-600/25 hover:bg-neutral-500/35 hover:border-zinc-400/75 hover:active:scale-95 tracking-wide flex gap-1.5 items-center"
                         draggable="false"
                         href="{live}"
                         target="_blank"

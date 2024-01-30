@@ -47,7 +47,7 @@
 >
     <div class="flex flex-col justify-end">
         <div class="flex flex-col-reverse">
-            <h2 class="text-3xl sm:text-4xl font-semibold text-neutral-100">
+            <h2 class="text-3xl sm:text-4xl text-neutral-100">
                 Portfolio
             </h2>
             <span

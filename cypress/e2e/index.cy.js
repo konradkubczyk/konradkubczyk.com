@@ -28,8 +28,8 @@ it('does not contain any email address', () => {
 it('has a custom font applied', () => {
     const page = cy.visit('/');
 
-    // Check if H1 has an IBM Plex Mono font applied
-    page.get('h1').should('have.css', 'font-family', '"IBM Plex Mono", monospace');
+    page.get('h1').should('have.css', 'font-family', 'Outfit, sans-serif');
+    page.get('p').should('have.css', 'font-family', '"Red Hat Text", sans-serif');
 });
 
 it('has a /licenses page', () => {

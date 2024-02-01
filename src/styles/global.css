@@ -1,12 +1,15 @@
 @font-face {
     font-family: 'Red Hat Text';
+    /*noinspection CssUnknownTarget*/
     src: url('/fonts/red-hat-text/red-hat-text-light.woff2') format('woff2');
     font-display: swap;
 }
 
 @font-face {
     font-family: 'Outfit';
+    /*noinspection CssUnknownTarget*/
     src: url('/fonts/outfit/outfit-thin.woff2') format('woff2');
+    font-display: swap;
 }
 
 :root {

@@ -12,9 +12,9 @@
 
 <div
         id="menu-container"
-        class={isOpen
-          ? "sm:block opacity-100 w-full sm:w-min flex-grow flex transition-opacity duration-500 delay-100"
-          : "sm:block opacity-0 sm:opacity-100 w-full sm:w-min flex-grow flex transition-opacity duration-300 pointer-events-none sm:pointer-events-auto"}
+        class="sm:block w-full sm:w-min flex-grow flex transition-opacity
+              {isOpen ? 'opacity-100 duration-500 delay-100'
+                : 'opacity-0 sm:opacity-100 duration-300 pointer-events-none sm:pointer-events-auto'}"
 >
     <menu class="flex gap-5 sm:gap-5 flex-col sm:flex-row justify-end">
         <MenuItem

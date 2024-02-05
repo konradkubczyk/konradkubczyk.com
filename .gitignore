@@ -30,5 +30,6 @@ cypress/videos/
 # Visual Studio Code
 .vscode/
 
-# Generated on build
+# Generated or copied on build
 /data/licenses.json
+/static/bootstrap-icons/*

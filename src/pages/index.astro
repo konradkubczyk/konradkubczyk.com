@@ -264,7 +264,7 @@ import Projects from "../components/Projects.svelte";
                     style="background-image: url('/img/backgrounds/resource-database-JGtQ3VJWoEU-unsplash.webp'); background-size: cover;"
             >
                 <div
-                        class="bg-neutral-900/75 sm:text-center p-5 sm:p-10 xl:p-20 sm:text-xl"
+                        class="bg-neutral-900/75 sm:text-center p-5 sm:p-10 xl:p-20 sm:text-lg"
                 >
                     <div class="flex flex-col-reverse">
                         <h2 class="text-3xl sm:text-4xl text-neutral-100">
@@ -280,30 +280,41 @@ import Projects from "../components/Projects.svelte";
                             class="mt-3 mb-4 xl:mt-5 xl:mb-6 h-px bg-gradient-to-r from-zinc-700 sm:from-transparent sm:via-zinc-700 to-transparent"
                     >
                     </div>
-                    <div class="flex gap-5 lg:gap-7 sm:justify-center flex-wrap">
-                        <a
-                                class="scrambled-email-link text-white/70 flex gap-3 items-center bg-neutral-400/10 px-4 py-2 rounded-md hover:text-white hover:bg-neutral-400/20 hover:active:scale-95 transition select-none"
-                                href="#"
-                                target="_blank"
-                                aria-label="Email"
-                                draggable="false"
-                        >
-                            <i class="bi bi-envelope-fill"></i>
-                            <div
-                                    class="scrambled-email"
-                                    data-sequence="4253106"
-                                    data-hq2Dn="."
-                                    data-gzc7T="kubczyk"
-                                    data-4fgK8=":"
-                                    data-RjLx2="@"
-                                    data-oGP2U="mailto"
-                                    data-4t4KA="konrad"
-                                    data-SxV5N="com"
+                    <div class="flex gap-5 lg:gap-7 sm:justify-center flex-wrap text-white/70 select-none">
+                        <div class="flex">
+                            <a
+                                    class="scrambled-email-link flex gap-3 items-center bg-neutral-400/10 px-4 py-2 rounded-bl-md rounded-tl-md hover:text-white hover:bg-neutral-400/20 hover:active:scale-95 transition"
+                                    href="#"
+                                    target="_blank"
+                                    aria-label="Email"
+                                    draggable="false"
                             >
-                            </div>
-                        </a>
+                                <i class="bi bi-envelope-fill"></i>
+                                <div
+                                        class="scrambled-email"
+                                        data-sequence="4253106"
+                                        data-hq2Dn="."
+                                        data-gzc7T="kubczyk"
+                                        data-4fgK8=":"
+                                        data-RjLx2="@"
+                                        data-oGP2U="mailto"
+                                        data-4t4KA="konrad"
+                                        data-SxV5N="com"
+                                >
+                                </div>
+                            </a>
+                            <div class="w-px bg-zinc-700/75"></div>
+                            <a
+                                    class="flex gap-3 items-center bg-neutral-400/5 px-4 py-2 rounded-br-md rounded-tr-md hover:text-white hover:bg-neutral-400/20 hover:active:scale-95 transition"
+                                    href="/publickey.asc"
+                                    target="_blank"
+                                    draggable="false"
+                            >
+                                <i class="bi bi-key-fill rotate-45"></i>
+                            </a>
+                        </div>
                         <a
-                                class="text-white/70 flex gap-3 items-center bg-neutral-400/10 px-4 py-2 rounded-md hover:text-white hover:bg-neutral-400/20 hover:active:scale-95 transition select-none"
+                                class="flex gap-3 items-center bg-neutral-400/10 px-4 py-2 rounded-md hover:text-white hover:bg-neutral-400/20 hover:active:scale-95 transition"
                                 href="https://gitlab.com/konradkubczyk"
                                 target="_blank"
                                 draggable="false"
@@ -312,7 +323,7 @@ import Projects from "../components/Projects.svelte";
                             GitLab
                         </a>
                         <a
-                                class="text-white/70 flex gap-3 items-center bg-neutral-400/10 px-4 py-2 rounded-md hover:text-white hover:bg-neutral-400/20 hover:active:scale-95 transition select-none"
+                                class="flex gap-3 items-center bg-neutral-400/10 px-4 py-2 rounded-md hover:text-white hover:bg-neutral-400/20 hover:active:scale-95 transition"
                                 href="https://mastodon.social/@konradkubczyk"
                                 rel="me"
                                 target="_blank"
@@ -322,7 +333,7 @@ import Projects from "../components/Projects.svelte";
                             Mastodon
                         </a>
                         <a
-                                class="text-white/70 flex gap-3 items-center bg-neutral-400/10 px-4 py-2 rounded-md hover:text-white hover:bg-neutral-400/20 hover:active:scale-95 transition select-none"
+                                class="flex gap-3 items-center bg-neutral-400/10 px-4 py-2 rounded-md hover:text-white hover:bg-neutral-400/20 hover:active:scale-95 transition"
                                 href="https://www.linkedin.com/in/konradkubczyk/"
                                 target="_blank"
                                 draggable="false"

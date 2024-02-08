@@ -10,6 +10,7 @@ test:
   stage: test
   script:
     - npm run gather-licenses &
+    - npm run copy-icons &
     - npm start &
     - npm run test
   artifacts:

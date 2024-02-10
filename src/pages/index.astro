@@ -55,16 +55,16 @@ import Projects from "../components/Projects.svelte";
                         class="flex gap-5 container mx-auto flex-col sm:flex-row flex-wrap px-5"
                 >
                     <ActivityField
+                            title="Software"
+                            description="Solving problems with software is what I enjoy doing. The languages which I use the most are JavaScript, Python and Java, but I am always eager to learn new ones."
+                    />
+                    <ActivityField
                             title="Web development"
                             description="This is my main area of expertise. I have been working on various projects built with WordPress during the last few years. I am also familiar with other technologies and frameworks."
                     />
                     <ActivityField
-                            title="UI/UX design"
+                            title="Design"
                             description=" The role of design is crucial in every project. Through my experience, I have learned how to create a product that is both functional and esthetically pleasing."
-                    />
-                    <ActivityField
-                            title="Software"
-                            description="Solving problems with software is what I enjoy doing. The languages which I use the most are JavaScript, Python and Java, but I am always eager to learn new ones."
                     />
                 </section>
             </div>
@@ -176,11 +176,11 @@ import Projects from "../components/Projects.svelte";
                 <div class="flex gap-5 flex-wrap sm:px-0 justify-between">
                     <SkillsCard
                             category="Web technologies"
-                            skills={["HTML", "CSS", "Node.js", "Express", "WordPress", "Bootstrap", "Tailwind CSS", "Vue.js", "Svelte", "Astro"]}
+                            skills={["HTML", "CSS", "Node.js", "Express", "WordPress", "Bootstrap", "Tailwind CSS", "Vue.js"]}
                     />
                     <SkillsCard
                             category="Programming"
-                            skills={["JavaScript", "TypeScript", "Python", "Java"]}
+                            skills={["JavaScript", "TypeScript", "Python"]}
                     />
                     <SkillsCard
                             category="Languages"
@@ -188,11 +188,11 @@ import Projects from "../components/Projects.svelte";
                     />
                     <SkillsCard
                             category="Software and utilities"
-                            skills={["Visual Studio Code", "JetBrains WebStorm", "Git", "LibreOffice", "Microsoft Office", "Docker", "Linux", "Penpot"]}
+                            skills={["Visual Studio Code", "JetBrains WebStorm", "Docker", "Linux", "Git", "Ansible", "Bash"]}
                     />
                     <SkillsCard
                             category="Databases"
-                            skills={["SQL", "Microsoft SQL Server", "MySQL", "MongoDB"]}
+                            skills={["SQL", "Microsoft SQL Server", "MySQL"]}
                     />
                 </div>
             </div>

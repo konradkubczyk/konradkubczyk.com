@@ -42,22 +42,22 @@
         </p>
     </div>
     <div
-            class="flex text-xs text-white/25 uppercase gap-3 tracking-wider flex-wrap"
+            class="flex text-xs text-white/25 uppercase gap-3 tracking-wider flex-wrap font-semibold"
     >
-        <span class="text-white/75 font-bold">
+        <span class="text-white/75">
             {language}
         </span>
         {#if group}
-            <span class="text-white/75 font-bold">
+            <span class="text-white/75">
                 Group
             </span>
         {:else}
-            <span class="text-white/75 font-bold">
+            <span class="text-white/75">
                 Individual
             </span>
         {/if}
         {#each tags as tag}
-            <span class="tag whitespace-nowrap font-semibold">
+            <span class="tag whitespace-nowrap">
                     {tag}
                 </span>
         {/each}

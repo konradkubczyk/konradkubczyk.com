@@ -1,6 +1,6 @@
 stages:
   - test
-  - deploy
+#  - deploy
 
 before_script:
   - npm ci
@@ -19,13 +19,13 @@ test:
       - cypress/screenshots/**/*.png
     expire_in: 1 day
 
-pages:
-  image: node:lts
-  stage: deploy
-  script:
-    - npm run build
-  artifacts:
-    paths:
-      - public
-  only:
-    - main
+#pages:
+#  image: node:lts
+#  stage: deploy
+#  script:
+#    - npm run build
+#  artifacts:
+#    paths:
+#      - public
+#  only:
+#    - main

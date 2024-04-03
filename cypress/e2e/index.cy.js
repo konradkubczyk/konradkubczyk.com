@@ -60,7 +60,7 @@ it('has a public key file present', () => {
     cy.request('/publickey.asc')
         .then((response) => {
             expect(response.status).to.eq(200);
-            expect(response.headers['content-type']).to.include('application/pgp-signature');
+            expect(response.headers['content-type']).to.include('application/pgp-keys');
             const firstLine = response.body.substring(0, response.body.indexOf('\n'));
             expect(firstLine).to.eq('-----BEGIN PGP PUBLIC KEY BLOCK-----');
         });

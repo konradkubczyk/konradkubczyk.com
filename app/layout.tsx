@@ -1,25 +1,23 @@
 import type {Metadata} from "next";
-import {Inter} from "next/font/google";
 import "./globals.css";
-
-const inter = Inter({subsets: ["latin"]});
+import {inter} from "@/app/fonts";
 
 export const metadata: Metadata = {
-  title: {
-    template: "%s - Konrad Kubczyk",
-    default: "Konrad Kubczyk"
-  },
-  description: "Web developer, learning and exploring through creative innovation.",
+    title: {
+        template: "%s - Konrad Kubczyk",
+        default: "Konrad Kubczyk"
+    },
+    description: "Web developer, learning and exploring through creative innovation.",
 };
 
 export default function RootLayout({
-                                     children,
+                                       children,
                                    }: Readonly<{
-  children: React.ReactNode;
+    children: React.ReactNode;
 }>) {
-  return (
-    <html lang="en">
-    <body className={inter.className}>{children}</body>
-    </html>
-  );
+    return (
+        <html lang="en">
+        <body className={inter.className + " bg-neutral-200 dark:bg-neutral-950 text-neutral-600 dark:text-neutral-400"}>{children}</body>
+        </html>
+    );
 }

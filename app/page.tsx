@@ -1,15 +1,21 @@
+"use client";
+
 import Header from "@/app/_components/header";
 import Image from "next/image";
 
 import background from "../public/background.webp"
 import {spaceGrotesk} from "@/app/fonts";
+import {useRef} from "react";
 
 export default function Home() {
+    const hero = useRef(null);
+
     return (
         <>
-            <Header/>
+            <Header observableRef={hero}/>
             <main className="flex flex-col">
                 <section
+                    ref={hero}
                     className="relative flex flex-col"
                     style={{
                         minHeight: "85vh"

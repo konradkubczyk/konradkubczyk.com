@@ -5,24 +5,23 @@ import Link from "next/link";
 
 import logo from "../../public/logo.svg"
 import {spaceGrotesk} from "@/app/fonts";
-import {useEffect, useState} from "react";
+import {MutableRefObject, useEffect, useState} from "react";
 
-export default function Header({className}: { className?: string }) {
+export default function Header({observableRef}: { observableRef: MutableRefObject<any> }) {
     const [isScrolled, setIsScrolled] = useState<boolean>();
 
     useEffect(() => {
-        const getScrolledState = () => window.scrollY !== 0;
+        const observer = new IntersectionObserver(([entry]) => {
+            setIsScrolled(!entry.isIntersecting);
+        }, {
+            root: null,
+            threshold: 1
+        });
 
-        const handleScroll = () => {
-            setIsScrolled(getScrolledState());
-        };
-        setIsScrolled(getScrolledState());
+        observer.observe(observableRef.current)
 
-        addEventListener('scroll', handleScroll);
-        return () => {
-            removeEventListener('scroll', handleScroll);
-        }
-    }, []);
+        return () => observer.disconnect()
+    }, [observableRef]);
 
     return (
         <header className="fixed top-2.5 w-full z-20">

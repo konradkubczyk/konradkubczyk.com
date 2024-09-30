@@ -1,11 +1,11 @@
-import {Inter, Space_Grotesk} from "next/font/google";
+import { Inter, Space_Grotesk } from "next/font/google";
 
 export const inter = Inter({
-    subsets: ["latin"],
-    display: "swap"
+  subsets: ["latin"],
+  display: "swap",
 });
 
 export const spaceGrotesk = Space_Grotesk({
-    subsets: ["latin"],
-    display: "swap"
+  subsets: ["latin"],
+  display: "swap",
 });

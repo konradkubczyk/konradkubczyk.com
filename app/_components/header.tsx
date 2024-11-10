@@ -31,21 +31,21 @@ export default function Header({
   }, [observableRef]);
 
   return (
-    <header className="fixed top-2.5 w-full z-20">
-      <div className="max-w-screen-xl mx-auto px-5">
+    <header className="fixed top-2.5 z-20 w-full">
+      <div className="mx-auto max-w-screen-xl px-5">
         <div
           className={
             (isScrolled
-              ? "px-3 bg-neutral-300/75 dark:bg-neutral-900/75 backdrop-blur-lg"
+              ? "bg-neutral-300/75 px-3 backdrop-blur-lg dark:bg-neutral-900/75"
               : "") +
-            " py-3 rounded-2xl flex justify-between items-center transition-all"
+            " flex items-center justify-between rounded-2xl py-3 transition-all"
           }
         >
           <Link
             href="/"
-            className="mx-2 opacity-70 focus:opacity-100 hover:opacity-100 transition active:hover:scale-90"
+            className="mx-2 opacity-70 transition hover:opacity-100 focus:opacity-100 active:hover:scale-90"
           >
-            <Image alt="Logo" src={logo} className="dark:invert h-5 w-auto" />
+            <Image alt="Logo" src={logo} className="h-5 w-auto dark:invert" />
           </Link>
           <nav>
             <ul className="flex gap-2 overflow-hidden">
@@ -74,7 +74,7 @@ function NavLink({
         href={href}
         className={
           spaceGrotesk.className +
-          " block uppercase transition px-3 py-2 rounded-lg hover:bg-neutral-300/50 focus:bg-neutral-300/50 dark:hover:bg-neutral-800/75 dark:focus:bg-neutral-800/75 text-sm tracking-wider focus:outline-none active:hover:scale-90"
+          " block rounded-lg px-3 py-2 text-sm uppercase tracking-wider transition hover:bg-neutral-300/50 focus:bg-neutral-300/50 focus:outline-none active:hover:scale-90 dark:hover:bg-neutral-800/75 dark:focus:bg-neutral-800/75"
         }
       >
         {children}

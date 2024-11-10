@@ -28,15 +28,15 @@ export default function Home() {
             quality={100}
             sizes="100vw"
             objectFit="cover"
-            className="invert dark:invert-0 opacity-60"
+            className="opacity-60 invert dark:invert-0"
           />
-          <div className="flex-1 z-10 bg-gradient-to-b from-65% from-neutral-200/40 dark:from-neutral-950/75 to-neutral-200 dark:to-neutral-950 flex items-center justify-center">
-            <div className="max-w-screen-xl px-5 w-full md:grid-cols-2 grid">
+          <div className="z-10 flex flex-1 items-center justify-center bg-gradient-to-b from-neutral-200/40 from-65% to-neutral-200 dark:from-neutral-950/75 dark:to-neutral-950">
+            <div className="grid w-full max-w-screen-xl px-5 md:grid-cols-2">
               <div className="flex flex-col gap-6">
                 <h1
                   className={
                     spaceGrotesk.className +
-                    " font-light text-6xl text-neutral-800 dark:text-neutral-300 tracking-tight"
+                    " text-6xl font-light tracking-tight text-neutral-800 dark:text-neutral-300"
                   }
                 >
                   Konrad Kubczyk

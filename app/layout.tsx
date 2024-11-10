@@ -21,7 +21,7 @@ export default function RootLayout({
       <body
         className={
           inter.className +
-          " bg-neutral-200 dark:bg-neutral-950 text-neutral-600 dark:text-neutral-400"
+          " bg-neutral-200 text-neutral-600 dark:bg-neutral-950 dark:text-neutral-400"
         }
       >
         {children}

@@ -4,8 +4,9 @@ import Header from "@/app/_components/header";
 import Image from "next/image";
 
 import background from "../public/background.webp";
-import { spaceGrotesk } from "@/app/fonts";
+import { outfit } from "@/app/fonts";
 import { useRef } from "react";
+import FeaturedCard from "@/app/_components/featured-card";
 
 export default function Home() {
   const hero = useRef(null);
@@ -28,16 +29,14 @@ export default function Home() {
             quality={100}
             sizes="100vw"
             objectFit="cover"
-            className="opacity-60 invert dark:invert-0"
+            className="opacity-40 invert dark:opacity-60 dark:invert-0"
           />
-          <div className="z-10 flex flex-1 items-center justify-center bg-gradient-to-b from-neutral-200/40 from-65% to-neutral-200 dark:from-neutral-950/75 dark:to-neutral-950">
-            <div className="grid w-full max-w-screen-xl px-5 md:grid-cols-2">
-              <div className="flex flex-col gap-6">
+          <div className="z-10 flex flex-1 flex-col items-center justify-around gap-20 bg-gradient-to-b from-neutral-200/40 from-80% to-neutral-200 dark:from-neutral-950/75 dark:to-neutral-950">
+            <div className="h-14"></div>
+            <div className="grid w-full max-w-screen-xl gap-5 px-5 md:grid-cols-2">
+              <div className="flex flex-col gap-5">
                 <h1
-                  className={
-                    spaceGrotesk.className +
-                    " text-6xl font-light tracking-tight text-neutral-800 dark:text-neutral-300"
-                  }
+                  className={`${outfit.className} ml-[-.25rem] text-6xl font-light tracking-tight text-neutral-800 dark:text-neutral-300`}
                 >
                   Konrad Kubczyk
                 </h1>
@@ -49,6 +48,20 @@ export default function Home() {
                 </p>
               </div>
               <div></div>
+            </div>
+            <div className="grid max-w-screen-xl gap-5 px-5 sm:grid-cols-3">
+              <FeaturedCard
+                title="Design"
+                description="Design plays a crucial role in every project, defining the experience of users while making lasting impressions and building trust."
+              />
+              <FeaturedCard
+                title="Development"
+                description="Bringing great ideas to life is what I pursue. Translating goals into results and solving challanges with carefully crafted solutions."
+              />
+              <FeaturedCard
+                title="Deployment"
+                description="Shipping digital experiences using modern, adaptive and scalable ways lets them be enjoyed globally and improves maintainability."
+              />
             </div>
           </div>
         </section>

@@ -5,7 +5,7 @@ export default function Featured() {
   return (
     <>
       {Object.entries(featured).map(([title, description]) => (
-        <FeaturedCard title={title} description={description} />
+        <FeaturedCard key={title} title={title} description={description} />
       ))}
     </>
   );

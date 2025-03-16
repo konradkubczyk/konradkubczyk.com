@@ -1,13 +1,13 @@
 "use client";
 
-import Header from "@/app/_components/header";
+import Header from "@/app/_components/Header";
 import Image from "next/image";
 
 import background from "../public/background.webp";
 import { outfit } from "@/app/fonts";
 import { useRef } from "react";
-import FeaturedCard from "@/app/_components/featured-card";
-import SkillsCard from "@/app/_components/SkillsCard";
+import Skills from "@/app/_components/Skills";
+import Featured from "@/app/_components/Featured";
 
 export default function Home() {
   const hero = useRef(null);
@@ -51,80 +51,13 @@ export default function Home() {
               <div></div>
             </div>
             <div className="grid max-w-screen-xl gap-5 px-5 sm:grid-cols-3">
-              <FeaturedCard
-                title="Design"
-                description="Design plays a crucial role in every project, defining the experience of users while making lasting impressions and building trust."
-              />
-              <FeaturedCard
-                title="Development"
-                description="Bringing great ideas to life is what I pursue. Translating goals into results and solving challanges with carefully crafted solutions."
-              />
-              <FeaturedCard
-                title="Deployment"
-                description="Shipping digital experiences using modern, adaptive and scalable ways lets them be enjoyed globally and improves maintainability."
-              />
+              <Featured />
             </div>
           </div>
         </section>
 
         <section id="skills" className="mx-auto max-w-screen-xl px-5">
-          <div className="flex flex-col gap-5 xl:flex-row">
-            <div className="rounded-2xl bg-neutral-100/75 p-5 text-neutral-800 xl:w-1/3 dark:bg-neutral-800/75 dark:text-neutral-300">
-              <div className="flex flex-col-reverse">
-                <h2 className={`${outfit.className} text-3xl sm:text-4xl`}>
-                  Abilities
-                </h2>
-              </div>
-              <p className="mt-5">
-                I am familiar with popular programming languages and widely used
-                software. I learn quickly, and I am eager to discover new
-                solutions which can improve my efficiency or expand
-                possibilities.
-              </p>
-            </div>
-            <div className="flex flex-wrap justify-between gap-5 sm:px-0">
-              <SkillsCard
-                category="Web technologies"
-                skills={[
-                  "HTML",
-                  "CSS",
-                  "Node.js",
-                  "Express",
-                  "WordPress",
-                  "Bootstrap",
-                  "Tailwind CSS",
-                  "Vue.js",
-                  "React",
-                  "Next.js",
-                ]}
-              />
-              <SkillsCard
-                category="Programming"
-                skills={["JavaScript", "TypeScript", "Python"]}
-              />
-              <SkillsCard
-                category="Languages"
-                skills={["Polish (native)", "English (C1)", "French (A1)"]}
-              />
-              <SkillsCard
-                category="Software and utilities"
-                skills={[
-                  "Visual Studio Code",
-                  "JetBrains WebStorm",
-                  "Docker",
-                  "Linux",
-                  "Git",
-                  "Penpot",
-                  "Ansible",
-                  "Bash",
-                ]}
-              />
-              <SkillsCard
-                category="Databases"
-                skills={["Relational databases", "SQL", "NoSQL"]}
-              />
-            </div>
-          </div>
+          <Skills />
         </section>
 
         <div className="h-screen">

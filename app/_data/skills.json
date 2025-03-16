@@ -1,0 +1,39 @@
+{
+  "Web technologies": [
+    "HTML",
+    "CSS",
+    "Node.js",
+    "Express",
+    "WordPress",
+    "Bootstrap",
+    "Tailwind CSS",
+    "Vue.js",
+    "React",
+    "Next.js"
+  ],
+  "Programming": [
+    "JavaScript",
+    "TypeScript",
+    "Python"
+  ],
+  "Languages": [
+    "Polish (native)",
+    "English (C1)",
+    "French (A1)"
+  ],
+  "Software and utilities": [
+    "Visual Studio Code",
+    "JetBrains WebStorm",
+    "Docker",
+    "Linux",
+    "Git",
+    "Penpot",
+    "Ansible",
+    "Bash"
+  ],
+  "Databases": [
+    "Relational databases",
+    "SQL",
+    "NoSQL"
+  ]
+}

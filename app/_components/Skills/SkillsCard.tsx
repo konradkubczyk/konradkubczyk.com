@@ -1,15 +1,5 @@
 import { outfit } from "@/app/fonts";
 
-const MAX_CHUNK_SIZE = 5;
-
-function chunkArray<T>(array: T[], maxChunkSize: number): T[][] {
-  const result: T[][] = [];
-  for (let i = 0; i < array.length; i += maxChunkSize) {
-    result.push(array.slice(i, i + maxChunkSize));
-  }
-  return result;
-}
-
 export default function SkillsCard({
   category,
   skills,
@@ -25,17 +15,16 @@ export default function SkillsCard({
         {category}
       </h3>
       <div className="flex gap-12">
-        {chunkArray(skills, MAX_CHUNK_SIZE).map(
-          (chunkOfSkills: string[], index) => (
-            <ul key={index} className="list-inside list-disc">
-              {chunkOfSkills.map((skill, index) => (
-                <li key={index} className="whitespace-nowrap">
-                  {skill}
-                </li>
-              ))}
-            </ul>
-          ),
-        )}
+        <ul className="flex list-inside flex-wrap gap-3">
+          {skills.map((skill) => (
+            <li
+              key={skill}
+              className="whitespace-nowrap rounded-lg bg-neutral-100/35 px-3 py-1 dark:bg-neutral-950/35"
+            >
+              {skill}
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
   );

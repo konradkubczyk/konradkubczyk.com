@@ -31,6 +31,7 @@ export default function Home() {
             quality={100}
             sizes="100vw"
             className="object-cover opacity-40 invert dark:opacity-60 dark:invert-0"
+            placeholder="blur"
           />
           <div className="z-10 flex flex-1 flex-col items-center justify-around gap-20 bg-gradient-to-b from-neutral-200/40 from-80% to-neutral-200 dark:from-neutral-950/75 dark:to-neutral-950">
             <div className="h-14"></div>

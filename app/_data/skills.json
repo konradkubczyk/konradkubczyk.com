@@ -1,39 +1,42 @@
 {
-  "Web technologies": [
+  "Web development": [
     "HTML",
     "CSS",
+    "Sass",
+    "Tailwind CSS",
+    "Bootstrap",
+    "React",
+    "Next.js",
+    "Vue.js",
     "Node.js",
     "Express",
-    "WordPress",
-    "Bootstrap",
-    "Tailwind CSS",
-    "Vue.js",
-    "React",
-    "Next.js"
+    "WordPress"
   ],
   "Programming": [
     "JavaScript",
     "TypeScript",
     "Python"
   ],
+  "Databases": [
+    "Relational databases",
+    "Non-relational databases"
+  ],
+  "Tools and software": [
+    "Docker",
+    "Linux",
+    "Git",
+    "Cypress"
+  ],
+  "Design": [
+    "Penpot",
+    "Figma"
+  ],
+  "Cloud": [
+    "Google Cloud Platform"
+  ],
   "Languages": [
     "Polish (native)",
     "English (C1)",
     "French (A1)"
-  ],
-  "Software and utilities": [
-    "Visual Studio Code",
-    "JetBrains WebStorm",
-    "Docker",
-    "Linux",
-    "Git",
-    "Penpot",
-    "Ansible",
-    "Bash"
-  ],
-  "Databases": [
-    "Relational databases",
-    "SQL",
-    "NoSQL"
   ]
 }

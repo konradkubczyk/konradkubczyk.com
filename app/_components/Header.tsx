@@ -1,9 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
+import { MutableRefObject, useEffect, useState } from "react";
+
+import { outfit } from "@/app/fonts";
 
 import logo from "../../public/logo.svg";
-import { MutableRefObject, useEffect, useState } from "react";
-import { outfit } from "@/app/fonts";
 
 export default function Header({
   observableRef,

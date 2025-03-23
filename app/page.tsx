@@ -1,13 +1,15 @@
 "use client";
 
-import Header from "@/app/_components/Header";
 import Image from "next/image";
+import { useRef } from "react";
+
+import Featured from "@/app/_components/Featured";
+import Header from "@/app/_components/Header";
+import Skills from "@/app/_components/Skills";
+
+import { outfit } from "@/app/fonts";
 
 import background from "../public/background.webp";
-import { outfit } from "@/app/fonts";
-import { useRef } from "react";
-import Skills from "@/app/_components/Skills";
-import Featured from "@/app/_components/Featured";
 
 export default function Home() {
   const hero = useRef(null);

@@ -1,7 +1,9 @@
-import { outfit } from "@/app/fonts";
+import { AcademicCapIcon } from "@heroicons/react/24/solid";
+
 import SkillsCard from "@/app/_components/Skills/SkillsCard";
 import skills from "@/app/_data/skills.json";
-import { AcademicCapIcon } from "@heroicons/react/24/solid";
+
+import { outfit } from "@/app/fonts";
 
 export default function Skills() {
   return (

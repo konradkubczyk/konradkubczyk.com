@@ -1,16 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
 import { MutableRefObject, useEffect, useState } from "react";
+import { NavLink } from "@/app/_components/Header/NavLink";
+import logo from "../../../public/logo.svg";
 
-import { outfit } from "@/app/fonts";
-
-import logo from "../../public/logo.svg";
-
-export function Header({
-  observableRef,
-}: {
+type HeaderProps = {
   observableRef: MutableRefObject<any>;
-}) {
+};
+
+export const Header = ({ observableRef }: HeaderProps) => {
   const [isScrolled, setIsScrolled] = useState<boolean>();
 
   useEffect(() => {
@@ -40,7 +38,7 @@ export function Header({
           } flex items-center justify-between rounded-2xl py-3 transition-all`}
         >
           <Link
-            href="/"
+            href="/public"
             className={`${
               isScrolled ? "mx-2" : "mr-2"
             } opacity-70 transition-all hover:opacity-100 focus:opacity-100 active:hover:scale-90`}
@@ -49,9 +47,9 @@ export function Header({
           </Link>
           <nav>
             <ul className="flex gap-2 overflow-hidden">
+              <NavLink href="#experience">Experience</NavLink>
               <NavLink href="#skills">Skills</NavLink>
               <NavLink href="#projects">Projects</NavLink>
-              <NavLink href="#experience">Experience</NavLink>
               <NavLink href="#contact">Contact</NavLink>
             </ul>
           </nav>
@@ -59,23 +57,4 @@ export function Header({
       </div>
     </header>
   );
-}
-
-function NavLink({
-  children,
-  href,
-}: {
-  children: React.ReactNode;
-  href: string;
-}) {
-  return (
-    <li>
-      <Link
-        href={href}
-        className={`${outfit.className} block rounded-lg px-3 py-2 text-sm uppercase tracking-wider transition hover:bg-neutral-300/50 focus:bg-neutral-300/50 focus:outline-none active:hover:scale-90 dark:hover:bg-neutral-800/75 dark:focus:bg-neutral-800/75`}
-      >
-        {children}
-      </Link>
-    </li>
-  );
-}
+};

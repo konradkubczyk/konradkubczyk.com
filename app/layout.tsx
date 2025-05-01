@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
-
+import { ReactNode } from "react";
 import { inter } from "@/app/fonts";
-
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -13,18 +12,18 @@ export const metadata: Metadata = {
     "Web developer, learning and exploring through creative innovation.",
 };
 
-export default function RootLayout({
+const RootLayout = ({
   children,
 }: Readonly<{
-  children: React.ReactNode;
-}>) {
-  return (
-    <html lang="en" className="scroll-smooth">
-      <body
-        className={`${inter.className} bg-neutral-200 leading-7 text-neutral-600 dark:bg-neutral-950 dark:text-neutral-400`}
-      >
-        {children}
-      </body>
-    </html>
-  );
-}
+  children: ReactNode;
+}>) => (
+  <html lang="en" className="scroll-smooth scroll-pt-32">
+    <body
+      className={`${inter.className} bg-neutral-200 leading-7 text-neutral-600 dark:bg-neutral-950 dark:text-neutral-400`}
+    >
+      {children}
+    </body>
+  </html>
+);
+
+export default RootLayout;

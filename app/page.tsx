@@ -2,23 +2,21 @@
 
 import Image from "next/image";
 import { useRef } from "react";
-
+import { Experience } from "@/app/_components/Experience";
 import { Featured } from "@/app/_components/Featured";
-import { Header } from "@/app/_components/Header";
+import { Header } from "@/app/_components/Header/Header";
 import { Skills } from "@/app/_components/Skills";
-
 import { outfit } from "@/app/fonts";
-
 import background from "../public/background.webp";
 
-export default function Home() {
+const Home = () => {
   const hero = useRef(null);
 
   return (
     <>
       <Header observableRef={hero} />
 
-      <main className="flex flex-col">
+      <main className="flex flex-col gap-y-32">
         <section
           ref={hero}
           className="relative flex flex-col"
@@ -35,7 +33,7 @@ export default function Home() {
             className="object-cover opacity-40 invert dark:opacity-60 dark:invert-0"
             placeholder="blur"
           />
-          <div className="z-10 flex flex-1 flex-col items-center justify-around gap-20 bg-gradient-to-b from-neutral-200/40 from-80% to-neutral-200 dark:from-neutral-950/75 dark:to-neutral-950">
+          <div className="z-10 flex flex-1 flex-col items-center justify-between gap-20 bg-gradient-to-b from-neutral-200/40 from-80% to-neutral-200 dark:from-neutral-950/75 dark:to-neutral-950">
             <div className="h-14"></div>
             <div className="grid w-full max-w-screen-xl gap-5 px-5 md:grid-cols-2">
               <div className="flex flex-col gap-5">
@@ -59,6 +57,13 @@ export default function Home() {
           </div>
         </section>
 
+        <section
+          id="experience"
+          className="mx-auto max-w-screen-xl px-5 w-full"
+        >
+          <Experience />
+        </section>
+
         <section id="skills" className="mx-auto max-w-screen-xl px-5">
           <Skills />
         </section>
@@ -69,4 +74,6 @@ export default function Home() {
       </main>
     </>
   );
-}
+};
+
+export default Home;

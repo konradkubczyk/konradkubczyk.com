@@ -6,7 +6,7 @@ import { outfit } from "@/app/fonts";
 
 import logo from "../../public/logo.svg";
 
-export default function Header({
+export function Header({
   observableRef,
 }: {
   observableRef: MutableRefObject<any>;

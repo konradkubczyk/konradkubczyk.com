@@ -5,7 +5,7 @@ import skills from "@/app/_data/skills.json";
 
 import { outfit } from "@/app/fonts";
 
-export default function Skills() {
+export function Skills() {
   return (
     <div className="flex flex-col gap-5 xl:flex-row">
       <div className="relative overflow-clip rounded-2xl bg-neutral-100/75 p-5 text-neutral-800 xl:w-1/3 dark:bg-neutral-800/75 dark:text-neutral-300">

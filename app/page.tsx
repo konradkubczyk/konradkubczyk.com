@@ -59,7 +59,7 @@ const Home = () => {
 
         <section
           id="experience"
-          className="mx-auto max-w-screen-xl px-5 w-full"
+          className="mx-auto w-full max-w-screen-xl px-5"
         >
           <Experience />
         </section>

@@ -1,16 +1,16 @@
 import { CalendarDateRangeIcon } from "@heroicons/react/24/outline";
 import { useMemo } from "react";
 import { getFormattedExperienceTimeframe } from "@/app/_lib/get-formatted-experience-timeframe";
-import { Experience } from "@/app/_types/experience";
+import { ExperienceItem as ExperienceItemType } from "@/app/_types/experience";
 import { outfit } from "@/app/fonts";
 
 type ExperienceProps = {
-  experience: Experience;
+  experienceItem: ExperienceItemType;
   isLast: boolean;
 };
 
-export const ExperienceItem = ({ experience, isLast }: ExperienceProps) => {
-  const { role, timeframe } = experience;
+export const ExperienceItem = ({ experienceItem, isLast }: ExperienceProps) => {
+  const { role, timeframe } = experienceItem;
 
   const { formattedStartDate, formattedEndDate, formattedDuration } = useMemo(
     () => getFormattedExperienceTimeframe(timeframe),

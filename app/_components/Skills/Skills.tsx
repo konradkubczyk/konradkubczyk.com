@@ -1,6 +1,6 @@
 import { AcademicCapIcon } from "@heroicons/react/24/solid";
 import { SkillsCard } from "@/app/_components/Skills/SkillsCard";
-import skills from "@/app/_data/skills.json";
+import { SKILLS } from "@/app/_constants/skills";
 import { outfit } from "@/app/fonts";
 
 export function Skills() {
@@ -18,7 +18,7 @@ export function Skills() {
         <AcademicCapIcon className="absolute bottom-0 right-[-25%] h-96 opacity-[4%] dark:opacity-[2.5%]" />
       </div>
       <div className="flex flex-wrap justify-between gap-5 sm:px-0">
-        {Object.entries(skills).map(([category, skills]) => (
+        {Object.entries(SKILLS).map(([category, skills]) => (
           <SkillsCard key={category} category={category} skills={skills} />
         ))}
       </div>

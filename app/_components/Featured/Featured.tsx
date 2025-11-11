@@ -1,9 +1,9 @@
 import { FeaturedCard } from "@/app/_components/Featured/FeaturedCard";
-import featured from "@/app/_data/featured.json";
+import { FEATURED } from "@/app/_constants/featured";
 
 export const Featured = () => (
   <>
-    {Object.entries(featured).map(([title, description]) => (
+    {Object.entries(FEATURED).map(([title, description]) => (
       <FeaturedCard key={title} title={title} description={description} />
     ))}
   </>

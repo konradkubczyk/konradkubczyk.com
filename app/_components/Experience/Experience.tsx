@@ -1,5 +1,5 @@
 import { ExperienceItem } from "@/app/_components/Experience/ExperienceItem";
-import experience from "@/app/_data/experience.json";
+import { EXPERIENCE } from "@/app/_constants/experience";
 import { outfit } from "@/app/fonts";
 
 export const Experience = () => (
@@ -10,11 +10,11 @@ export const Experience = () => (
       Experience
     </h2>
     <div className="flex flex-col gap-1 lg:flex-row lg:gap-2">
-      {experience.map((experienceItem, index) => (
+      {EXPERIENCE.map((experienceItem, index) => (
         <ExperienceItem
           key={JSON.stringify(experienceItem)}
-          experience={experienceItem}
-          isLast={index === experience.length - 1}
+          experienceItem={experienceItem}
+          isLast={index === EXPERIENCE.length - 1}
         />
       ))}
     </div>

@@ -1,38 +1,37 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { ReactNode } from "react";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
-  subsets: ["latin"]
+  subsets: ["latin"],
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
-  subsets: ["latin"]
+  subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
   title: {
     template: "%s - Konrad Kubczyk",
-    default: "Konrad Kubczyk"
+    default: "Konrad Kubczyk",
   },
   description:
-    "Web developer, learning and exploring through creative innovation."
+    "Web developer, learning and exploring through creative innovation.",
 };
 
-export default function RootLayout({
-                                     children
-                                   }: Readonly<{
-  children: React.ReactNode;
-}>) {
-  return (
-    <html lang="en">
-    <body
-      className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-    >
-    {children}
+const RootLayout = ({
+  children,
+}: Readonly<{
+  children: ReactNode;
+}>) => (
+  <html lang="en">
+    <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      {children}
     </body>
-    </html>
-  );
-}
+  </html>
+);
+
+export default RootLayout;

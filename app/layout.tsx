@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ReactNode } from "react";
+import { ThemeProvider } from "@/app/_components/ThemeProvider";
 import { inter } from "@/app/fonts";
 import "./globals.css";
 
@@ -17,11 +18,22 @@ const RootLayout = ({
 }: Readonly<{
   children: ReactNode;
 }>) => (
-  <html lang="en" className="scroll-pt-32 scroll-smooth">
+  <html
+    lang="en"
+    className="scroll-pt-32 scroll-smooth"
+    suppressHydrationWarning
+  >
     <body
       className={`${inter.className} bg-neutral-200 leading-7 text-neutral-600 dark:bg-neutral-950 dark:text-neutral-400`}
     >
-      {children}
+      <ThemeProvider
+        attribute="class"
+        defaultTheme="system"
+        enableSystem
+        disableTransitionOnChange
+      >
+        {children}
+      </ThemeProvider>
     </body>
   </html>
 );

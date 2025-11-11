@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 const Home = () => (
-  <div className="flex justify-center items-center h-dvh">
+  <div className="flex h-dvh items-center justify-center">
     <Image
       className="dark:invert"
       src="/logo.svg"

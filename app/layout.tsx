@@ -4,13 +4,13 @@ import { ReactNode } from "react";
 import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const sans = Geist({
+  variable: "--sans",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const mono = Geist_Mono({
+  variable: "--mono",
   subsets: ["latin"],
 });
 
@@ -29,7 +29,7 @@ const RootLayout = ({
   children: ReactNode;
 }>) => (
   <html lang="en" suppressHydrationWarning>
-    <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+    <body className={`${sans.variable} ${mono.variable} antialiased`}>
       <ThemeProvider
         attribute="class"
         defaultTheme="system"

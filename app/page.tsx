@@ -10,7 +10,12 @@ const Home = () => (
       height={100}
       priority
     />
-    <h1 className="text-muted-foreground font-sans text-2xl">Konrad Kubczyk</h1>
+    <div className="flex flex-col gap-4 text-center">
+      <h1 className="font-display text-4xl">Konrad Kubczyk</h1>
+      <p className="text-muted-foreground">
+        Crafting immersive web experiences with acute precision
+      </p>
+    </div>
   </div>
 );
 

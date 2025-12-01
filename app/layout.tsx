@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Funnel_Display, Geist, Geist_Mono } from "next/font/google";
 import { ReactNode } from "react";
 import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
@@ -11,6 +11,11 @@ const sans = Geist({
 
 const mono = Geist_Mono({
   variable: "--mono",
+  subsets: ["latin"],
+});
+
+const display = Funnel_Display({
+  variable: "--display",
   subsets: ["latin"],
 });
 
@@ -29,7 +34,9 @@ const RootLayout = ({
   children: ReactNode;
 }>) => (
   <html lang="en" suppressHydrationWarning>
-    <body className={`${sans.variable} ${mono.variable} antialiased`}>
+    <body
+      className={`${sans.variable} ${mono.variable} ${display.variable} antialiased`}
+    >
       <ThemeProvider
         attribute="class"
         defaultTheme="system"

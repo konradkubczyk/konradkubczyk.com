@@ -1,6 +1,6 @@
-import Header from "@/components/header";
-import Hero from "@/components/hero";
-import ProjectsSection from "@/components/projects-section";
+import { Header } from "@/components/header";
+import { Hero } from "@/components/hero";
+import { ProjectsSection } from "@/components/projects-section";
 
 const Home = () => (
   <div className="flex justify-center p-8">

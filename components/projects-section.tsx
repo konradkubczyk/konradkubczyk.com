@@ -1,6 +1,7 @@
-import ProjectCard from "@/components/project-card";
+import { Suspense } from "react";
+import { ProjectCard } from "@/components/project-card";
 
-const ProjectsSection = () => (
+export const ProjectsSection = async () => (
   <div className="flex flex-col gap-4">
     <h2 className="font-display text-3xl">Projects</h2>
     <div
@@ -11,11 +12,11 @@ const ProjectsSection = () => (
         scrollbarWidth: "none",
       }}
     >
-      {Array.from({ length: 16 }).map((_, i) => (
-        <ProjectCard key={i} />
-      ))}
+      <Suspense fallback="Loading...">
+        {Array.from({ length: 16 }).map((_, i) => (
+          <ProjectCard key={i} />
+        ))}
+      </Suspense>
     </div>
   </div>
 );
-
-export default ProjectsSection;

@@ -8,7 +8,7 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 
-const Header = () => (
+export const Header = () => (
   <header className="bg-muted flex items-center justify-between rounded-2xl px-4 py-2">
     <Image
       className="dark:invert"
@@ -31,5 +31,3 @@ const Header = () => (
     </NavigationMenu>
   </header>
 );
-
-export default Header;

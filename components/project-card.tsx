@@ -1,4 +1,4 @@
-const ProjectCard = () => (
+export const ProjectCard = () => (
   <div
     className="bg-muted flex min-w-xs snap-start flex-col gap-2 rounded-2xl p-4"
     style={{
@@ -24,5 +24,3 @@ const ProjectCard = () => (
     </div>
   </div>
 );
-
-export default ProjectCard;

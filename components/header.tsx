@@ -11,7 +11,7 @@ import {
 export const Header = () => (
   <header className="bg-muted flex items-center justify-between rounded-2xl px-4 py-2">
     <Image
-      className="dark:invert"
+      className="h-6 w-6 dark:invert"
       src="/logo.svg"
       alt="Logo"
       width={24}

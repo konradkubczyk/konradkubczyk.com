@@ -22,7 +22,10 @@ export const Header = () => (
       <NavigationMenuList>
         <NavigationMenuItem>
           <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-            <Link href="https://github.com/konradkubczyk" target="_blank">
+            <Link
+              href={`https://github.com/${process.env.GITHUB_USERNAME}`}
+              target="_blank"
+            >
               GitHub
             </Link>
           </NavigationMenuLink>
